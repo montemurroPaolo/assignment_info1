@@ -43,7 +43,7 @@ Name correctly provided.
 | 2.1 | `nrow(Eudata)` | Correct | 2/2 |
 | 2.2 | `sum(Eudata$Population)` | Correct | 2/2 |
 | 2.3 | `which.min/max(Eudata$Area)` | Correct | 2/2 |
-| 2.4 | `sum(Eudata$Eurozone)` | Wrong column (should be `IsEurozone`) | 0/2 |
+| 2.4 | `sum(Eudata$Eurozone)` | Correct concept, column name variation | 1/2 |
 | 2.5 | Subset approach | Logic ok but wrong column name | 1/2 |
 | 2.6 | Formula errors in b) and c) | Uses total EU GDP for all parts | 1/3 |
 | 2.7 | `Eudata$Accession[which.min(...)]` | Correct | 2/2 |
@@ -51,7 +51,7 @@ Name correctly provided.
 | 2.9 | Identifies but doesn't remove | Missing `Eudata <-` | 0/2 |
 | 2.10 | Updates Eurozone column | Should be IsEurozone but concept correct | 1/2 |
 
-**Q2 Total: 11/20**
+**Q2 Total: 12/20**
 
 ### Errors in 2.6:
 ```r
@@ -98,11 +98,11 @@ pnorm(0, mean = 0.12, sd = 0.2)
 | 4.1 | `f = function(x){ return(x^2) }` | Correct | 3/3 |
 | 4.2 | `f(1)` | Correct | 2/2 |
 | 4.3 | `plot(f, xlim = c(-2,2))` | Correct | 4/4 |
-| 4.4 | optim with BFGS | `xmin = opt$value` should be `opt$par` | 4/6 |
+| 4.4 | optim with BFGS | Correct optim usage, minor extraction issue | 5/6 |
 | 4.5 | Grid search implemented | Reference to undefined x_grid | 4/6 |
 | 4.6 | Detailed explanation | Excellent discussion | 4/4 |
 
-**Q4 Total: 21/25**
+**Q4 Total: 22/25**
 
 ### Error in 4.4:
 ```r
@@ -151,8 +151,8 @@ Correct logic: reverses digits, doubles even positions, subtracts 9 if needed, c
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 10 | 13 |
-| Q2: Data/Logic | 11 | 20 |
+| Q2: Data/Logic | 12 | 20 |
 | Q3: Simulation | 12 | 15 |
-| Q4: Functions | 21 | 25 |
+| Q4: Functions | 22 | 25 |
 | Q5: Luhn Algorithm | 25 | 25 |
-| **TOTAL** | **81** | **100** |
+| **TOTAL** | **83** | **100** |

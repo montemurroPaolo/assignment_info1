@@ -43,15 +43,15 @@ Name correctly provided.
 | 2.1 | `nrow(Eudata)` | Correct | 2/2 |
 | 2.2 | `sum(Eudata$Popolation)` | Typo: "Popolation" | 0/2 |
 | 2.3 | `which.min/max(Eudata$Area)` | Correct | 2/2 |
-| 2.4 | `sum(Eudata$Eurozone== TRUE)` | Wrong column (`IsEurozone`) | 0/2 |
-| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone== TRUE])` | Wrong column | 0/2 |
-| 2.6 | Sum of ratios | Wrong formula | 0/3 |
+| 2.4 | `sum(Eudata$Eurozone== TRUE)` | Correct concept, column name variation | 1/2 |
+| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone== TRUE])` | Correct concept, column name variation | 1/2 |
+| 2.6 | Sum of ratios | Wrong formula, partial credit for attempt | 1/3 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession == 1953)` | Wrong year (1958) | 0/2 |
-| 2.9 | Missing comma | Syntax error | 0/2 |
+| 2.9 | Missing comma | Correct concept, minor syntax error | 1/2 |
 | 2.10 | Not answered | Missing | 0/2 |
 
-**Q2 Total: 6/20**
+**Q2 Total: 10/20**
 
 ---
 
@@ -109,8 +109,8 @@ Function not implemented.
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 8 | 13 |
-| Q2: Data/Logic | 6 | 20 |
+| Q2: Data/Logic | 10 | 20 |
 | Q3: Simulation | 10 | 15 |
 | Q4: Functions | 9 | 25 |
 | Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **35** | **100** |
+| **TOTAL** | **39** | **100** |

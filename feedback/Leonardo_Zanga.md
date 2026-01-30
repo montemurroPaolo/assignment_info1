@@ -46,13 +46,13 @@ v1[length(v1)]  # Gets last element of v1
 | 2.3 | `which.min/max(Eudata$Area)` | Correct | 2/2 |
 | 2.4 | `Sum(Eudata$Eurozone==TRUE)` | `Sum` doesn't exist (case!), wrong column | 0/2 |
 | 2.5 | `sum(Eudata$GDP[Eudata$Eurozone])` | Wrong column name | 1/2 |
-| 2.6 | Sum of ratios | Wrong formula | 0/3 |
+| 2.6 | Sum of ratios | Wrong formula, partial credit for attempt | 1/3 |
 | 2.7 | `min(Eudata$Accesion)` | Typo: "Accesion" | 1/2 |
 | 2.8 | Uses CountyName | Should count, not sum names | 0/2 |
 | 2.9 | `Eudata[...=='UK',]` | KEEPS UK instead of removing | 0/2 |
 | 2.10 | Incomplete | Wrong approach | 0/2 |
 
-**Q2 Total: 6/20**
+**Q2 Total: 7/20**
 
 ### Critical Error in 2.9:
 ```r
@@ -88,11 +88,11 @@ Eudata <- Eudata[Eudata$CountyName != 'United Kingdom', ]
 | 4.1 | Function with print() | Works but should use return() | 3/3 |
 | 4.2 | `f(1)` | Correct | 2/2 |
 | 4.3 | `plot(f,2,-2)` | Arguments reversed | 3/4 |
-| 4.4 | optim with BFGS | Should extract $par | 4/6 |
+| 4.4 | optim with BFGS | Correct optim usage, minor extraction issue | 5/6 |
 | 4.5 | Uses optim again | Should implement grid search manually | 0/6 |
 | 4.6 | "because i have add upper..." | Incomplete answer | 0/4 |
 
-**Q4 Total: 12/25**
+**Q4 Total: 13/25**
 
 ### What 4.5 should look like:
 ```r
@@ -118,8 +118,8 @@ Function is incomplete and has major syntax errors. The logic was not properly i
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 8 | 13 |
-| Q2: Data/Logic | 6 | 20 |
+| Q2: Data/Logic | 7 | 20 |
 | Q3: Simulation | 13 | 15 |
-| Q4: Functions | 12 | 25 |
+| Q4: Functions | 13 | 25 |
 | Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **41** | **100** |
+| **TOTAL** | **43** | **100** |

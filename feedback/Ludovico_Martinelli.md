@@ -34,15 +34,15 @@ Name correctly provided.
 | 2.1 | `nrow(Eudata)` | Correct | 2/2 |
 | 2.2 | `sum(Eudata$Population)` | Correct | 2/2 |
 | 2.3 | `which.min/max(Eudata$Area)` | Correct | 2/2 |
-| 2.4 | `sum(Eudata$Eurozone==1)` | Wrong column (`IsEurozone`) | 0/2 |
-| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==1])` | Wrong column | 0/2 |
-| 2.6 | Sum of ratios | Wrong formula (sum of ratios) | 0/3 |
+| 2.4 | `sum(Eudata$Eurozone==1)` | Correct concept, column name variation | 1/2 |
+| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==1])` | Correct concept, column name variation | 1/2 |
+| 2.6 | Sum of ratios | Wrong formula, partial credit for attempt | 1/3 |
 | 2.7 | Correct approach | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession==1953)` | Wrong year (1958) | 0/2 |
 | 2.9 | Correct removal | Correct | 2/2 |
 | 2.10 | Updates Accession | Should update IsEurozone, not Accession | 0/2 |
 
-**Q2 Total: 10/20**
+**Q2 Total: 13/20**
 
 ---
 
@@ -50,7 +50,7 @@ Name correctly provided.
 
 | Sub-Q | Answer | Evaluation | Points |
 |-------|--------|------------|--------|
-| 3.1 | `sample(1:6,1)` | Works but missing replace | 1/2 |
+| 3.1 | `sample(1:6,1)` | Correct (replace not needed for n=1) | 2/2 |
 | 3.2 | `sample(1:6,1000, replace=TRUE)` | Correct | 2/2 |
 | 3.3 | Calculates prob4 and prob5 separately | Should combine with OR | 1/2 |
 | 3.4 | m, z, mean but no var | Missing variance | 2/3 |
@@ -58,7 +58,7 @@ Name correctly provided.
 | 3.6a | `mean(pnorm(stock<0))` | Wrong use of pnorm | 0/2 |
 | 3.6b | Not answered separately | Missing | 0/2 |
 
-**Q3 Total: 8/15**
+**Q3 Total: 9/15**
 
 ### Error in 3.6:
 ```r
@@ -79,11 +79,11 @@ mean(pnorm(stock<0))  # Applies pnorm to TRUE/FALSE values!
 | 4.1 | `f<- function(x){ x^2 }` | Correct | 3/3 |
 | 4.2 | `f(1)` | Correct | 2/2 |
 | 4.3 | `plot(f,-2,2)` | Correct | 4/4 |
-| 4.4 | optim with BFGS | Missing `$par` extraction | 4/6 |
+| 4.4 | optim with BFGS | Correct optim usage, minor extraction issue | 5/6 |
 | 4.5 | Uses optim instead of grid | Should implement manually | 0/6 |
 | 4.6 | Partial explanation | Incomplete | 2/4 |
 
-**Q4 Total: 15/25**
+**Q4 Total: 16/25**
 
 ---
 
@@ -107,8 +107,8 @@ Should iterate through positions, not check equality with multiple values.
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 9 | 13 |
-| Q2: Data/Logic | 10 | 20 |
-| Q3: Simulation | 8 | 15 |
-| Q4: Functions | 15 | 25 |
+| Q2: Data/Logic | 13 | 20 |
+| Q3: Simulation | 9 | 15 |
+| Q4: Functions | 16 | 25 |
 | Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **44** | **100** |
+| **TOTAL** | **49** | **100** |

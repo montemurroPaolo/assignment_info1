@@ -34,15 +34,15 @@ Name correctly provided.
 | 2.1 | `nrow(Eudata)` | Correct | 2/2 |
 | 2.2 | `sum(Eudata$Population)` | Correct | 2/2 |
 | 2.3 | `which.min/max(Eudata$Area)` | Correct | 2/2 |
-| 2.4 | `sum(Eudata$Eurozone==TRUE)` | Wrong column (`IsEurozone`) | 0/2 |
-| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==TRUE])` | Wrong column | 0/2 |
+| 2.4 | `sum(Eudata$Eurozone==TRUE)` | Correct concept, column name variation | 1/2 |
+| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==TRUE])` | Correct concept, column name variation | 1/2 |
 | 2.6 | Complete with `*10^6` | Excellent formula! (wrong column) | 2/3 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession==1953)` | Wrong year (1958) | 0/2 |
 | 2.9 | Correct removal | Correct | 2/2 |
 | 2.10 | Not completed | Missing | 0/2 |
 
-**Q2 Total: 12/20**
+**Q2 Total: 14/20**
 
 ### Excellent work on 2.6 (despite wrong column):
 ```r
@@ -57,7 +57,7 @@ GDP_per_capita_total <- total_GDP_euros / total_population
 
 | Sub-Q | Answer | Evaluation | Points |
 |-------|--------|------------|--------|
-| 3.1 | `sample(1:6,1)` | Missing replace=TRUE | 1/2 |
+| 3.1 | `sample(1:6,1)` | Correct (replace not needed for n=1) | 2/2 |
 | 3.2 | `sample(1:6,1000,replace=TRUE)` | Correct | 2/2 |
 | 3.3 | `(length(p4)+length(p5))/1000` | Correct | 2/2 |
 | 3.4 | m, z, mean(z), var(z) | Complete | 3/3 |
@@ -65,7 +65,7 @@ GDP_per_capita_total <- total_GDP_euros / total_population
 | 3.6a | `sum(stock<0)/length(stock)` | Correct | 2/2 |
 | 3.6b | `pnorm(0,mean=0.12,sd=0.2)` | Correct | 2/2 |
 
-**Q3 Total: 14/15**
+**Q3 Total: 15/15**
 
 ---
 
@@ -132,8 +132,8 @@ Issues:
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 9 | 13 |
-| Q2: Data/Logic | 12 | 20 |
-| Q3: Simulation | 14 | 15 |
+| Q2: Data/Logic | 14 | 20 |
+| Q3: Simulation | 15 | 15 |
 | Q4: Functions | 21 | 25 |
 | Q5: Luhn Algorithm | 15 | 25 |
-| **TOTAL** | **73** | **100** |
+| **TOTAL** | **76** | **100** |

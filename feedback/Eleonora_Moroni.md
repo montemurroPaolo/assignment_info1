@@ -47,15 +47,15 @@ log10(sin(2)/exp(2))
 | 2.1 | `#28` (hardcoded) | Should use nrow(Eudata) | 1/2 |
 | 2.2 | `sum(Eudata$Population)` | Correct | 2/2 |
 | 2.3 | `Eudata$Population[min(Eudata$Area)]` | Wrong: uses min() as index, not which.min() | 0/2 |
-| 2.4 | `sum(Eudata$Eurozone==1)` | Wrong column (should be `IsEurozone`) | 0/2 |
-| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==1])` | Wrong column name | 0/2 |
+| 2.4 | `sum(Eudata$Eurozone==1)` | Correct concept, column name variation | 1/2 |
+| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==1])` | Correct concept, column name variation | 1/2 |
 | 2.6 | a) and b) present, c) missing | Formula correct but incomplete | 2/3 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession==1953)` | Wrong year (EU founded 1958, not 1953) | 0/2 |
 | 2.9 | `Eudata[Eudata$Country != "UK"]` | Missing comma (syntax error) | 1/2 |
 | 2.10 | Not answered | Missing | 0/2 |
 
-**Q2 Total: 8/20**
+**Q2 Total: 10/20**
 
 ### Error in 2.3:
 ```r
@@ -73,7 +73,7 @@ Eudata$Population[which.max(Eudata$Area)]
 
 | Sub-Q | Answer | Evaluation | Points |
 |-------|--------|------------|--------|
-| 3.1 | `sample(1:6,1)` | Works but missing replace=TRUE | 1/2 |
+| 3.1 | `sample(1:6,1)` | Correct (replace not needed for n=1) | 2/2 |
 | 3.2 | `k<-sample(1:6,1000, replace=TRUE)` | Correct | 2/2 |
 | 3.3 | Function with parenthesis issue | Partial - logic correct, syntax error | 1/2 |
 | 3.4 | m, z created | Missing mean(z) and var(z) output | 1/3 |
@@ -81,7 +81,7 @@ Eudata$Population[which.max(Eudata$Area)]
 | 3.6a | `sum(stock<0)/length(stock)` | Correct | 2/2 |
 | 3.6b | Not answered | Missing pnorm() | 0/2 |
 
-**Q3 Total: 9/15**
+**Q3 Total: 10/15**
 
 ### Error in 3.3:
 ```r
@@ -132,8 +132,8 @@ Function not implemented.
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 9 | 13 |
-| Q2: Data/Logic | 8 | 20 |
-| Q3: Simulation | 9 | 15 |
+| Q2: Data/Logic | 10 | 20 |
+| Q3: Simulation | 10 | 15 |
 | Q4: Functions | 7 | 25 |
 | Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **35** | **100** |
+| **TOTAL** | **38** | **100** |

@@ -85,21 +85,21 @@
 | Metric | Value |
 |--------|-------|
 | Number of Students | 16 |
-| Mean Score | 53.6 / 100 |
-| Median Score | 45.0 / 100 |
-| Standard Deviation | 17.8 |
-| Minimum Score | 30 / 100 |
-| Maximum Score | 82 / 100 |
-| Pass Rate (>= 50) | 50% (8/16) |
+| Mean Score | 55.9 / 100 |
+| Median Score | 47.5 / 100 |
+| Standard Deviation | 17.5 |
+| Minimum Score | 31 / 100 |
+| Maximum Score | 83 / 100 |
+| Pass Rate (>= 50) | 56% (9/16) |
 
 ### Score Distribution
 
 ```
-30-39:  ████ (4 students)
+30-39:  ███ (3 students)
 40-49:  █████ (5 students)
 50-59:  █ (1 student)
 60-69:  █ (1 student)
-70-79:  ███ (3 students)
+70-79:  ████ (4 students)
 80-89:  ██ (2 students)
 90-100: (0 students)
 ```
@@ -109,10 +109,10 @@
 | Question | Max | Mean | Median | % of Max |
 |----------|-----|------|--------|----------|
 | Q0: Name | 2 | 2.0 | 2 | 100% |
-| Q1: R Basics | 13 | 8.8 | 9 | 67% |
-| Q2: Data/Logic | 20 | 9.4 | 9.5 | 47% |
-| Q3: Simulation | 15 | 11.7 | 13 | 78% |
-| Q4: Functions | 25 | 13.4 | 14 | 54% |
+| Q1: R Basics | 13 | 8.8 | 9 | 68% |
+| Q2: Data/Logic | 20 | 11.1 | 11.5 | 56% |
+| Q3: Simulation | 15 | 11.8 | 13 | 79% |
+| Q4: Functions | 25 | 14.1 | 14.5 | 56% |
 | Q5: Luhn | 25 | 8.3 | 0 | 33% |
 
 ### Q5 Luhn Algorithm Completion
@@ -143,17 +143,19 @@
 
 ### Q2: Data and Logical Conditions
 
-1. **Wrong column name for Eurozone**
+1. **Column name variation for Eurozone**
    - Students used `Eurozone` instead of `IsEurozone`
-   - The CSV column is named `IsEurozone`
+   - Partial credit (1/2) awarded for correct logic with column name variation
 
 2. **GDP per capita formula error**
    - Wrong: `sum(GDP/Population)` (sum of individual ratios)
    - Correct: `sum(GDP) / sum(Population)` (ratio of totals)
+   - Partial credit (1/3) awarded for attempt with wrong formula
 
-3. **EU founding year confusion**
-   - Many students answered 1953 (Treaty of Paris / ECSC)
-   - Correct answer: 1958 (Treaty of Rome / EEC)
+3. **EU founding year - hardcoded value**
+   - Many students hardcoded `1953` in Q2.8 based on historical knowledge
+   - Should derive the year from the data: `min(Eudata$Accession)` returns 1958
+   - Then use that value: `sum(Eudata$Accession == min(Eudata$Accession))`
 
 4. **CountyName column typo**
    - The CSV contains `CountyName` (typo in data)
@@ -161,11 +163,13 @@
 
 5. **Subsetting syntax errors**
    - Missing comma: `Eudata[condition]` instead of `Eudata[condition, ]`
+   - Partial credit (1/2) awarded for correct logic with minor syntax error
 
 ### Q3: Simulation and Probability
 
-1. **Missing `replace=TRUE`**
-   - For dice simulation, replacement is needed
+1. **`replace=TRUE` requirement**
+   - Q3.1 (single roll): `replace=TRUE` NOT required - full credit given
+   - Q3.2 (1000 rolls): `replace=TRUE` IS required - `sample(1:6, 1000)` fails
 
 2. **Variance calculation omitted**
    - Many calculated `mean(z)` but forgot `var(z)`
@@ -180,11 +184,15 @@
    - Some students minimized `-f(x)` which finds the MAXIMUM
    - Should minimize `f(x)` directly
 
-2. **Grid search not implemented**
-   - Many reused `optim()` instead of manual grid search
-   - Correct approach: `x <- seq(-2, 2, length.out=100); x[which.min(sapply(x, f))]`
+2. **optim result extraction**
+   - Students who called `optim()` correctly but didn't extract `$par` received partial credit (5/6)
+   - The optimization was performed correctly; minor extraction issue
 
-3. **Missing explanation for Q4.6**
+3. **Grid search not implemented**
+   - Many reused `optim()` instead of manual grid search
+   - Correct approach: `x <- seq(-2, 2, length.out=100); x[which.min(f(x))]`
+
+4. **Missing explanation for Q4.6**
    - Expected: "optim uses continuous optimization; grid search evaluates discrete points"
 
 ### Q5: Luhn Algorithm
@@ -205,22 +213,22 @@
 
 | Rank | Student | Total |
 |------|---------|-------|
-| 1 | Damiano Spiatta | 82 |
-| 2 | Erica Trofimov | 81 |
-| 3 | Malak El Fatih | 76 |
-| 4 | Lisa Dellerba | 75 |
-| 5 | Samuel Boccomino | 73 |
-| 6 | Guano Anderson | 64 |
-| 7 | Filippo Manachino | 55 |
-| 8 | Stefano Laureti | 46 |
-| 9 | Ludovico Martinelli | 44 |
-| 10 | Matteo Zucchi | 42 |
-| 11 | Assiya Mokabbal | 41 |
-| 11 | Leonardo Zanga | 41 |
-| 13 | Nicholas Serantoni | 37 |
-| 14 | Eleonora Moroni | 35 |
-| 14 | Matteo Gangi | 35 |
-| 16 | Anna Bonera | 30 |
+| 1 | Erica Trofimov | 83 |
+| 2 | Damiano Spiatta | 82 |
+| 3 | Lisa Dellerba | 78 |
+| 4 | Malak El Fatih | 77 |
+| 5 | Samuel Boccomino | 76 |
+| 6 | Guano Anderson | 66 |
+| 7 | Filippo Manachino | 59 |
+| 8 | Ludovico Martinelli | 49 |
+| 9 | Stefano Laureti | 46 |
+| 10 | Matteo Zucchi | 45 |
+| 11 | Assiya Mokabbal | 44 |
+| 12 | Leonardo Zanga | 43 |
+| 13 | Matteo Gangi | 39 |
+| 13 | Nicholas Serantoni | 39 |
+| 15 | Eleonora Moroni | 38 |
+| 16 | Anna Bonera | 31 |
 
 ---
 

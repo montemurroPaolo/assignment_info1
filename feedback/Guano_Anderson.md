@@ -43,15 +43,15 @@ Name correctly provided.
 | 2.1 | `nrow(Eudata)` | Correct | 2/2 |
 | 2.2 | `sum(Eudata$Population)` | Correct | 2/2 |
 | 2.3 | `which.min/max(Eudata$Area)` | Correct | 2/2 |
-| 2.4 | `sum(Eudata$Eurozone==1)` | Wrong column (`IsEurozone`) | 0/2 |
-| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==1])` | Wrong column | 0/2 |
+| 2.4 | `sum(Eudata$Eurozone==1)` | Correct concept, column name variation | 1/2 |
+| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==1])` | Correct concept, column name variation | 1/2 |
 | 2.6 | Complete with `*1e6` | Good formula but wrong column | 2/3 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession==1953)` | Wrong year (1958) | 0/2 |
 | 2.9 | `subset(Eudata,Code != "GB")` | Different code, might work | 1/2 |
 | 2.10 | Not completed | Missing | 0/2 |
 
-**Q2 Total: 11/20**
+**Q2 Total: 13/20**
 
 ---
 
@@ -129,8 +129,8 @@ Issues:
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 9 | 13 |
-| Q2: Data/Logic | 11 | 20 |
+| Q2: Data/Logic | 13 | 20 |
 | Q3: Simulation | 13 | 15 |
 | Q4: Functions | 14 | 25 |
 | Q5: Luhn Algorithm | 15 | 25 |
-| **TOTAL** | **64** | **100** |
+| **TOTAL** | **66** | **100** |

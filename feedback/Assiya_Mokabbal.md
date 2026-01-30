@@ -47,15 +47,15 @@ log10(sin(2)/exp(2))
 | 2.1 | `nrow(Eudata)` | Correct | 2/2 |
 | 2.2 | `sum(Eudata$Population)` | Correct | 2/2 |
 | 2.3 | `which.min/max(Eudata$Area)` | Correct approach | 2/2 |
-| 2.4 | `sum(Eudata$Eurozone==TRUE)` | Wrong column name (should be `IsEurozone`) | 0/2 |
-| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone == TRUE])` | Wrong column name | 0/2 |
-| 2.6 | `sum(Eudata$GDP/Eudata$Population)` | Wrong formula (sum of ratios != ratio of sums) | 0/3 |
+| 2.4 | `sum(Eudata$Eurozone==TRUE)` | Correct concept, column name variation | 1/2 |
+| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone == TRUE])` | Correct concept, column name variation | 1/2 |
+| 2.6 | `sum(Eudata$GDP/Eudata$Population)` | Wrong formula, partial credit for attempt | 1/3 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession == 1953)` | Wrong year (founding was 1958) | 0/2 |
 | 2.9 | Correct concept but typo "Knigdom" | Partial credit | 1/2 |
 | 2.10 | `Eudata[Eudata$Eurozone == "Bulgaria"]` | Wrong approach entirely | 0/2 |
 
-**Q2 Total: 9/20**
+**Q2 Total: 12/20**
 
 ### Critical Error in 2.6:
 ```r
@@ -124,8 +124,8 @@ Function not implemented. Only the test data line was present.
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 9 | 13 |
-| Q2: Data/Logic | 9 | 20 |
+| Q2: Data/Logic | 12 | 20 |
 | Q3: Simulation | 12 | 15 |
 | Q4: Functions | 9 | 25 |
 | Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **41** | **100** |
+| **TOTAL** | **44** | **100** |

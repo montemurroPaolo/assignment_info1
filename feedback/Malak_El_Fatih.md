@@ -60,7 +60,7 @@ gdp_pc_noneuro <- sum(Eudata$GDP[Eudata$IsEurozone == 0]) * 1e6 /
 
 | Sub-Q | Answer | Evaluation | Points |
 |-------|--------|------------|--------|
-| 3.1 | `sample(1:6, 1)` | Works | 1/2 |
+| 3.1 | `sample(1:6, 1)` | Correct (replace not needed for n=1) | 2/2 |
 | 3.2 | `sample(1:6, 1000, replace=TRUE)` | Correct | 2/2 |
 | 3.3 | `mean(k == 4 \| k == 5)` | Correct | 2/2 |
 | 3.4 | m created, z missing | Incomplete | 1/3 |
@@ -68,7 +68,7 @@ gdp_pc_noneuro <- sum(Eudata$GDP[Eudata$IsEurozone == 0]) * 1e6 /
 | 3.6a | `mean(stock < 0)` | Correct | 2/2 |
 | 3.6b | `pnorm(0, mean=0.12, sd=0.2)` | Correct | 2/2 |
 
-**Q3 Total: 12/15**
+**Q3 Total: 13/15**
 
 ---
 
@@ -131,7 +131,7 @@ Correct algorithm with:
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 6 | 13 |
 | Q2: Data/Logic | 13 | 20 |
-| Q3: Simulation | 12 | 15 |
+| Q3: Simulation | 13 | 15 |
 | Q4: Functions | 18 | 25 |
 | Q5: Luhn Algorithm | 25 | 25 |
-| **TOTAL** | **76** | **100** |
+| **TOTAL** | **77** | **100** |

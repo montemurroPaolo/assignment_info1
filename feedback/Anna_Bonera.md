@@ -49,7 +49,7 @@ log10(sin(2)/exp(2))
 | 2.3 | `which.min/which.max` approach | Correct | 2/2 |
 | 2.4 | `sum(Eudata$Eurozone==TRUE)` | Correct | 2/2 |
 | 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==TRUE])` | Correct | 2/2 |
-| 2.6 | `sum(GDP/Population)` | **Wrong formula** | 0/3 |
+| 2.6 | `sum(GDP/Population)` | Wrong formula, partial credit for attempt | 1/3 |
 | 2.7 | *Not answered* | Missing - Should be `min(Eudata$Accession)` | 0/2 |
 | 2.8 | `sum(Eudata$Accession==1953)` | Correct | 2/2 |
 | 2.9 | *Not answered* | Missing | 0/2 |
@@ -64,7 +64,7 @@ sum(Eudata$GDP/Eudata$Population)  # Sums individual ratios
 sum(Eudata$GDP) * 1e6 / sum(Eudata$Population)  # Total GDP / Total Population
 ```
 
-**Q2 Total: 10/20**
+**Q2 Total: 11/20**
 
 ---
 
@@ -112,9 +112,9 @@ sum(Eudata$GDP) * 1e6 / sum(Eudata$Population)  # Total GDP / Total Population
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 9 | 13 |
-| Q2: Data/Logic | 10 | 20 |
+| Q2: Data/Logic | 11 | 20 |
 | Q3: Simulation | 4 | 15 |
 | Q4: Functions | 5 | 25 |
 | Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **30** | **100** |
+| **TOTAL** | **31** | **100** |
 

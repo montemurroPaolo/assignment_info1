@@ -47,15 +47,15 @@ log10(sin(2)/exp(2))
 | 2.1 | `nrow(Eudata)` | Correct | 2/2 |
 | 2.2 | `sum(Eudata$Population)` | Correct | 2/2 |
 | 2.3 | `which.min/which.max(Eudata$Area)` | Correct | 2/2 |
-| 2.4 | `sum(Eudata$Eurozone==1)` | Wrong column (`IsEurozone`) | 0/2 |
-| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==1])` | Wrong column | 0/2 |
+| 2.4 | `sum(Eudata$Eurozone==1)` | Correct concept, column name variation | 1/2 |
+| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==1])` | Correct concept, column name variation | 1/2 |
 | 2.6 | Good structure but wrong column | Correct logic, wrong column name | 2/3 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession==1953)` | Wrong year (should be 1958) | 0/2 |
 | 2.9 | `subset(Eudata, Code != "UK")` | Correct! | 2/2 |
 | 2.10 | Not answered | Missing | 0/2 |
 
-**Q2 Total: 12/20**
+**Q2 Total: 14/20**
 
 ---
 
@@ -63,7 +63,7 @@ log10(sin(2)/exp(2))
 
 | Sub-Q | Answer | Evaluation | Points |
 |-------|--------|------------|--------|
-| 3.1 | `sample(1:6, 1)` | Works but missing `replace=TRUE` | 1/2 |
+| 3.1 | `sample(1:6, 1)` | Correct (replace not needed for n=1) | 2/2 |
 | 3.2 | `k <- sample(1:6, 1000, replace=TRUE)` | Correct | 2/2 |
 | 3.3 | `mean(k==4\|k==5)` | Correct | 2/2 |
 | 3.4 | m, z, Expected, Variance | Complete | 3/3 |
@@ -71,7 +71,7 @@ log10(sin(2)/exp(2))
 | 3.6a | `mean(stock<0)` | Correct | 2/2 |
 | 3.6b | `pnorm(0, mean=0.12, sd=0.2)` | Correct | 2/2 |
 
-**Q3 Total: 14/15**
+**Q3 Total: 15/15**
 
 ---
 
@@ -82,11 +82,11 @@ log10(sin(2)/exp(2))
 | 4.1 | `f <- function(x){x^2}` | Correct | 3/3 |
 | 4.2 | `f(1)` | Correct | 2/2 |
 | 4.3 | `plot(x, f(x), type="l")` | Correct | 4/4 |
-| 4.4 | optim with L-BFGS-B | Missing `xmin <- $par` | 4/6 |
+| 4.4 | optim with L-BFGS-B | Correct optim usage, minor extraction issue | 5/6 |
 | 4.5 | `xmin_grid <- grid()` | Wrong: `grid()` is for graphics | 0/6 |
 | 4.6 | Not answered | Missing | 0/4 |
 
-**Q4 Total: 13/25**
+**Q4 Total: 14/25**
 
 ### Error in 4.4:
 ```r
@@ -139,8 +139,8 @@ The student's comments show understanding of what should happen but couldn't tra
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 9 | 13 |
-| Q2: Data/Logic | 12 | 20 |
-| Q3: Simulation | 14 | 15 |
-| Q4: Functions | 13 | 25 |
+| Q2: Data/Logic | 14 | 20 |
+| Q3: Simulation | 15 | 15 |
+| Q4: Functions | 14 | 25 |
 | Q5: Luhn Algorithm | 5 | 25 |
-| **TOTAL** | **55** | **100** |
+| **TOTAL** | **59** | **100** |
