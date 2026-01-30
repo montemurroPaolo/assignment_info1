@@ -1,0 +1,7864 @@
+# Exam "Informatica 2"
+, 2025-09-04
+# Peter Gruber and Paul Schneider
+# Rules
+# - Except for theoretical questions, all questions must be answered
+using R! …
+# - The exam takes 90 minutes and has 5 questions
+# - There are a total of 100 points
+# >>>>> SUBMIT your answers on iCorsi in time IMPORTANT!!! …
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+…
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+…
+37
+38
+39
+…
+40
+41
+42
+43
+44
+45
+46
+47
+<---
+# Material that you can use
+# - the R help function
+# - any printed material (open book)
+# Notes
+# - There are several ways how this exam can be solved.
+# - What counts are ...
+# + that your program works
+# + that you follow the instructions
+# + that the program fulfills the requirements
+# - We do not expect you to provide exactly the solution presented in
+class.
+# Tip:
+# - Use R to check your solution!
+################################################
+# 0: Your name (2 points) #
+################################################
+# 0.1 Write your name below as a comment
+# <Guano Anderson >
+################################################
+# 1: R basics (13 points) #
+################################################
+# 1.1 Create a vector v1 as defined in equation 1.1 on the Info Sheet. Do
+not use the c() command.
+v1<-seq(10,1,
+-1)
+v1
+# 1.2 Create a vector v2 as defined in equation 1.2 on the Info Sheet. Do
+not use the c() command.
+v2<-seq(3,30,3)
+v2
+# 1.3 Create a matrix M as defined in equation 1.3 on the Info Sheet.
+v3<-seq(1,291,10)
+v4<-seq(2,292,10)
+v5<-seq(3,293,10)
+v6<-seq(4,294,10)
+48
+v7<-seq(10,300,10)
+49
+50
+M<-rbind(v3,v4,v5,v6,v7)
+51
+M
+52
+# 1.4 Print the first row of M
+53
+M[1,]
+54
+# 1.5 Display the last element of v1. Tell R to "display the last element
+of x"
+, …
+55
+# regardless of the dimension of v1.
+56
+tail(v1,1)
+57
+# 1.6 Perform the calculations in equation 1.4 on the Info Sheet.
+58
+(12/(19-7))^(1/5)
+59
+60
+(log10(1)+log10(2))/((pi-1)/(pi-1))
+61
+62
+log10(sin(2)/exp(2))
+63
+# 1.7 Create a variable "u" with the value "ten to the power minus 5"
+64
+u<-10^5
+65
+# 1.8 If you would now run the line
+66
+print(U)
+67
+# you would get an error message. Which important concept of R is the
+reason …
+68
+# for this error? Answer in 1 sentence as a comment.
+69
+70
+## R is case sensitive,which means that u and V are two different
+variables …
+71
+72
+################################################
+73
+# 2: Data and Logical conditions (20 points) #
+74
+################################################
+75
+# The file "Eudata.csv" contains data about the (still 28) EU countries.
+76
+# The columns are: County Name, Code, Capital, Accession (=Year of
+membership), …
+77
+# Population, Area, GDP (in Million EUR), currency, IsEurozone (=1, if
+member) …
+78
+79
+80
+81
+# The following line loads the data into an R dataframe
+# Hunt: Use Session/Set Working Directory/To Source File Location
+Eudata <- read.table('Eudata.csv'
+, sep=";"
+,header=TRUE)
+82
+83
+84
+85
+head(Eudata)
+# 2.1 How many countries are there in the dataset?
+nrow(Eudata)
+86
+87
+88
+89
+90
+# 2.2 Calculate the total population of the EU
+sum(Eudata$Population)
+# 2.3 Print the population of the smallest and largest EU country by Area
+Eudata$Population[which.min(Eudata$Area)]# smallest
+91
+92
+Eudata$Population[which.max(Eudata$Area)]#Largest
+93
+94
+# 2.4 Calculate the number of countries that are members of the Eurozone
+95
+96
+sum(Eudata$Eurozone==1)
+# 2.5 Calculate the total GDP of all Eurozone members
+97
+98
+sum(Eudata$GDP[Eudata$Eurozone==1])
+99
+100
+# 2.6 Calculate the GDP per capita in euros
+# (a) of the total EU, (b) of the Eurozone (c) of the non-Eurozone
+101
+EU …
+102
+103
+104
+105
+106
+#a
+gdp_pc
+gdp_pc
+#b
+_
+Eu<-sum((Eudata$GDP)*1e6)/sum(Eudata$Population)
+Eu
+_
+107
+108
+gdp_pc
+_
+EZ<-(sum(Eudata$GDP[Eudata$Eurozone==1])*1e6)/sum(Eudata$
+Population[Eudata$Eurozone==1]) …
+109
+gdp_pc
+EZ
+_
+110
+#c
+111
+gdp_pc
+no
+Eu
+_
+_
+_
+memb<-(sum(Eudata$GDP[Eudata$Eurozone==0])*1e6)/sum(Eudata$
+Population[Eudata$Eurozone==0]) …
+112
+gdp_pc
+no
+Eu
+memb
+_
+_
+_
+113
+# 2.7 When was the EU founded?
+114
+# Hint: this must be the earliest year in which any country became a
+…
+member
+115
+min(Eudata$Accession)
+116
+# 2.8 Calculate the number of EU founding members
+117
+sum(Eudata$Accession==1953)
+118
+# 2.9 Only now you discover that the data set still contains the UK.
+119
+# Permanently remove the UK from the dataframe "Eudata"
+120
+Eudata<-subset(Eudata,Code != "GB")
+121
+# 2.10 You also discover that Bulgaria actually joined the Euro on 1st
+…
+January 2026.
+122
+# Permanently update the dataframe "Eudata" accordingly.
+123
+124
+125
+126
+################################################
+127
+# 3: Simulation and probability (15 points) #
+128
+################################################
+129
+# 3.1 Use R to produce one roll of a dice.
+130
+One
+roll
+_
+_
+dice<-sample(1:6,1,T)
+131
+One
+roll
+dice
+_
+_
+132
+# 3.2 Create a vector called "k" that contains 1000 rolls of a dice
+133
+k<-sample(1:6,1000,T)
+134
+# 3.3 Using "k" from (3.2), estimate the probability of obtaining
+135
+# a "4" or "5" from a dice
+136
+mean(k==4 | k==5)
+137
+# 3.4 Create a vector called "m" that contains 1000 (different) rolls of
+a dice …
+138
+# Using "k" and "m" from (3.2) and (3.4), estimate the expected value
+139
+# and variance of the random variable z = 2k-m
+140m<-sample(1:6,1000,T)
+141
+z<-2*k-m
+142
+z
+143
+# 3.5 Assume the yearly stock return to be normally distributed with a
+mean of 0.12 and …
+144
+# a standard deviation of 0.2. Create a variable "stock" with 100
+draws of stock returns …
+145
+stock<-rnorm(100,0.12,0.2)
+146
+stock
+147
+# 3.6 What is the probability of a negative stock return?
+148
+# Answer this question ...
+149
+# (a) by using the variable "stock" from (3.5)
+150
+mean(stock<0)
+151
+152
+# (b) by calculating the (theoretical) probability for a normal
+distribution …
+153
+pnorm(0,mean = 0.12,sd=0.2)
+154
+155
+156
+157
+158
+################################################
+# 4: Functions and Optimization (25 points)#
+################################################
+# 4.1 Create the function f(x)=x^2 in R
+159
+160
+161
+f<-function(x){
+x^2
+162
+163
+164
+165
+166
+167
+}
+# 4.2 Calculate the value of f for x=1
+f(1)
+# 4.3 Create a plot of the function for the interval [-2, 2]
+# If in doubt, type "?plot" to get the help file for the function
+curve(f,from = -2,to=2)
+168
+169
+# 4.4 Numerically, by using R, find the location of the minimum using the
+optim …
+170
+# function. Store the result of your minimization (the location of
+the minimum) …
+171
+# in a variable called xmin
+172
+res<-optim(par=0,fn=f,method = "BFGS")
+173
+ximin<-res$par
+174
+# 4.5 Now try to find the location of the minimum by implementing a grid
+search …
+175
+# yourself. Choose N=100 grid points. Search in an interval between
+…
+-2 and 2.
+176
+# Store the result of your minimization (the location of the minimum)
+in a …
+177
+# variable called xmin
+_grid
+178
+179
+grid
+_
+search<-optim(par = 0, fn= f, gr = 100, method = "L-BFGS-B"
+, lower =
+-2, upper = 2) …
+180
+xmin
+_grid<-
+181
+optim()
+182
+# 4.6 Answer in a short comment (<= 2 sentences). The results from (4.4)
+and (4.5) …
+183
+# are not identical. Why?
+184
+185
+186
+####################################################
+187
+# 5: Functions and algorithms (25 points) #
+188
+####################################################
+189
+# 5.1 The Luhn Algorithm is used to check whether a credit card number
+is valid. It goes …
+190
+# like this
+191
+# a) process individual digits from right to left
+192
+# b) leave digits number 1,3,5 etc (counted from right) unchanged
+193
+# c) multiply digits 2,3,6 etc (counted from right) by 2
+194
+# d) if a digit (after multiplying by 2) is larger than 9, subtract
+9 …
+195
+# e) calculate the sum of all (processed) digits
+196
+# IF the result can be divided by 10, the number is a valid credit
+…
+card number
+197
+#
+198
+# Example: 63487
+199
+# Right to left: do not change 7, multiply 8 by 2 and subtract 9, do
+not change 4, …
+200
+# multiply 3 by 2 and do not subtract anything, do
+not change 6 …
+201
+# 7 + 8*2-9 + 4 + 3*2 + 6 = 30 --> the number is
+valid …
+202
+# Hint: The operation x %% y yields the remainder of the division
+…
+x/y.
+203
+# For instance, 7 %% 4 gives 3
+204
+205
+# Write a function called checkLuhn that takes as argument a vector of
+individual digits …
+206
+# and returns TRUE if the number is a valid number and FALSE if it is not
+…
+valid.
+207
+# The follwing line takes a *valid* credit card number and creates a
+…
+vector with single digits.
+208
+# You can use this to test your function
+209
+# Hint: digits contains the numbers from LEFT to RIGHT, while the Luhn
+algorithm works from …
+210
+# right to left.
+211
+digits <- as.numeric(unlist(strsplit("5019717010103742"
+,
+"")))
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+checkLuhn<-function(v1){
+v1<-c(6,3,4,8,7)
+value<-length(v1)
+index<-1
+somma<-0
+while (value>=1) {
+if(index%%2==0){
+v1[value]<-v1[value]*2
+if(v1[value]>9){
+v1[value]<-v1[value]-9
+223
+}
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+}
+somma<-somma+v1[value]
+value<-value-1
+index<-index+1
+}
+if(somma%%10==0){
+return(TRUE)
+}else{
+return(FALSE)
+}
+}
+checkLuhn(digits)
+# Exam "Informatica 2"
+, 2025-09-04
+# Peter Gruber and Paul Schneider
+1
+2
+3
+4
+# Rules
+5
+# - Except for theoretical questions, all questions must be answered
+using R! …
+6
+# - The exam takes 90 minutes and has 5 questions
+7
+# - There are a total of 100 points
+8
+# >>>>> SUBMIT your answers on iCorsi in time IMPORTANT!!! …
+<---
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+…
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+…
+37
+38
+…
+39
+40
+41
+42
+43
+44
+# Material that you can use
+# - the R help function
+# - any printed material (open book)
+# Notes
+# - There are several ways how this exam can be solved.
+# - What counts are ...
+# + that your program works
+# + that you follow the instructions
+# + that the program fulfills the requirements
+# - We do not expect you to provide exactly the solution presented in
+class.
+# Tip:
+# - Use R to check your solution!
+################################################
+# 0: Your name (2 points) #
+################################################
+# 0.1 Write your name below as a comment
+# <your name>
+#Anna Bonera
+################################################
+# 1: R basics (13 points) #
+################################################
+# 1.1 Create a vector v1 as defined in equation 1.1 on the Info Sheet. Do
+not use the c() command.
+v1 <- seq(10,1,
+-1)
+# 1.2 Create a vector v2 as defined in equation 1.2 on the Info Sheet. Do
+not use the c() command.
+v2 <- seq(3,30,3)
+# 1.3 Create a matrix M as defined in equation 1.3 on the Info Sheet.
+# 1.4 Print the first row of M
+# 1.5 Display the last element of v1. Tell R to "display the last element
+of x"
+, …
+45
+# regardless of the dimension of v1.
+46tail(v1,1)
+47
+# 1.6 Perform the calculations in equation 1.4 on the Info Sheet.
+48
+(12/(19-7))^(1/5)
+49
+(log(1)+log(2))/((pi+1)/(pi-1))
+50
+log((sin(2))/exp(2))
+51
+# 1.7 Create a variable "u" with the value "ten to the power minus 5"
+52
+u <- (10)^(-5)
+53
+# 1.8 If you would now run the line
+54
+# print(U)
+55
+# you would get an error message. Which important concept of R is the
+reason …
+56
+# for this error? Answer in 1 sentence as a comment.
+57
+58
+because the name of variables are case sensitive, so U is not the same as
+u …
+59
+################################################
+60
+# 2: Data and Logical conditions (20 points) #
+61
+################################################
+62
+# The file "Eudata.csv" contains data about the (still 28) EU countries.
+63
+# The columns are: County Name, Code, Capital, Accession (=Year of
+membership), …
+64
+# Population, Area, GDP (in Million EUR), currency, IsEurozone (=1, if
+member) …
+65
+66
+67
+68
+# The following line loads the data into an R dataframe
+# Hunt: Use Session/Set Working Directory/To Source File Location
+Eudata <- read.table('Eudata.csv'
+, sep=";"
+,header=TRUE)
+69
+70
+# 2.1 How many countries are there in the dataset?
+71
+72
+# 2.2 Calculate the total population of the EU
+73
+sum(Eudata$Population)
+74
+# 2.3 Print the population of the smallest and largest EU country by Area
+75
+sum(Eudata$Population[which.min(Eudata$Area)])
+76
+sum((Eudata$Population[which.max(Eudata$Area)]))
+77
+# 2.4 Calculate the number of countries that are members of the Eurozone
+78
+sum(Eudata$Eurozone==TRUE)
+79
+# 2.5 Calculate the total GDP of all Eurozone members
+80
+sum(Eudata$GDP[Eudata$Eurozone==TRUE])
+81
+# 2.6 Calculate the GDP per capita in euros
+82
+# (a) of the total EU, (b) of the Eurozone (c) of the non-Eurozone
+EU …
+83
+sum(Eudata$GDP/Eudata$Population)
+84
+sum(Eudata$GDP[Eudata$Eurozone==TRUE]/Eudata$Population[Eudata$Eurozone==
+TRUE]) …
+85
+sum(Eudata$GDP[Eudata$Eurozone==FALSE]/Eudata$Population[Eudata$Eurozone=
+=FALSE]) …
+86
+# 2.7 When was the EU founded?
+87
+# Hint: this must be the earliest year in which any country became a
+member …
+88
+89
+90
+# 2.8 Calculate the number of EU founding members
+EU
+_
+founding_
+members= sum(Eudata$Accession==1953)
+91
+92
+93
+# 2.9 Only now you discover that the data set still contains the UK.
+# Permanently remove the UK from the dataframe "Eudata"
+94
+95
+# 2.10 You also discover that Bulgaria actually joined the Euro on 1st
+…
+96
+January 2026.
+# Permanently update the dataframe "Eudata" accordingly.
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+################################################
+# 3: Simulation and probability (15 points) #
+################################################
+# 3.1 Use R to produce one roll of a dice.
+dice=sample(1:6,1)
+# 3.2 Create a vector called "k" that contains 1000 rolls of a dice
+k <- sample(1:6,1000,replace = TRUE)
+# 3.3 Using "k" from (3.2), estimate the probability of obtaining
+# a "4" or "5" from a dice
+109
+110
+# 3.4 Create a vector called "m" that contains 1000 (different) rolls of
+a dice …
+111
+# Using "k" and "m" from (3.2) and (3.4), estimate the expected value
+112
+# and variance of the random variable z = 2k-m
+113
+114
+# 3.5 Assume the yearly stock return to be normally distributed with a
+mean of 0.12 and …
+115
+# a standard deviation of 0.2. Create a variable "stock" with 100
+draws of stock returns …
+116
+117
+# 3.6 What is the probability of a negative stock return?
+118
+# Answer this question ...
+119
+# (a) by using the variable "stock" from (3.5)
+120
+# (b) by calculating the (theoretical) probability for a normal
+distribution …
+121
+122
+123
+124
+125
+126
+127
+128
+129
+################################################
+# 4: Functions and Optimization (25 points)#
+################################################
+# 4.1 Create the function f(x)=x^2 in R
+f <- function(x){x^2}
+# 4.2 Calculate the value of f for x=1
+f(1)
+130
+131
+# 4.3 Create a plot of the function for the interval [-2, 2]
+# If in doubt, type "?plot" to get the help file for the function
+132
+133
+# 4.4 Numerically, by using R, find the location of the minimum using the
+optim …
+134
+# function. Store the result of your minimization (the location of
+the minimum) …
+135# in a variable called xmin
+136
+137
+# 4.5 Now try to find the location of the minimum by implementing a grid
+search …
+138
+# yourself. Choose N=100 grid points. Search in an interval between
+…
+-2 and 2.
+139
+# Store the result of your minimization (the location of the minimum)
+in a …
+140
+# variable called xmin
+_grid
+141
+142
+# 4.6 Answer in a short comment (<= 2 sentences). The results from (4.4)
+and (4.5) …
+143
+# are not identical. Why?
+144
+145
+146
+y####################################################
+147
+# 5: Functions and algorithms (25 points) #
+148
+####################################################
+149
+# 5.1 The Luhn Algorithm is used to check whether a credit card number
+is valid. It goes …
+150
+# like this
+151
+# a) process individual digits from right to left
+152
+# b) leave digits number 1,3,5 etc (counted from right) unchanged
+153
+# c) multiply digits 2,3,6 etc (counted from right) by 2
+154
+# d) if a digit (after multiplying by 2) is larger than 9, subtract
+9 …
+155
+# e) calculate the sum of all (processed) digits
+156
+# IF the result can be divided by 10, the number is a valid credit
+card number …
+157
+#
+158
+# Example: 63487
+159
+# Right to left: do not change 7, multiply 8 by 2 and subtract 9, do
+not change 4, …
+160
+# multiply 3 by 2 and do not subtract anything, do
+not change 6 …
+161
+# 7 + 8*2-9 + 4 + 3*2 + 6 = 30 --> the number is
+valid …
+162
+# Hint: The operation x %% y yields the remainder of the division
+x/y.
+…
+163
+# For instance, 7 %% 4 gives 3
+164
+165
+# Write a function called checkLuhn that takes as argument a vector of
+individual digits …
+166
+# and returns TRUE if the number is a valid number and FALSE if it is not
+valid.
+…
+167
+168
+# The follwing line takes a *valid* credit card number and creates a
+…
+vector with single digits.
+169
+# You can use this to test your function
+170
+# Hint: digits contains the numbers from LEFT to RIGHT, while the Luhn
+algorithm works from …
+171
+# right to left.
+172digits <- as.numeric(unlist(strsplit("5019717010103742"
+,
+"")))
+173
+174
+175
+# Exam "Informatica 2"
+, 2025-09-04
+# Peter Gruber and Paul Schneider
+# Rules
+# - Except for theoretical questions, all questions must be answered
+using R! …
+# - The exam takes 90 minutes and has 5 questions
+# - There are a total of 100 points
+# >>>>> SUBMIT your answers on iCorsi in time IMPORTANT!!! …
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+…
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+…
+37
+38
+39
+…
+40
+41
+42
+43
+44
+45
+46
+47
+<---
+# Material that you can use
+# - the R help function
+# - any printed material (open book)
+# Notes
+# - There are several ways how this exam can be solved.
+# - What counts are ...
+# + that your program works
+# + that you follow the instructions
+# + that the program fulfills the requirements
+# - We do not expect you to provide exactly the solution presented in
+class.
+# Tip:
+# - Use R to check your solution!
+################################################
+# 0: Your name (2 points) #
+################################################
+# 0.1 Write your name below as a comment
+# Spiatta Damiano
+################################################
+# 1: R basics (13 points) #
+################################################
+# 1.1 Create a vector v1 as defined in equation 1.1 on the Info Sheet. Do
+not use the c() command.
+v1<- 10:1
+v1
+# 1.2 Create a vector v2 as defined in equation 1.2 on the Info Sheet. Do
+not use the c() command.
+v2 <- seq(3,30, by = 3)
+v2
+# 1.3 Create a matrix M as defined in equation 1.3 on the Info Sheet.
+M <- matrix(1:300, nrow = 10, ncol = 30)
+head(M)
+# 1.4 Print the first row of M
+print(M[1,])
+# 1.5 Display the last element of v1. Tell R to "display the last element
+47…
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+…
+of x"
+,
+# regardless of the dimension of v1.
+print(v2[length(v2)])
+# 1.6 Perform the calculations in equation 1.4 on the Info Sheet.
+(12/(19-7)^(1/5)
+(log(1)+log(2))/((pi+1)/(pi-1))
+log(sin(2)/exp(2))
+# 1.7 Create a variable "u" with the value "ten to the power minus 5"
+u <- 10^(-5)
+# 1.8 If you would now run the line
+# print(U)
+# you would get an error message. Which important concept of R is the
+reason
+59
+# for this error? Answer in 1 sentence as a comment.
+60
+61
+…
+#R in case sensitive, capital letters are not equals as normal letter. v1
+is different than V1
+62
+63
+################################################
+64
+# 2: Data and Logical conditions (20 points) #
+65
+################################################
+66
+# The file "Eudata.csv" contains data about the (still 28) EU countries.
+67
+# The columns are: County Name, Code, Capital, Accession (=Year of
+membership), …
+68
+# Population, Area, GDP (in Million EUR), currency, IsEurozone (=1, if
+member) …
+69
+70
+71
+72
+# The following line loads the data into an R dataframe
+# Hunt: Use Session/Set Working Directory/To Source File Location
+Eudata <- read.table('Eudata.csv'
+, sep=";"
+,header=TRUE)
+73
+74
+# 2.1 How many countries are there in the dataset?
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+sum()
+# 2.2 Calculate the total population of the EU
+sum(myData$Population)
+# 2.3 Print the population of the smallest and largest EU country by Area
+myData$Population[which.min(myData$Area)]
+myData$Population[which.max(myData$Area)]
+# 2.4 Calculate the number of countries that are members of the Eurozone
+sum(myData$IsEurozone == 1)
+# 2.5 Calculate the total GDP of all Eurozone members
+sum(myData$GDP[myData$IsEurozone == 1])
+# 2.6 Calculate the GDP per capita in euros
+#(a) of the total EU,
+sum(myData$GDP) / sum(myData$Population)
+#(b) of the Eurozone
+sum(myData$GDP[myData$IsEurozone == 1]) /
+sum(myData$Population[myData$IsEurozone == 1])
+#(c) of the non-Eurozone EU
+sum(myData$GDP[myData$IsEurozone != 1]) /
+sum(myData$Population[myData$IsEurozone != 1])
+# 2.7 When was the EU founded?
+95
+# Hint: this must be the earliest year in which any country became a
+…
+96
+97
+98
+99
+100
+101
+102
+…
+103
+104
+member
+myData$Accession == min(myData$Accession[myData$IsEurozone != 1])
+# 2.8 Calculate the number of EU founding members
+EU
+_
+founders <- sum(myData$Accession == 1953)
+# 2.9 Only now you discover that the data set still contains the UK.
+# Permanently remove the UK from the dataframe "Eudata"
+Eudata[Eudata$CountryName != "United Kingdom"
+, ]
+# 2.10 You also discover that Bulgaria actually joined the Euro on 1st
+January 2026.
+# Permanently update the dataframe "Eudata" accordingly.
+Eudata$Eurozone[Eudata$CountryName == "Bulgaria"] <- TRUE
+105
+106
+107
+################################################
+108
+# 3: Simulation and probability (15 points) #
+109
+################################################
+110
+# 3.1 Use R to produce one roll of a dice.
+111
+dice <- sample(1:6, size = 1, replace = TRUE)
+112
+dice
+113
+# 3.2 Create a vector called "k" that contains 1000 rolls of a dice
+114
+n <- 1000
+115
+k <- c(sample(1:6, size = n, replace = TRUE))
+116
+k
+117
+# 3.3 Using "k" from (3.2), estimate the probability of obtaining
+118
+# a "4" or "5" from a dice
+119
+prob
+4
+or
+_
+_
+_
+5 <- mean(k %in% c(4, 5))
+120
+prob
+4
+or
+5
+_
+_
+_
+121
+# 3.4 Create a vector called "m" that contains 1000 (different) rolls of
+a dice …
+122
+# Using "k" and "m" from (3.2) and (3.4), estimate the expected value
+123
+# and variance of the random variable z = 2k-m
+124
+m <- sample(1:6, size = n, replace = TRUE)
+125
+z <- 2*k - m
+126
+127
+expected
+128
+expected
+129
+variance
+value
+value
+z
+_
+_
+z <- var(z)
+z <- mean(z)
+_
+_
+_
+130
+variance
+z
+_
+131
+# 3.5 Assume the yearly stock return to be normally distributed with a
+mean of 0.12 and …
+132
+# a standard deviation of 0.2. Create a variable "stock" with 100
+draws of stock returns …
+133
+stock <- rnorm(100, mean = 0.12, sd = 0.2)
+134
+# 3.6 What is the probability of a negative stock return?
+135
+# Answer this question ...
+136
+# (a) by using the variable "stock" from (3.5)
+137
+prob
+_
+neg_
+emp <- mean(stock<0)
+138
+print(prob
+_
+neg_
+emp)
+139
+# (b) by calculating the (theoretical) probability for a normal
+distribution …
+140prob
+_
+neg_
+theor <- pnorm(0,mean = 0.12, sd = 0.2)
+141
+print(prob
+_
+neg_
+theor)
+142
+143
+144
+145
+146
+147
+148
+################################################
+# 4: Functions and Optimization (25 points)#
+################################################
+# 4.1 Create the function f(x)=x^2 in R
+f <- function(x){
+x^2
+149
+}
+150
+# 4.2 Calculate the value of f for x=1
+151
+f(1)
+152
+# 4.3 Create a plot of the function for the interval [-2, 2]
+153
+# If in doubt, type "?plot" to get the help file for the function
+154
+x <- seq(-2, 2, length.out = 200)
+155
+y <- f(x)
+156
+plot(x, y, type = "l"
+, lwd = 2, main = "Plot of f(x) = x^2"
+,xlab = "x"
+,
+ylab = "f(x)") …
+157
+# 4.4 Numerically, by using R, find the location of the minimum using the
+…
+optim
+158
+# function. Store the result of your minimization (the location of
+the minimum) …
+159
+# in a variable called xmin
+160
+opt <- optim(0,f,method = "BFGS")
+161
+x
+_
+min = opt$par
+162
+y_
+min = opt$value
+163
+xmin <- list("min x" = x
+_
+min,
+"min y" = y_
+min)
+164
+print(xmin)
+165
+# 4.5 Now try to find the location of the minimum by implementing a grid
+search …
+166
+# yourself. Choose N=100 grid points. Search in an interval between
+…
+-2 and 2.
+167
+# Store the result of your minimization (the location of the minimum)
+in a …
+168
+# variable called xmin
+_grid
+169
+N <- 100
+170
+grid <- seq(-2, 2, length.out = N)
+171
+values <- f(grid)
+172
+173
+174
+x
+min
+_
+_grid <- grid[which.min(values)]
+y_
+min
+_grid <- min(values)
+175
+176
+177
+xmin
+_grid <- list("min x" = x
+min
+_
+_grid,
+print(xmin
+_grid)
+"min y" = y_
+min
+_grid)
+178
+179
+# 4.6 Answer in a short comment (<= 2 sentences). The results from (4.4)
+and (4.5) …
+180
+# are not identical. Why?
+181
+182
+# The results are not identical because optim searches in a continuous
+space, …
+183
+# while the grid search is limited to a finite set of discrete points.
+184
+185
+186
+####################################################
+187
+# 5: Functions and algorithms (25 points) #
+188
+####################################################
+189
+# 5.1 The Luhn Algorithm is used to check whether a credit card number
+is valid. It goes …
+190
+# like this
+191
+# a) process individual digits from right to left
+192
+# b) leave digits number 1,3,5 etc (counted from right) unchanged
+193
+# c) multiply digits 2,3,6 etc (counted from right) by 2
+194
+# d) if a digit (after multiplying by 2) is larger than 9, subtract
+9 …
+195
+# e) calculate the sum of all (processed) digits
+196
+# IF the result can be divided by 10, the number is a valid credit
+card number …
+197
+#
+198
+# Example: 63487
+199
+# Right to left: do not change 7, multiply 8 by 2 and subtract 9, do
+not change 4, …
+200
+# multiply 3 by 2 and do not subtract anything, do
+not change 6 …
+201
+# 7 + 8*2-9 + 4 + 3*2 + 6 = 30 --> the number is
+valid …
+202
+# Hint: The operation x %% y yields the remainder of the division
+…
+x/y.
+203
+# For instance, 7 %% 4 gives 3
+204
+205
+# Write a function called checkLuhn that takes as argument a vector of
+individual digits …
+206
+# and returns TRUE if the number is a valid number and FALSE if it is not
+…
+valid.
+207
+208
+…
+209
+210
+…
+211
+212
+# The follwing line takes a *valid* credit card number and creates a
+vector with single digits.
+# You can use this to test your function
+# Hint: digits contains the numbers from LEFT to RIGHT, while the Luhn
+algorithm works from
+# right to left.
+digits <- as.numeric(unlist(strsplit("5019717010103742"
+,
+"")))
+213
+214
+215
+checkLuhn <- function(digits) {
+rev
+_
+digits <- rev(digits)
+216
+217
+218
+219
+220
+221
+for (i in seq_
+along(rev
+_
+digits)) {
+if (i %% 2 == 0) {
+rev
+_
+digits[i] <- rev
+_
+digits[i] * 2
+if (rev
+_
+digits[i] > 9) {
+rev
+_
+digits[i] <- rev
+_
+digits[i] - 9
+222
+}
+223
+}
+224
+}
+225
+226
+sum(rev
+_
+digits) %% 10 == 0
+227
+}
+228
+229
+230
+231
+#test
+checkLuhn(10)
+checkLuhn(36)
+232
+233
+234
+235
+236
+237
+# Exam "Informatica 2"
+, 2025-09-04
+# Peter Gruber and Paul Schneider
+# Rules
+# - Except for theoretical questions, all questions must be answered
+using R! …
+# - The exam takes 90 minutes and has 5 questions
+# - There are a total of 100 points
+# >>>>> SUBMIT your answers on iCorsi in time IMPORTANT!!! …
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+…
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+…
+37
+38
+…
+39
+40
+41
+42
+43
+44
+45
+46
+47
+<---
+# Material that you can use
+# - the R help function
+# - any printed material (open book)
+# Notes
+# - There are several ways how this exam can be solved.
+# - What counts are ...
+# + that your program works
+# + that you follow the instructions
+# + that the program fulfills the requirements
+# - We do not expect you to provide exactly the solution presented in
+class.
+# Tip:
+# - Use R to check your solution!
+################################################
+# 0: Your name (2 points) #
+################################################
+# 0.1 Write your name below as a comment
+# <your name>
+#Eleonora Moroni
+################################################
+# 1: R basics (13 points) #
+################################################
+# 1.1 Create a vector v1 as defined in equation 1.1 on the Info Sheet. Do
+not use the c() command.
+v1 <- seq(10,1,
+-1)
+# 1.2 Create a vector v2 as defined in equation 1.2 on the Info Sheet. Do
+not use the c() command.
+v2 <- seq(3,30,3)
+# 1.3 Create a matrix M as defined in equation 1.3 on the Info Sheet.
+row1 <- seq(1,291,10)
+row2 <- seq(2,292,10)
+row3 <- seq(3,293,10)
+row4 <- seq(4,294,10)
+row5 <- seq(10,300,10)
+M <- rbind(row1,row2,row3,row4,row5)
+# 1.4 Print the first row of M
+48
+M["row1"
+,]
+49
+# 1.5 Display the last element of v1. Tell R to "display the last element
+of x"
+, …
+50
+# regardless of the dimension of v1.
+51
+x<-v1
+52
+tail(x,1)
+53
+# 1.6 Perform the calculations in equation 1.4 on the Info Sheet.
+54
+(12/(19-7))^(1/5)
+55
+(log(1)+log(2))/((pi+1)/(pi-1))
+56
+log(sin(2)/exp(2))
+57
+# 1.7 Create a variable "u" with the value "ten to the power minus 5"
+58
+u<-(10)^(-5)
+59
+# 1.8 If you would now run the line
+60
+# print(U)
+61
+# you would get an error message. Which important concept of R is the
+reason …
+62
+# for this error? Answer in 1 sentence as a comment.
+63
+#because u and U are seen in R as two diffrent variables, R is very
+senstivie …
+64
+65
+################################################
+66
+# 2: Data and Logical conditions (20 points) #
+67
+################################################
+68
+# The file "Eudata.csv" contains data about the (still 28) EU countries.
+69
+# The columns are: County Name, Code, Capital, Accession (=Year of
+membership), …
+70
+# Population, Area, GDP (in Million EUR), currency, IsEurozone (=1, if
+member) …
+71
+72
+73
+74
+# The following line loads the data into an R dataframe
+# Hunt: Use Session/Set Working Directory/To Source File Location
+Eudata <- read.table('Eudata.csv'
+, sep=";"
+,header=TRUE)
+75
+76
+# 2.1 How many countries are there in the dataset?
+77
+78
+79
+80
+81
+82
+#28
+# 2.2 Calculate the total population of the EU
+sum(Eudata$Population)
+# 2.3 Print the population of the smallest and largest EU country by Area
+Eudata$Population[min(Eudata$Area)]
+Eudata$Population[max(Eudata$Area)]
+83
+84
+# 2.4 Calculate the number of countries that are members of the Eurozone
+85
+sum(Eudata$Eurozone==1)
+86
+# 2.5 Calculate the total GDP of all Eurozone members
+87
+sum(Eudata$GDP[Eudata$Eurozone==1])
+88
+# 2.6 Calculate the GDP per capita in euros
+89
+# (a) of the total EU, (b) of the Eurozone (c) of the non-Eurozone
+EU …
+90
+#a)
+91
+sum(Eudata$GDP)/sum(Eudata$Population)
+92
+#b)
+93
+sum(Eudata$GDP[Eudata$IsEurozone==1])/sum(Eudata$Population[Eudata$
+93…
+IsEurozone==1])
+94
+# 2.7 When was the EU founded?
+95
+# Hint: this must be the earliest year in which any country became a
+member …
+96
+min(Eudata$Accession)
+97
+98
+99
+100
+101
+102
+103
+…
+104
+# 2.8 Calculate the number of EU founding members
+sum(Eudata$Accession==1953)
+# 2.9 Only now you discover that the data set still contains the UK.
+# Permanently remove the UK from the dataframe "Eudata"
+Eudata<-Eudata[Eudata$Country != "UK"]
+# 2.10 You also discover that Bulgaria actually joined the Euro on 1st
+January 2026.
+# Permanently update the dataframe "Eudata" accordingly.
+105
+106
+107
+108
+################################################
+109
+# 3: Simulation and probability (15 points) #
+110
+################################################
+111
+# 3.1 Use R to produce one roll of a dice.
+112
+sample(1:6,1)
+113
+# 3.2 Create a vector called "k" that contains 1000 rolls of a dice
+114
+k<-sample(1:6,1000, replace=TRUE)
+115
+# 3.3 Using "k" from (3.2), estimate the probability of obtaining
+116
+# a "4" or "5" from a dice
+117
+prob
+4
+or
+5<- function(k)
+_
+_
+_
+118
+{sum(k%in% c(4,5)/
+119
+length(k))}
+120
+prob
+4
+or
+5(k)
+_
+_
+_
+121
+# 3.4 Create a vector called "m" that contains 1000 (different) rolls of
+a dice …
+122
+# Using "k" and "m" from (3.2) and (3.4), estimate the expected value
+123
+# and variance of the random variable z = 2k-m
+124
+m<-sample(1:6,1000,replace=TRUE)
+125
+z<-2*k-m
+126
+# 3.5 Assume the yearly stock return to be normally distributed with a
+mean of 0.12 and …
+127
+# a standard deviation of 0.2. Create a variable "stock" with 100
+draws of stock returns …
+128
+stock<-rnorm(100,0.12,0.2)
+129
+# 3.6 What is the probability of a negative stock return?
+130
+# Answer this question ...
+131
+# (a) by using the variable "stock" from (3.5)
+132
+# (b) by calculating the (theoretical) probability for a normal
+distribution …
+133
+negative
+_
+stock<-sum(stock<0)/length(stock)
+134
+print(negative
+stock)
+_
+135
+################################################
+136
+# 4: Functions and Optimization (25 points)#
+137
+################################################
+138# 4.1 Create the function f(x)=x^2 in R
+139
+140
+f<-function(x) {
+return<-x^2
+141
+}
+142
+# 4.2 Calculate the value of f for x=1
+143
+f(1)
+144
+# 4.3 Create a plot of the function for the interval [-2, 2]
+145
+# If in doubt, type "?plot" to get the help file for the function
+146
+x<-seq(-2,2)
+147
+plot(x,f(x),
+148
+"l")
+# 4.4 Numerically, by using R, find the location of the minimum using the
+optim …
+149
+# function. Store the result of your minimization (the location of
+the minimum) …
+150
+# in a variable called xmin
+151
+xmin<-function(x){
+152
+stopifnot(-2<=x && x<=2)
+153
+return(x)
+154
+}
+155
+156
+# 4.5 Now try to find the location of the minimum by implementing a grid
+search …
+157
+# yourself. Choose N=100 grid points. Search in an interval between
+…
+-2 and 2.
+158
+# Store the result of your minimization (the location of the minimum)
+in a …
+159
+# variable called xmin
+_grid
+160
+161
+# 4.6 Answer in a short comment (<= 2 sentences). The results from (4.4)
+and (4.5) …
+162
+# are not identical. Why?
+163
+164
+165
+####################################################
+166
+# 5: Functions and algorithms (25 points) #
+167
+####################################################
+168
+# 5.1 The Luhn Algorithm is used to check whether a credit card number
+is valid. It goes …
+169
+# like this
+170
+# a) process individual digits from right to left
+171
+# b) leave digits number 1,3,5 etc (counted from right) unchanged
+172
+# c) multiply digits 2,3,6 etc (counted from right) by 2
+173
+# d) if a digit (after multiplying by 2) is larger than 9, subtract
+9 …
+174
+# e) calculate the sum of all (processed) digits
+175
+# IF the result can be divided by 10, the number is a valid credit
+card number …
+176
+#
+177
+# Example: 63487
+178
+# Right to left: do not change 7, multiply 8 by 2 and subtract 9, do
+not change 4, …
+179
+# multiply 3 by 2 and do not subtract anything, do
+not change 6 …
+180
+# 7 + 8*2-9 + 4 + 3*2 + 6 = 30 --> the number is
+valid …
+181
+# Hint: The operation x %% y yields the remainder of the division
+…
+x/y.
+182
+# For instance, 7 %% 4 gives 3
+183
+184
+# Write a function called checkLuhn that takes as argument a vector of
+individual digits …
+185
+# and returns TRUE if the number is a valid number and FALSE if it is not
+valid.
+…
+186
+187
+# The follwing line takes a *valid* credit card number and creates a
+…
+vector with single digits.
+188
+# You can use this to test your function
+189
+# Hint: digits contains the numbers from LEFT to RIGHT, while the Luhn
+algorithm works from …
+190
+# right to left.
+191
+digits <- as.numeric(unlist(strsplit("5019717010103742"
+,
+"")))
+192
+193
+194
+# Exam "Informatica 2"
+, 2025-09-04
+# Peter Gruber and Paul Schneider
+# Rules
+# - Except for theoretical questions, all questions must be answered
+using R! …
+# - The exam takes 90 minutes and has 5 questions
+# - There are a total of 100 points
+# >>>>> SUBMIT your answers on iCorsi in time IMPORTANT!!! …
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+…
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+…
+37
+38
+…
+39
+40
+41
+42
+43
+44
+45
+46
+47
+<---
+# Material that you can use
+# - the R help function
+# - any printed material (open book)
+# Notes
+# - There are several ways how this exam can be solved.
+# - What counts are ...
+# + that your program works
+# + that you follow the instructions
+# + that the program fulfills the requirements
+# - We do not expect you to provide exactly the solution presented in
+class.
+# Tip:
+# - Use R to check your solution!
+################################################
+# 0: Your name (2 points) #
+################################################
+# 0.1 Write your name below as a comment
+# Erica Trofimov
+################################################
+# 1: R basics (13 points) #
+################################################
+# 1.1 Create a vector v1 as defined in equation 1.1 on the Info Sheet. Do
+not use the c() command.
+v1 <- seq (10, 1,
+-1)
+# 1.2 Create a vector v2 as defined in equation 1.2 on the Info Sheet. Do
+not use the c() command.
+v2 <- seq( 3, 30, 3)
+# 1.3 Create a matrix M as defined in equation 1.3 on the Info Sheet.
+v1 = seq(1,291,10)
+v2 = seq( 2, 292, 10)
+v3 = seq( 3, 293, 10)
+v4 = seq(4, 294, 10)
+v5 = seq(10, 300, 10)
+M = rbind(v1, v2, v3,v4,v5)
+48
+# 1.4 Print the first row of M
+49
+M[1, ]
+50
+# 1.5 Display the last element of v1. Tell R to "display the last element
+of x"
+, …
+51
+# regardless of the dimension of v1.
+52
+v1[length(v1)]
+53
+# 1.6 Perform the calculations in equation 1.4 on the Info Sheet.
+54
+## 1.
+55
+((12)/(19 -7 ))^(1 / 5)
+56
+## 2.
+57
+(log10(1) + log10(2))/ ((pi + 1)/ (pi - 1))
+58
+59
+60
+## 3.
+log10 ( sin(2)/exp(2))
+61
+62
+# 1.7 Create a variable "u" with the value "ten to the power minus 5"
+63
+64
+u <- 10^(-5)
+65
+# 1.8 If you would now run the line
+66
+# print(U)
+67
+# you would get an error message. Which important concept of R is the
+reason …
+68
+# for this error? Answer in 1 sentence as a comment.
+69
+## R is case-sensitive. Hence, it would consider U as a totally different
+…
+object than U. We do not have any U object
+70
+## in our directory, hence R will give error. If we want to print the
+value of the variable we just created, …
+71
+## we would need to run print(u).
+72
+73
+################################################
+74
+# 2: Data and Logical conditions (20 points) #
+75
+################################################
+76
+# The file "Eudata.csv" contains data about the (still 28) EU countries.
+77
+# The columns are: County Name, Code, Capital, Accession (=Year of
+membership), …
+78
+# Population, Area, GDP (in Million EUR), currency, IsEurozone (=1, if
+member) …
+79
+80
+81
+# The following line loads the data into an R dataframe
+# Hunt: Use Session/Set Working Directory/To Source File Location
+82
+83
+Eudata <- read.table('Eudata.csv'
+, sep=";"
+,header=TRUE)
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+# 2.1 How many countries are there in the dataset?
+nrow(Eudata)
+# 2.2 Calculate the total population of the EU
+sum(Eudata$Population)
+# 2.3 Print the population of the smallest and largest EU country by Area
+min
+_pop = which.min(Eudata$Area)
+max
+_pop = which.max(Eudata$Area)
+Eudata$Population[min
+_pop]
+Eudata$Population[max
+_pop]
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+# 2.4 Calculate the number of countries that are members of the Eurozone
+sum(Eudata$Eurozone)
+# 2.5 Calculate the total GDP of all Eurozone members
+library(dplyr)
+Eurozone%>%
+filter ( Eurozone == 1) %>%
+summarize( sum(GDP))
+## or
+Eurozone = Eudata[ Eudata$Eurozone == 1, ]
+sum(Eurozone$GDP)
+105
+106
+107
+# 2.6 Calculate the GDP per capita in euros
+# (a) of the total EU, (b) of the Eurozone (c) of the non-Eurozone
+EU …
+108
+a = sum(Eudata$GDP)/sum(Eudata$Population)
+109
+b = sum(Eudata$GDP)/sum(Eurozone$Population)
+110
+NonEuro = Eudata[ Eudata$Eurozone == 0, ]
+111
+c = sum(Eudata$GDP)/sum(NonEuro$Population)
+112
+113
+114
+115
+…
+# 2.7 When was the EU founded?
+# Hint: this must be the earliest year in which any country became a
+member
+116
+117
+found
+_year = Eudata$Accession[which.min(Eudata$Accession) ]
+118
+119
+120
+121
+122
+123
+124
+# 2.8 Calculate the number of EU founding members
+nrow( Eudata[ Eudata$Accession == 1953, ] )
+# 2.9 Only now you discover that the data set still contains the UK.
+# Permanently remove the UK from the dataframe "Eudata"
+Eudata[ Eudata$Code == 'UK'
+, ]
+Eudata[ - 28, ]
+125
+126
+# 2.10 You also discover that Bulgaria actually joined the Euro on 1st
+…
+127
+128
+January 2026.
+# Permanently update the dataframe "Eudata" accordingly.
+Eudata[ Eudata$CountyName == 'Bulgaria'
+,
+'Eurozone'] <- 1
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+################################################
+# 3: Simulation and probability (15 points) #
+################################################
+# 3.1 Use R to produce one roll of a dice.
+sample(1 : 6, 1, replace = TRUE)
+# 3.2 Create a vector called "k" that contains 1000 rolls of a dice
+k <- sample(1:6, 1000, replace = TRUE)
+# 3.3 Using "k" from (3.2), estimate the probability of obtaining
+# a "4" or "5" from a dice
+k4 = sum(k ==4)
+k5 = sum(k == 5)
+prob
+k4
+_
+_
+5 = (k4 + k5 ) / (length(k))
+143
+144
+# 3.4 Create a vector called "m" that contains 1000 (different) rolls of
+a dice …
+145
+# Using "k" and "m" from (3.2) and (3.4), estimate the expected value
+146
+# and variance of the random variable z = 2k-m
+147
+m = sample(1:6, 1000, replace = TRUE)
+148
+149
+150
+151
+152
+153
+154
+expr <- function(k,m){
+return(2*k - m )
+}
+z = expr ( k, m)
+z
+mean = mean(z)
+_
+z
+var = var(z)
+_
+155
+156
+# 3.5 Assume the yearly stock return to be normally distributed with a
+mean of 0.12 and …
+157
+# a standard deviation of 0.2. Create a variable "stock" with 100
+draws of stock returns …
+158
+stock <- rnorm(100, 0.12, 0.3)
+159
+160
+161
+# 3.6 What is the probability of a negative stock return?
+162
+# Answer this question ...
+163
+# (a) by using the variable "stock" from (3.5)
+164
+neg_
+stock = sum( stock < 0)
+165
+prob
+_
+neg = neg_
+stock / length(stock)
+166
+prob
+_
+neg
+167
+# (b) by calculating the (theoretical) probability for a normal
+distribution …
+168
+pnorm( 0 , neg_
+stock , lower.tail = TRUE)
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+################################################
+# 4: Functions and Optimization (25 points)#
+################################################
+# 4.1 Create the function f(x)=x^2 in R
+f = function(x){
+return ( x^2)
+}
+# 4.2 Calculate the value of f for x=1
+f(1)
+# 4.3 Create a plot of the function for the interval [-2, 2]
+plot( f, xlim = c(-2,2))
+# If in doubt, type "?plot" to get the help file for the function
+182
+183
+# 4.4 Numerically, by using R, find the location of the minimum using the
+optim …
+184
+# function. Store the result of your minimization (the location of
+the minimum) …
+185
+# in a variable called xmin
+186
+opt = optim(
+187
+par = 2,
+188f,
+189
+method = 'BFGS'
+190
+)
+191
+opt$par
+192
+xmin = opt$value
+193
+f(xmin)
+194
+# 4.5 Now try to find the location of the minimum by implementing a grid
+search …
+195
+# yourself. Choose N=100 grid points. Search in an interval between
+…
+-2 and 2.
+196
+# Store the result of your minimization (the location of the minimum)
+in a …
+197
+# variable called xmin
+_grid
+198
+N = 100
+199
+points = seq( -2, 2 , 0.04)
+200
+y_grid = sapply( points, f)
+201
+min
+_
+index = which.min(y_grid)
+202
+best
+_y_grid
+_
+search = y_grid[ min
+index]
+_
+203
+xmin
+_grid = x
+_grid [ min
+index]
+_
+204
+205
+min
+coordinates = c(xmin
+_
+_grid, best
+_y_grid
+search )
+_
+206
+# 4.6 Answer in a short comment (<= 2 sentences). The results from (4.4)
+and (4.5) …
+207
+# are not identical. Why?
+208
+## Results of 4.4 depend on the arbitrary parameter we want the optim()
+…
+function
+209
+## to start iterating from. Based on that, results slightly vary.
+…
+Moreover, it also depends on the algorithm we chose.
+210
+## Since the result of this minimization problem is 0, chosing a Gradient
+descent or a Nelder-Mead cuould …
+211
+## give slightly different results (but still right if we approximate)
+212
+213
+## The grid search, instead, is a brute force method. It is still
+effective, …
+214
+## but highly depends on the value we decide to look from. If 0 was not
+in the grid, and we would have added, say, 0.1 as the value …
+215
+## closer to 0, then this method would have gave us 0.1 as xmin value,
+…
+completely ignoring 0 which was not in our grid.
+216
+217
+y####################################################
+218
+# 5: Functions and algorithms (25 points) #
+219
+####################################################
+220
+# 5.1 The Luhn Algorithm is used to check whether a credit card number
+is valid. It goes …
+221
+# like this
+222
+# a) process individual digits from right to left
+223
+224
+# b) leave digits number 1,3,5 etc (counted from right) unchanged
+225
+226
+# c) multiply digits 2,3,6 etc (counted from right) by 2
+227
+228
+229
+# d) if a digit (after multiplying by 2) is larger than 9, subtract
+229…
+9
+230
+# e) calculate the sum of all (processed) digits
+231
+# IF the result can be divided by 10, the number is a valid credit
+card number …
+232
+#
+233
+# Example: 63487
+234
+# Right to left: do not change 7, multiply 8 by 2 and subtract 9, do
+not change 4, …
+235
+# multiply 3 by 2 and do not subtract anything, do
+not change 6 …
+236
+# 7 + 8*2-9 + 4 + 3*2 + 6 = 30 --> the number is
+valid …
+237
+# Hint: The operation x %% y yields the remainder of the division
+…
+x/y.
+238
+# For instance, 7 %% 4 gives 3
+239
+240
+241
+checkLuhn <- function(digits) {
+right
+_
+digits <- rev(digits)
+242
+243
+244
+245
+246
+247
+for (i in 1:length(right
+_
+digits)) {
+if (i %% 2 == 0) {
+doubled <- right
+_
+digits[i] * 2
+if (doubled > 9) {
+doubled = doubled - 9
+248
+}
+249
+right
+_
+digits[i] <- doubled
+250
+}
+251
+}
+252
+sum <- sum(right
+_
+digits)
+253
+254
+255
+256
+257
+if (sum %% 10 == 0) {
+return(TRUE)
+} else {
+return(FALSE)
+258
+}
+259
+result <- checkLuhn(card
+to
+_
+_
+check)
+260
+}
+261
+# Write a function called checkLuhn that takes as argument a vector of
+individual digits …
+262
+# and returns TRUE if the number is a valid number and FALSE if it is not
+…
+valid.
+263
+264
+265
+…
+266
+267
+…
+268
+269
+270
+# The follwing line takes a *valid* credit card number and creates a
+vector with single digits.
+# You can use this to test your function
+# Hint: digits contains the numbers from LEFT to RIGHT, while the Luhn
+algorithm works from
+# right to left.
+digits <- as.numeric(unlist(strsplit("5019717010103742"
+,
+"")))
+checkLuhn(digits )
+271
+272
+273
+# Exam "Informatica 2"
+, 2025-09-04
+# Peter Gruber and Paul Schneider
+1
+2
+3
+4
+# Rules
+5
+# - Except for theoretical questions, all questions must be answered
+using R! …
+6
+# - The exam takes 90 minutes and has 5 questions
+7
+# - There are a total of 100 points
+8
+# >>>>> SUBMIT your answers on iCorsi in time IMPORTANT!!! …
+<---
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+…
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+# Material that you can use
+# - the R help function
+# - any printed material (open book)
+# Notes
+# - There are several ways how this exam can be solved.
+# - What counts are ...
+# + that your program works
+# + that you follow the instructions
+# + that the program fulfills the requirements
+# - We do not expect you to provide exactly the solution presented in
+class.
+# Tip:
+# - Use R to check your solution!
+################################################
+# 0: Filippo Manachino (2 points) #
+################################################
+# 0.1 Write your name below as a comment
+# <Filippo Manachino>
+33
+################################################
+34
+# 1: R basics (13 points) #
+35
+################################################
+36
+# 1.1 Create a vector v1 as defined in equation 1.1 on the Info Sheet. Do
+…
+not use the c() command.
+37
+v1 <- 10:1
+38
+# 1.2 Create a vector v2 as defined in equation 1.2 on the Info Sheet. Do
+…
+not use the c() command.
+39
+v2 <- seq(3, 30, by=3)
+40
+# 1.3 Create a matrix M as defined in equation 1.3 on the Info Sheet.
+41
+M <- matrix(1:300, nrow=10, ncol=30)
+42
+# 1.4 Print the first row of M
+43
+M[1, ]
+44
+# 1.5 Display the last element of v1. Tell R to "display the last element
+of x"
+, …
+45
+# regardless of the dimension of v1.
+46v1[length(v1)]
+47
+# 1.6 Perform the calculations in equation 1.4 on the Info Sheet.
+48
+((sqrt^5(12/(19-17))))
+49
+(log(1)+log(2))/((pi+1)/(pi-1))
+50
+log((sin(2))/(exp(1))^2)
+51
+# 1.7 Create a variable "u" with the value "ten to the power minus 5"
+52
+u <- 10^(-5)
+53
+# 1.8 If you would now run the line
+54
+# print(U)
+55
+# you would get an error message. Which important concept of R is the
+reason …
+56
+# for this error? Answer in 1 sentence as a comment.
+57
+#R is case-sensitive: U and u are different objects (different names)
+58
+59
+################################################
+60
+# 2: Data and Logical conditions (20 points) #
+61
+################################################
+62
+# The file "Eudata.csv" contains data about the (still 28) EU countries.
+63
+# The columns are: County Name, Code, Capital, Accession (=Year of
+membership), …
+64
+# Population, Area, GDP (in Million EUR), currency, IsEurozone (=1, if
+member) …
+65
+66
+67
+68
+# The following line loads the data into an R dataframe
+# Hunt: Use Session/Set Working Directory/To Source File Location
+Eudata <- read.table('Eudata.csv'
+, sep=";"
+,header=TRUE)
+69
+70
+# 2.1 How many countries are there in the dataset?
+71
+nrow(Eudata) #this is just the command, to save this into a variable just
+do n
+countries <- nrow(Eudata) …
+_
+72
+# 2.2 Calculate the total population of the EU
+73
+total
+_pop <- sum(Eudata$Population)
+74
+# 2.3 Print the population of the smallest and largest EU country by Area
+75
+pop_
+smallest
+_
+by_
+area <- Eudata$Population[which.min(Eudata$Area)]
+76
+pop_
+biggest
+_
+by_
+area <- Eudata$Population[which.max(Eudata$Area)]
+77
+# 2.4 Calculate the number of countries that are members of the Eurozone
+78
+n
+_
+eurozone <- sum(Eudata$Eurozone==1)
+79
+# 2.5 Calculate the total GDP of all Eurozone members
+80
+gdp_
+eurozone <- sum(Eudata$GDP[Eudata$Eurozone==1])
+81
+# 2.6 Calculate the GDP per capita in euros
+82
+# (a) of the total EU, (b) of the Eurozone (c) of the non-Eurozone
+EU …
+83
+total
+_gdp <- sum(Eudata$GDP)
+84
+gdp_
+eurozone <- sum(Eudata$GDP[Eudata$Eurozone==1])
+85
+gdp_
+non
+_
+eurozone <- sum(Eudata$GDP[Eudata$Eurozone==0])
+86
+87
+total
+_gdp_pc <- total
+_gdp/sum(Eudata$Population)
+88
+gdp_pc
+_
+eu <- gdp_
+eurozone/sum(Eudata$Population[Eudata$Eurozone==1])
+89
+gpd
+_pc
+non
+eu <-
+_
+_
+eurozone/sum(Eudata$Population[Eudata$Eurozone==0]) …
+gdp_
+non
+_
+90
+# 2.7 When was the EU founded?
+91
+# Hint: this must be the earliest year in which any country became a
+member …
+92
+93
+94
+95
+96
+97
+98
+…
+99
+eu
+_
+founding <- min(Eudata$Accession)
+# 2.8 Calculate the number of EU founding members
+total
+_
+founders <- sum(Eudata$Accession==1953)
+# 2.9 Only now you discover that the data set still contains the UK.
+# Permanently remove the UK from the dataframe "Eudata"
+Eudata <- subset(Eudata, Code != "UK")
+# 2.10 You also discover that Bulgaria actually joined the Euro on 1st
+January 2026.
+# Permanently update the dataframe "Eudata" accordingly.
+100
+101
+102
+################################################
+103
+# 3: Simulation and probability (15 points) #
+104
+################################################
+105
+# 3.1 Use R to produce one roll of a dice.
+106
+dice <- sample(1:6, 1)
+107
+# 3.2 Create a vector called "k" that contains 1000 rolls of a dice
+108
+k <- sample(1:6, 1000, replace = TRUE)
+109
+# 3.3 Using "k" from (3.2), estimate the probability of obtaining
+110
+# a "4" or "5" from a dice
+111
+p4
+_p5 <- mean(k==4|k==5)
+112
+# 3.4 Create a vector called "m" that contains 1000 (different) rolls of
+a dice …
+113
+# Using "k" and "m" from (3.2) and (3.4), estimate the expected value
+114
+# and variance of the random variable z = 2k-m
+115
+m <- sample(1:6, 1000, replace = TRUE)
+116
+z <- 2*k-m
+117
+Expected <- mean(z)
+118
+Variance <- var(z)
+119
+# 3.5 Assume the yearly stock return to be normally distributed with a
+mean of 0.12 and …
+120
+# a standard deviation of 0.2. Create a variable "stock" with 100
+draws of stock returns …
+121
+stock <- rnorm(n = 100,mean = 0.12, sd = 0.2)
+122
+# 3.6 What is the probability of a negative stock return?
+123
+# Answer this question ...
+124
+# (a) by using the variable "stock" from (3.5)
+125
+p_
+neg_
+hat <- mean(stock<0)
+126
+# (b) by calculating the (theoretical) probability for a normal
+distribution …
+127
+p_
+neg_
+theory <- pnorm(0, mean = 0.12, sd = 0.2)
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+################################################
+# 4: Functions and Optimization (25 points)#
+################################################
+# 4.1 Create the function f(x)=x^2 in R
+f <- function(x){x^2}
+# 4.2 Calculate the value of f for x=1
+f(1)
+# 4.3 Create a plot of the function for the interval [-2, 2]
+# If in doubt, type "?plot" to get the help file for the function
+x <- seq(-2,2,length.out=100)
+139
+140
+141
+142
+143
+144
+145
+plot(x,f(x),type="l")
+# 4.4 Numerically, by using R, find the location of the minimum using the
+optim …
+# function. Store the result of your minimization (the location of
+the minimum) …
+# in a variable called xmin
+xmin <- optim(0, f, method = "L-BFGS-B"
+,lower=-2, upper=2)
+# 4.5 Now try to find the location of the minimum by implementing a grid
+search …
+-2 and 2.
+in a …
+# variable called xmin
+_grid
+x <- seq(-2,2,length.out=100)
+xmin
+_grid <- grid()
+# 4.6 Answer in a short comment (<= 2 sentences). The results from (4.4)
+and (4.5) …
+# are not identical. Why?
+# yourself. Choose N=100 grid points. Search in an interval between
+…
+146
+# Store the result of your minimization (the location of the minimum)
+147
+148
+149
+150
+151
+152
+153
+154
+y####################################################
+155
+# 5: Functions and algorithms (25 points) #
+156
+####################################################
+157
+# 5.1 The Luhn Algorithm is used to check whether a credit card number
+is valid. It goes …
+158
+# like this
+159
+# a) process individual digits from right to left
+160
+# b) leave digits number 1,3,5 etc (counted from right) unchanged
+161
+# c) multiply digits 2,3,6 etc (counted from right) by 2, the
+sequence in ambigous, i used 2,4,6 etc …
+162
+# d) if a digit (after multiplying by 2) is larger than 9, subtract
+9 …
+163
+# e) calculate the sum of all (processed) digits
+164
+# IF the result can be divided by 10, the number is a valid credit
+…
+card number
+165
+#
+166
+# Example: 63487
+167
+# Right to left: do not change 7, multiply 8 by 2 and subtract 9, do
+not change 4, …
+168
+# multiply 3 by 2 and do not subtract anything, do
+not change 6 …
+169
+# 7 + 8*2-9 + 4 + 3*2 + 6 = 30 --> the number is
+valid …
+170
+# Hint: The operation x %% y yields the remainder of the division
+…
+x/y.
+171
+# For instance, 7 %% 4 gives 3
+172
+173
+# Write a function called checkLuhn that takes as argument a vector of
+individual digits …
+174
+# and returns TRUE if the number is a valid number and FALSE if it is not
+…valid.
+175
+176
+# The follwing line takes a *valid* credit card number and creates a
+…
+vector with single digits.
+177
+# You can use this to test your function
+178
+# Hint: digits contains the numbers from LEFT to RIGHT, while the Luhn
+algorithm works from …
+179
+# right to left.
+180
+#the sequence in ambigous, i used 2,4,6 etc
+181
+digits <- as.numeric(unlist(strsplit("5019717010103742"
+,
+"")))
+182
+d <- c(2,4,7,3,0,1,0,1,0,7,1,7,9,1,0,5)
+183
+checkLuhn <- function(d){digits}
+184
+for (i in 1:16){
+185
+if (d=="1,3,5,7,9"){
+186
+creditnumber <- d
+187
+}
+188
+189
+190
+191
+192
+else if(d=="2,4,6,8"){
+h <- d*2
+if(h>9){
+h <- h-9
+creditnumber <- h
+193
+}
+194
+}
+195
+}
+196
+#unfortunately i dont remember how to code it, the base idea of my
+algorithm was to create a for cycle that would scan the vector number by …
+number using an if condition …
+197
+#if the number was 1,3,5,7,9 it would add it to a vector called
+creditnumber, else if the number was 2,4,6,8 it would first multiply it …
+by 2 then with the other if it would check …
+198
+#if the number was >9 in that case it would divide by 2 and then add it
+…
+to the vector
+199
+#at the end outside the vector i would have summed it and checked if the
+division by 10 would leave an integer or no so to determine if the credit…
+number was valid or no …
+200
+201
+# Exam "Informatica 2"
+, 2025-09-04
+# Peter Gruber and Paul Schneider
+1
+2
+3
+4
+# Rules
+5
+# - Except for theoretical questions, all questions must be answered
+using R! …
+6
+# - The exam takes 90 minutes and has 5 questions
+7
+# - There are a total of 100 points
+8
+# >>>>> SUBMIT your answers on iCorsi in time IMPORTANT!!! …
+<---
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+…
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+# Material that you can use
+# - the R help function
+# - any printed material (open book)
+# Notes
+# - There are several ways how this exam can be solved.
+# - What counts are ...
+# + that your program works
+# + that you follow the instructions
+# + that the program fulfills the requirements
+# - We do not expect you to provide exactly the solution presented in
+class.
+# Tip:
+# - Use R to check your solution!
+################################################
+# 0: Your name (2 points) #
+################################################
+# 0.1 Write your name below as a comment
+# <your name>
+32
+##### <Leonardo Zanga>
+33
+################################################
+34
+# 1: R basics (13 points) #
+35
+################################################
+36
+# 1.1 Create a vector v1 as defined in equation 1.1 on the Info Sheet. Do
+…
+not use the c() command.
+37
+v1<-seq(10,1,
+-1)
+38
+v1
+39
+# 1.2 Create a vector v2 as defined in equation 1.2 on the Info Sheet. Do
+…
+not use the c() command.
+40
+v2<-3*seq(1:10)
+41
+v2
+42
+# 1.3 Create a matrix M as defined in equation 1.3 on the Info Sheet.
+43
+M<-rbind(seq(1,291,10),seq(2,292,10),seq(3,293,10),seq(4,294,10),seq(10,
+300,10)) …
+44
+M
+45
+# 1.4 Print the first row of M
+46M[1,]
+47
+# 1.5 Display the last element of v1. Tell R to "display the last element
+of x"
+, …
+48
+# regardless of the dimension of v1.
+49
+M[length(M)]
+50
+# 1.6 Perform the calculations in equation 1.4 on the Info Sheet.
+51
+(12/(19-7))^1/5
+52
+(log(1)+log(2))/((pi+1)/(pi+2))
+53
+log(sin(2)/exp(2))
+54
+# 1.7 Create a variable "u" with the value "ten to the power minus 5"
+55
+u<-10^(-5)
+56
+# 1.8 If you would now run the line
+57
+# print(U)
+58
+# you would get an error message. Which important concept of R is the
+…
+reason
+59
+# for this error? Answer in 1 sentence as a comment.
+60
+#### Because U and u are different values in R
+61
+62
+63
+################################################
+64
+# 2: Data and Logical conditions (20 points) #
+65
+################################################
+66
+# The file "Eudata.csv" contains data about the (still 28) EU countries.
+67
+# The columns are: County Name, Code, Capital, Accession (=Year of
+membership), …
+68
+# Population, Area, GDP (in Million EUR), currency, IsEurozone (=1, if
+member) …
+69
+70
+71
+72
+# The following line loads the data into an R dataframe
+# Hunt: Use Session/Set Working Directory/To Source File Location
+Eudata <- read.table('Eudata.csv'
+, sep=";"
+,header=TRUE)
+73
+74
+75
+# 2.1 How many countries are there in the dataset?
+nrow(Eudata)
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+# 2.2 Calculate the total population of the EU
+sum(Eudata$Population[Eudata$Eurozone==1])
+# 2.3 Print the population of the smallest and largest EU country by Area
+Eudata$Population[which.max(Eudata$Area)]
+Eudata$Population[which.min(Eudata$Area)]
+# 2.4 Calculate the number of countries that are members of the Eurozone
+Sum(Eudata$Eurozone==TRUE)
+# 2.5 Calculate the total GDP of all Eurozone members
+sum(Eudata$GDP[Eudata$Eurozone])
+86
+87
+# 2.6 Calculate the GDP per capita in euros
+# (a) of the total EU, (b) of the Eurozone (c) of the non-Eurozone
+88
+EU …
+89
+sum(Eudata$GDP/Eudata$Population)
+90
+sum(Eudata$GDP[Eudata$Eurozone==TRUE]/Eudata$Population[Eudata$Eurozone==
+TRUE]) …
+91
+sum(Eudata$GDP[Eudata$Eurozone==FALSE]/Eudata$Population[Eudata$Eurozone=
+=FALSE]) …
+92
+# 2.7 When was the EU founded?
+93
+# Hint: this must be the earliest year in which any country became a
+member …
+94
+min(Eudata$Accesion)
+95
+96
+97
+98
+99
+100
+101
+# 2.8 Calculate the number of EU founding members
+sum(Eudata$CountyName[Eudata$Accesion==1953])
+# 2.9 Only now you discover that the data set still contains the UK.
+# Permanently remove the UK from the dataframe "Eudata"
+Eudata<-Eudata[Eudata$countyname=='United Kingdom'
+,]
+Eudata
+102
+103
+# 2.10 You also discover that Bulgaria actually joined the Euro on 1st
+…
+104
+105
+106
+January 2026.
+# Permanently update the dataframe "Eudata" accordingly.
+new<-bulgaria
+Eudata$New
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+################################################
+# 3: Simulation and probability (15 points) #
+################################################
+# 3.1 Use R to produce one roll of a dice.
+R<-sample(1:6,1,replace=TRUE)
+R
+# 3.2 Create a vector called "k" that contains 1000 rolls of a dice
+k<-sample(1:6,100,replace=TRUE)
+k
+# 3.3 Using "k" from (3.2), estimate the probability of obtaining
+# a "4" or "5" from a dice
+k[k>=4 & k<=5]
+length(k[k>=4 & k<=5])/length(k)
+122
+123
+# 3.4 Create a vector called "m" that contains 1000 (different) rolls of
+a dice …
+124
+# Using "k" and "m" from (3.2) and (3.4), estimate the expected value
+125
+# and variance of the random variable z = 2k-m
+126
+m<-sample(1:6,1000,replace=TRUE)
+127
+m
+128
+z=2*k-m
+129
+mean(z)
+130
+131
+# 3.5 Assume the yearly stock return to be normally distributed with a
+mean of 0.12 and …
+132
+# a standard deviation of 0.2. Create a variable "stock" with 100
+draws of stock returns …
+133
+stocks<-rnorm(100,0.12,0.2)
+134
+stocks
+135
+# 3.6 What is the probability of a negative stock return?
+136
+# Answer this question ...
+137
+# (a) by using the variable "stock" from (3.5)
+138prob<-mean(stocks<0)
+139
+prob
+140
+# (b) by calculating the (theoretical) probability for a normal
+distribution …
+141
+pnorm(0,0.12,0.2)
+142
+143
+144
+145
+146
+147
+148
+149
+################################################
+# 4: Functions and Optimization (25 points)#
+################################################
+# 4.1 Create the function f(x)=x^2 in R
+f<-function(x){
+ris<-x^2
+print(ris)
+150
+151
+# 4.2 Calculate the value of f for x=1
+152
+}
+f(1)
+153
+154
+# 4.3 Create a plot of the function for the interval [-2, 2]
+155
+# If in doubt, type "?plot" to get the help file for the function
+156
+plot(f,2,
+-2)
+157
+plot()
+158
+# 4.4 Numerically, by using R, find the location of the minimum using the
+optim …
+159
+# function. Store the result of your minimization (the location of
+the minimum) …
+160
+# in a variable called xmin
+161
+xmin<-optim( par=0, fn=f, method="BFGS")
+162
+xmin
+163
+# 4.5 Now try to find the location of the minimum by implementing a grid
+search …
+164
+# yourself. Choose N=100 grid points. Search in an interval between
+…
+-2 and 2.
+165
+# Store the result of your minimization (the location of the minimum)
+in a …
+166
+# variable called xmin
+_grid
+167
+lowerbound=-2
+168
+upperbound=+2
+169
+xmin
+_grid<-optim( par=100, fn=f, method="BFGS"
+,lower=lowerbound,
+upper=upperbound) …
+170
+xmin
+171
+# 4.6 Answer in a short comment (<= 2 sentences). The results from (4.4)
+and (4.5) …
+172
+# are not identical. Why?
+173
+because i have add upper and lower bound
+174
+175
+176
+y####################################################
+177
+# 5: Functions and algorithms (25 points) #
+178
+####################################################
+179
+# 5.1 The Luhn Algorithm is used to check whether a credit card number
+is valid. It goes …
+180
+# like this
+181# a) process individual digits from right to left
+182
+183
+# b) leave digits number 1,3,5 etc (counted from right) unchanged
+# c) multiply digits 2,3,6 etc (counted from right) by 2
+# d) if a digit (after multiplying by 2) is larger than 9, subtract
+184
+9 …
+185
+# e) calculate the sum of all (processed) digits
+186
+# IF the result can be divided by 10, the number is a valid credit
+card number …
+187
+#
+188
+# Example: 63487
+189
+# Right to left: do not change 7, multiply 8 by 2 and subtract 9, do
+not change 4, …
+190
+# multiply 3 by 2 and do not subtract anything, do
+not change 6 …
+191
+# 7 + 8*2-9 + 4 + 3*2 + 6 = 30 --> the number is
+valid …
+192
+# Hint: The operation x %% y yields the remainder of the division
+…
+x/y.
+193
+# For instance, 7 %% 4 gives 3
+194
+195
+# Write a function called checkLuhn that takes as argument a vector of
+individual digits …
+196
+# and returns TRUE if the number is a valid number and FALSE if it is not
+…
+valid.
+197
+s=0
+198
+v1<-c(6,3,4,8,7)
+199
+n<-v1()
+200
+201
+202
+203
+204
+205
+chwcluLuhn<-function(v1){
+if(n*2>9){}
+ris< n+((n+1)*2-9)+4+3*2+6/10
+valid<-(ris/10)==TRUE
+s=s+s1
+206
+}
+207
+else{
+208
+209
+210
+…
+211
+212
+…
+213
+214
+}
+# The follwing line takes a *valid* credit card number and creates a
+vector with single digits.
+# You can use this to test your function
+# Hint: digits contains the numbers from LEFT to RIGHT, while the Luhn
+algorithm works from
+# right to left.
+digits <- as.numeric(unlist(strsplit("5019717010103742"
+,
+"")))
+215
+216
+217
+Saved: 13.01.26, 15:24:34 Page 1/5
+Printed for: Peter Gruber
+# Exam "Informatica 2"
+, 2025-09-04
+# Peter Gruber and Paul Schneider
+# Rules
+# - Except for theoretical questions, all questions must be answered
+using R! …
+# - The exam takes 90 minutes and has 5 questions
+# - There are a total of 100 points
+# >>>>> SUBMIT your answers on iCorsi in time IMPORTANT!!! …
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+…
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+…
+37
+38
+…
+39
+40
+41
+42
+43
+44
+45
+46
+47
+<---
+# Material that you can use
+# - the R help function
+# - any printed material (open book)
+# Notes
+# - There are several ways how this exam can be solved.
+# - What counts are ...
+# + that your program works
+# + that you follow the instructions
+# + that the program fulfills the requirements
+# - We do not expect you to provide exactly the solution presented in
+class.
+# Tip:
+# - Use R to check your solution!
+################################################
+# 0: Your name (2 points) #
+################################################
+# 0.1 Write your name below as a comment
+# Dell Erba Lisa
+################################################
+# 1: R basics (13 points) #
+################################################
+# 1.1 Create a vector v1 as defined in equation 1.1 on the Info Sheet. Do
+not use the c() command.
+v1<-10:1
+# 1.2 Create a vector v2 as defined in equation 1.2 on the Info Sheet. Do
+not use the c() command.
+v2<-seq(3,30,by=3)
+# 1.3 Create a matrix M as defined in equation 1.3 on the Info Sheet.
+row1<-seq(1,291,by=10)
+row2<-seq(2,292,by=10)
+row3<-seq(3,293,by=10)
+row4<-seq(4,292,by=10)
+row5<-seq(10,300,by=10)
+M<-rbind(row1,row2,row3,row4,row5)
+# 1.4 Print the first row of M
+Saved: 13.01.26, 15:24:34 Page 2/5
+Printed for: Peter Gruber
+48
+49
+M[1,]
+# 1.5 Display the last element of v1. Tell R to "display the last element
+of x"
+, …
+50
+# regardless of the dimension of v1.
+51
+52
+53
+tail(v1,1)
+# 1.6 Perform the calculations in equation 1.4 on the Info Sheet.
+(12/(19-7))^(1/5)
+54
+(log10(1)+log10(2))/((pi+1)/(pi-1))
+log10(sin(2)/exp(2))
+55
+56
+57
+# 1.7 Create a variable "u" with the value "ten to the power minus 5"
+58
+u<-10^(-5)
+59
+# 1.8 If you would now run the line
+60
+# print(U)
+61
+# you would get an error message. Which important concept of R is the
+reason …
+62
+# for this error? Answer in 1 sentence as a comment.
+63
+#R is a case sensitive, our variable is called u and not U, which is
+…
+undefined.
+64
+65
+################################################
+66
+# 2: Data and Logical conditions (20 points) #
+67
+################################################
+68
+# The file "Eudata.csv" contains data about the (still 28) EU countries.
+69
+# The columns are: County Name, Code, Capital, Accession (=Year of
+membership), …
+70
+# Population, Area, GDP (in Million EUR), currency, IsEurozone (=1, if
+member) …
+71
+72
+# The following line loads the data into an R dataframe
+73
+# Hunt: Use Session/Set Working Directory/To Source File Location
+74
+Eudata <- read.table('Eudata.csv'
+, sep=";"
+,header=TRUE)
+75
+76
+# 2.1 How many countries are there in the dataset?
+nrow(Eudata)
+77
+# 2.2 Calculate the total population of the EU
+78
+tot
+_pop<-sum(Eudata$Population)
+79
+# 2.3 Print the population of the smallest and largest EU country by Area
+80
+min(Eudata$Population)
+81
+max(Eudata$Population)
+82
+# 2.4 Calculate the number of countries that are members of the Eurozone
+83
+sum(Eudata$Eurozone==1)
+84
+# 2.5 Calculate the total GDP of all Eurozone members
+85
+gdp_
+eurozone<-sum(Eudata$GDP[Eudata$Eurozone==1])
+86
+# 2.6 Calculate the GDP per capita in euros
+87
+# (a) of the total EU, (b) of the Eurozone (c) of the non-Eurozone
+EU …
+88
+gdp_
+tot<-sum(Eudata$GDP)
+89
+gdp_per
+_
+capita
+_
+eu<-gdp_
+tot/tot
+_pop
+90
+pop_
+eurozone<-sum(Eudata$Population[Eudata$Eurozone==1])
+91
+gdp_per
+_
+capita
+_
+eurozone<-gdp_
+eurozone/pop_
+eurozone
+92
+gdp_
+non
+_
+eurozone<-sum(Eudata$GDP[Eudata$Eurozone==0])
+93pop_
+non
+_
+eurozone<-sum(Eudata$Population[Eudata$Eurozone==0])
+Saved: 13.01.26, 15:24:34 Page 3/5
+Printed for: Peter Gruber
+94
+gdp_per
+_
+capita
+non
+_
+_
+eurozone<-gdp_
+non
+_
+eurozone/pop_
+non
+eurozone
+_
+95
+# 2.7 When was the EU founded?
+96
+# Hint: this must be the earliest year in which any country became a
+member …
+97
+min(Eudata$Accession)
+98
+# 2.8 Calculate the number of EU founding members
+99
+founding_
+memebers<-sum(Eudata$Accession==1953)
+100
+# 2.9 Only now you discover that the data set still contains the UK.
+101
+# Permanently remove the UK from the dataframe "Eudata"
+102
+Eudata<-Eudata[Eudata$CountyName!="United Kingdom"
+, ]
+103
+# 2.10 You also discover that Bulgaria actually joined the Euro on 1st
+…
+January 2026.
+104
+# Permanently update the dataframe "Eudata" accordingly.
+105
+Eudata<-Eudata[Eudata$CountyName=="Bulgaria"
+, ]
+106
+107
+108
+################################################
+109
+# 3: Simulation and probability (15 points) #
+110
+################################################
+111
+# 3.1 Use R to produce one roll of a dice.
+112
+dice<-sample(1:6,1,replace=TRUE)
+113
+# 3.2 Create a vector called "k" that contains 1000 rolls of a dice
+114
+k<-sample(1:6,1000,replace=TRUE)
+115
+# 3.3 Using "k" from (3.2), estimate the probability of obtaining
+116
+# a "4" or "5" from a dice
+117
+mean(k==4 | k==5)
+118
+# 3.4 Create a vector called "m" that contains 1000 (different) rolls of
+a dice …
+119
+# Using "k" and "m" from (3.2) and (3.4), estimate the expected value
+120
+# and variance of the random variable z = 2k-m
+121
+m<-sample(1:6,1000,replace=TRUE)
+122
+z<-2*k-m
+123
+expected
+value
+_
+_
+124
+print(expected
+z<-mean(z)
+value
+z)
+_
+_
+125
+var(z)
+126
+# 3.5 Assume the yearly stock return to be normally distributed with a
+mean of 0.12 and …
+127
+# a standard deviation of 0.2. Create a variable "stock" with 100
+draws of stock returns …
+128
+stock<-rnorm(100,0.12,0.2)
+129
+# 3.6 What is the probability of a negative stock return?
+130
+# Answer this question ...
+131
+# (a) by using the variable "stock" from (3.5)
+132
+# (b) by calculating the (theoretical) probability for a normal
+distribution …
+133
+134
+135
+136
+137
+138
+139
+#a
+mean(stock<0)
+#b
+stock<-pnorm(0,0.12,0.2)
+################################################
+# 4: Functions and Optimization (25 points)#
+Saved: 13.01.26, 15:24:34 Page 4/5
+Printed for: Peter Gruber
+140
+141
+142
+143
+144
+################################################
+# 4.1 Create the function f(x)=x^2 in R
+f<-function(x){
+x<-x^2
+return(x)
+145
+}
+146
+# 4.2 Calculate the value of f for x=1
+147
+f(1)
+148
+# 4.3 Create a plot of the function for the interval [-2, 2]
+149
+# If in doubt, type "?plot" to get the help file for the function
+150
+curve(f,
+-2,2)
+151
+# 4.4 Numerically, by using R, find the location of the minimum using the
+…
+optim
+152
+# function. Store the result of your minimization (the location of
+the minimum) …
+153
+# in a variable called xmin
+154
+xmin<-optim(par=0,fn=f,lower=-2,upper=2,method='L-BFGS')
+155
+# 4.5 Now try to find the location of the minimum by implementing a grid
+…
+search
+156
+# yourself. Choose N=100 grid points. Search in an interval between
+…
+-2 and 2.
+157
+# Store the result of your minimization (the location of the minimum)
+in a …
+158
+# variable called xmin
+_grid
+159
+xmin<-optim(par=100,fn=f,method='Brent'
+, lower=-2,upper=2)
+160
+161
+# 4.6 Answer in a short comment (<= 2 sentences). The results from (4.4)
+and (4.5) …
+162
+# are not identical. Why?
+163
+# Because of the floating-point approximation
+164
+#The two ways to find the location of the minimum are close to each other
+but they aren't exactly the same …
+165
+y####################################################
+166
+# 5: Functions and algorithms (25 points) #
+167
+####################################################
+168
+# 5.1 The Luhn Algorithm is used to check whether a credit card number
+is valid. It goes …
+169
+# like this
+170
+# a) process individual digits from right to left
+171
+# b) leave digits number 1,3,5 etc (counted from right) unchanged
+172
+# c) multiply digits 2,3,6 etc (counted from right) by 2
+173
+# d) if a digit (after multiplying by 2) is larger than 9, subtract
+9 …
+174
+# e) calculate the sum of all (processed) digits
+175
+# IF the result can be divided by 10, the number is a valid credit
+card number …
+176
+#
+177
+# Example: 63487
+178
+# Right to left: do not change 7, multiply 8 by 2 and subtract 9, do
+not change 4, …
+179
+# multiply 3 by 2 and do not subtract anything, do
+not change 6 …
+Saved: 13.01.26, 15:24:34 Page 5/5
+Printed for: Peter Gruber
+180
+# 7 + 8*2-9 + 4 + 3*2 + 6 = 30 --> the number is
+valid …
+181
+…
+x/y.
+# Hint: The operation x %% y yields the remainder of the division
+182
+# For instance, 7 %% 4 gives 3
+183
+184
+# Write a function called checkLuhn that takes as argument a vector of
+individual digits …
+185
+# and returns TRUE if the number is a valid number and FALSE if it is not
+…
+valid.
+186
+187
+# The follwing line takes a *valid* credit card number and creates a
+…
+vector with single digits.
+188
+# You can use this to test your function
+189
+# Hint: digits contains the numbers from LEFT to RIGHT, while the Luhn
+algorithm works from …
+190
+# right to left.
+191
+digits <- as.numeric(unlist(strsplit("5019717010103742"
+,
+"")))
+192
+193
+194
+195
+196
+197
+198
+199
+200
+checkLuhn<-function(CardNumber){
+digits<-as.numeric(unlist(strsplit(CardNumber,
+digits
+_
+rev<-rev(digits)
+for(i in seq_
+along(digits
+rev)){
+_
+if( i %% 2==0){
+digits
+_
+rev[i]<-digits-rev[i]*2
+if(digits
+rev[i]>9){
+_
+digits
+_
+rev[i]<-digits
+rev[i]-9
+_
+"")))
+201
+}
+202
+}
+203
+204
+205
+206
+total<-sum(digits
+rev)
+_
+return(total%%10==0)
+207
+}
+}
+208
+209
+checkLuhn("5019717010103742")
+210
+# Exam "Informatica 2"
+, 2025-09-04
+# Peter Gruber and Paul Schneider
+# Rules
+# - Except for theoretical questions, all questions must be answered
+using R! …
+# - The exam takes 90 minutes and has 5 questions
+# - There are a total of 100 points
+# >>>>> SUBMIT your answers on iCorsi in time IMPORTANT!!! …
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+…
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+…
+37
+38
+39
+…
+40
+41
+42
+43
+44
+45
+46
+47
+<---
+# Material that you can use
+# - the R help function
+# - any printed material (open book)
+# Notes
+# - There are several ways how this exam can be solved.
+# - What counts are ...
+# + that your program works
+# + that you follow the instructions
+# + that the program fulfills the requirements
+# - We do not expect you to provide exactly the solution presented in
+class.
+# Tip:
+# - Use R to check your solution!
+################################################
+# 0: Your name (2 points) #
+################################################
+# 0.1 Write your name below as a comment
+# <your name>
+#Martinelli Ludovico
+################################################
+# 1: R basics (13 points) #
+################################################
+# 1.1 Create a vector v1 as defined in equation 1.1 on the Info Sheet. Do
+not use the c() command.
+v1<- seq(10,1,
+-1)
+v1
+# 1.2 Create a vector v2 as defined in equation 1.2 on the Info Sheet. Do
+not use the c() command.
+v2<-seq(3,30,3)
+v2
+# 1.3 Create a matrix M as defined in equation 1.3 on the Info Sheet.
+riga1<- seq(1,291,10)
+riga2<-seq(2,292,10)
+riga3<-seq(3,293,10)
+riga4<-seq(4,294,10)
+riga10<-seq(10,300,10)
+48
+M<-matrix(c(riga1,riga2,riga3,riga4,riga10), nrow = 5, byrow = T)
+49
+M
+50
+# 1.4 Print the first row of M
+51
+M[1,]
+52
+# 1.5 Display the last element of v1. Tell R to "display the last element
+of x"
+, …
+53
+# regardless of the dimension of v1.
+54
+tail(v1,1)
+55
+# 1.6 Perform the calculations in equation 1.4 on the Info Sheet.
+56
+(12/(19-7))^(1/5)
+57
+(log10(1)+log10(2))/((pi+1)/(pi-1))
+58
+log10(sin(2)/exp(2))
+59
+# 1.7 Create a variable "u" with the value "ten to the power minus 5"
+60
+u<-10^12
+61
+# 1.8 If you would now run the line
+62
+# print(U)
+63
+# you would get an error message. Which important concept of R is the
+reason …
+64
+# for this error? Answer in 1 sentence as a comment.
+65
+66
+#R is case sensitive, so we have to pay attention when we write capital
+…
+letter.
+67
+68
+################################################
+69
+# 2: Data and Logical conditions (20 points) #
+70
+################################################
+71
+# The file "Eudata.csv" contains data about the (still 28) EU countries.
+72
+# The columns are: County Name, Code, Capital, Accession (=Year of
+membership), …
+73
+# Population, Area, GDP (in Million EUR), currency, IsEurozone (=1, if
+member) …
+74
+75
+# The following line loads the data into an R dataframe
+76
+# Hunt: Use Session/Set Working Directory/To Source File Location
+77
+Eudata <- read.table('Eudata.csv'
+, sep=";"
+,header=TRUE)
+78
+View(Eudata)
+79
+# 2.1 How many countries are there in the dataset?
+80
+nrow(Eudata)
+81
+# 2.2 Calculate the total population of the EU
+82
+sum(Eudata$Population)
+83
+# 2.3 Print the population of the smallest and largest EU country by Area
+84
+Eudata$Population[which.min(Eudata$Area)]
+85
+Eudata$Population[which.max(Eudata$Area)]
+86
+# 2.4 Calculate the number of countries that are members of the Eurozone
+87
+sum(Eudata$Eurozone==1)
+88
+# 2.5 Calculate the total GDP of all Eurozone members
+89
+sum(Eudata$GDP[Eudata$Eurozone==1])
+90
+# 2.6 Calculate the GDP per capita in euros
+91
+# (a) of the total EU, (b) of the Eurozone (c) of the non-Eurozone
+EU …
+92
+gdp_per
+_
+capita<-(Eudata$GDP/Eudata$Population)
+93gdp_per
+_
+capita
+94
+95
+96
+sum(gdp_per
+_
+capita[Eudata$Currency=='euro'])
+sum(Eudata$GDP[Eudata$Eurozone==1]/Eudata$Population[Eudata$Eurozone==1])
+sum(Eudata$GDP[Eudata$Eurozone==0]/Eudata$Population[Eudata$Eurozone==0])
+97
+98
+# 2.7 When was the EU founded?
+99
+# Hint: this must be the earliest year in which any country became a
+member …
+100
+Eudata$Accession[which.min(Eudata$Accession)]
+101
+102
+# 2.8 Calculate the number of EU founding members
+103
+sum(Eudata$Accession==1953)
+104
+# 2.9 Only now you discover that the data set still contains the UK.
+105
+# Permanently remove the UK from the dataframe "Eudata"
+106
+Eudata<-Eudata[Eudata$CountyName != 'United Kingdom'
+,]
+107
+# 2.10 You also discover that Bulgaria actually joined the Euro on 1st
+…
+January 2026.
+108
+# Permanently update the dataframe "Eudata" accordingly.
+109
+Eudata$Accession[3,4]<- 2026
+110
+#qui devo cercare di sostituire la casella accession nel rigo 3, mettendo
+la data 2026 …
+111
+112
+113
+################################################
+114
+# 3: Simulation and probability (15 points) #
+115
+################################################
+116
+# 3.1 Use R to produce one roll of a dice.
+117
+sample(1:6,1)
+118
+# 3.2 Create a vector called "k" that contains 1000 rolls of a dice
+119
+k<-sample(1:6,1000, replace = TRUE)
+120
+k
+121
+# 3.3 Using "k" from (3.2), estimate the probability of obtaining
+122
+# a "4" or "5" from a dice
+123
+prob4<-mean(k==4)
+124
+prob4
+125
+prob5<-mean(k==5)
+126
+prob5
+127
+# 3.4 Create a vector called "m" that contains 1000 (different) rolls of
+a dice …
+128
+# Using "k" and "m" from (3.2) and (3.4), estimate the expected value
+129
+# and variance of the random variable z = 2k-m
+130
+m<- sample(1:6,1000, replace = T)
+131
+m
+132
+k
+133
+z<-2*k-m
+134
+expectedvalue<-mean(z)
+135
+round(expectedvalue)
+136
+# 3.5 Assume the yearly stock return to be normally distributed with a
+mean of 0.12 and …
+137
+# a standard deviation of 0.2. Create a variable "stock" with 100
+draws of stock returns …
+138
+stock<-rnorm(mean=0.12,sd=0.2,100)
+139stock
+140
+# 3.6 What is the probability of a negative stock return?
+141
+# Answer this question ...
+142
+# (a) by using the variable "stock" from (3.5)
+143
+# (b) by calculating the (theoretical) probability for a normal
+distribution …
+144
+mean(pnorm(stock<0))
+145
+round(mean(pnorm(stock<0)))
+146
+################################################
+147
+# 4: Functions and Optimization (25 points)#
+148
+################################################
+149
+# 4.1 Create the function f(x)=x^2 in R
+150
+f<- function(x){
+151
+x^2
+152
+}
+153
+154
+# 4.2 Calculate the value of f for x=1
+155
+f(1)
+156
+# 4.3 Create a plot of the function for the interval [-2, 2]
+157
+# If in doubt, type "?plot" to get the help file for the function
+158
+plot(f,
+-2,2)
+159
+# 4.4 Numerically, by using R, find the location of the minimum using the
+optim …
+160
+# function. Store the result of your minimization (the location of
+the minimum) …
+161
+# in a variable called xmin
+162
+xmin<- optim(par=1,fn=f,gr=NULL, method = 'BFGS')
+163
+xmin
+164
+# 4.5 Now try to find the location of the minimum by implementing a grid
+search …
+165
+# yourself. Choose N=100 grid points. Search in an interval between
+…
+-2 and 2.
+166
+# Store the result of your minimization (the location of the minimum)
+in a …
+167
+# variable called xmin
+_grid
+168
+169
+#in questo caso ho provato ad utilizzare questo metodo
+dell'ottimizzazione con grid …
+170
+#nonostante non riesca a svolgerlo
+171
+kgrid<-seq(0,100,1)
+172
+ugrid<-c(kgrid)
+173
+k
+_
+ottimo<- kgrid[which.min(ugrid)]
+174
+k
+ottimo
+_
+175
+xmin
+_grid<- optim(par=1,fn=kgrid, gr=grad ,lower=-2, upper=2 ,method =
+'BFGS') …
+176
+177
+#in questo caso devo utilizzare il comando grid research per trovare il
+178
+#punto di minimo della variabile xmin
+_grid
+179
+# 4.6 Answer in a short comment (<= 2 sentences). The results from (4.4)
+and (4.5) …
+180
+# are not identical. Why?
+181
+#4.4 is negative infinity while the 4.5 is between -2 and 2
+182
+183
+####################################################
+184
+# 5: Functions and algorithms (25 points) #
+185
+####################################################
+186
+# 5.1 The Luhn Algorithm is used to check whether a credit card number
+is valid. It goes …
+187
+# like this
+188
+# a) process individual digits from right to left
+189
+# b) leave digits number 1,3,5 etc (counted from right) unchanged
+190
+# c) multiply digits 2,3,6 etc (counted from right) by 2
+191
+# d) if a digit (after multiplying by 2) is larger than 9, subtract
+9 …
+192
+# e) calculate the sum of all (processed) digits
+193
+# IF the result can be divided by 10, the number is a valid credit
+…
+card number
+194
+#
+195
+# Example: 63487
+196
+# Right to left: do not change 7, multiply 8 by 2 and subtract 9, do
+not change 4, …
+197
+# multiply 3 by 2 and do not subtract anything, do
+not change 6 …
+198
+# 7 + 8*2-9 + 4 + 3*2 + 6 = 30 --> the number is
+valid …
+199
+# Hint: The operation x %% y yields the remainder of the division
+…
+x/y.
+200
+# For instance, 7 %% 4 gives 3
+201
+202
+# Write a function called checkLuhn that takes as argument a vector of
+individual digits …
+203
+# and returns TRUE if the number is a valid number and FALSE if it is not
+…
+valid.
+204
+checkLuhn<- function(x){
+205
+count= 0
+206
+if(x==1 && 3 && 5){
+207
+return(x)
+208
+}
+209
+210
+else if(x==2 && 3 && 6){
+return(x*2)
+211
+}
+212
+213
+else if (x*2>9){
+return(x-9)
+214
+}
+215
+return(x)
+216
+}
+217
+218
+# The follwing line takes a *valid* credit card number and creates a
+…
+vector with single digits.
+219
+# You can use this to test your function
+220
+# Hint: digits contains the numbers from LEFT to RIGHT, while the Luhn
+algorithm works from …
+221
+# right to left.
+222
+digits <- as.numeric(unlist(strsplit("5019717010103742"
+,
+"")))
+223
+224
+225
+Saved: 13.01.26, 15:34:48 Page 1/6
+Printed for: Peter Gruber
+# Exam "Informatica 2"
+, 2025-09-04
+# Peter Gruber and Paul Schneider
+1
+2
+3
+4
+# Rules
+5
+# - Except for theoretical questions, all questions must be answered
+using R! …
+6
+# - The exam takes 90 minutes and has 5 questions
+7
+# - There are a total of 100 points
+8
+# >>>>> SUBMIT your answers on iCorsi in time IMPORTANT!!! …
+<---
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+…
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+# Material that you can use
+# - the R help function
+# - any printed material (open book)
+# Notes
+# - There are several ways how this exam can be solved.
+# - What counts are ...
+# + that your program works
+# + that you follow the instructions
+# + that the program fulfills the requirements
+# - We do not expect you to provide exactly the solution presented in
+class.
+# Tip:
+# - Use R to check your solution!
+################################################
+# 0: Your name (2 points) #
+################################################
+# 0.1 Write your name below as a comment
+# <Malak El fatih>
+33
+################################################
+34
+# 1: R basics (13 points) #
+35
+################################################
+36
+# 1.1 Create a vector v1 as defined in equation 1.1 on the Info Sheet. Do
+…
+not use the c() command.
+37
+v1 = seq(10,0,
+-1)
+38
+# 1.2 Create a vector v2 as defined in equation 1.2 on the Info Sheet. Do
+…
+not use the c() command.
+39
+v2 = 3 *(1:10)
+40
+# 1.3 Create a matrix M as defined in equation 1.3 on the Info Sheet.
+41
+M <- matrix(seq(1, 300, by = 1), nrow = 5, byrow = TRUE)
+42
+# 1.4 Print the first row of M
+43
+M[1, ]
+44
+# 1.5 Display the last element of v1. Tell R to "display the last element
+of x"
+, …
+45
+# regardless of the dimension of v1.
+46
+Saved: 13.01.26, 15:34:48 Page 2/6
+Printed for: Peter Gruber
+47
+48
+49
+50
+# 1.6 Perform the calculations in equation 1.4 on the Info Sheet.
+res <- c((12/(19-7))^(1/5),
+(log(1) + log(2)) / ((pi + 1)/(pi - 1 )),
+log(sin(2)/exp(2))
+51
+)
+52
+# 1.7 Create a variable "u" with the value "ten to the power minus 5"
+53
+54
+# 1.8 If you would now run the line
+55
+# print(U)
+56
+# you would get an error message. Which important concept of R is the
+reason …
+57
+# for this error? Answer in 1 sentence as a comment.
+58
+59
+60
+################################################
+61
+# 2: Data and Logical conditions (20 points) #
+62
+################################################
+63
+# The file "Eudata.csv" contains data about the (still 28) EU countries.
+64
+# The columns are: County Name, Code, Capital, Accession (=Year of
+membership), …
+65
+# Population, Area, GDP (in Million EUR), currency, IsEurozone (=1, if
+member) …
+66
+67
+68
+69
+# The following line loads the data into an R dataframe
+# Hunt: Use Session/Set Working Directory/To Source File Location
+Eudata <- read.table('Eudata.csv'
+, sep=";"
+,header=TRUE)
+70
+71
+72
+# 2.1 How many countries are there in the dataset?
+nrow(Eudata)
+73
+74
+75
+# 2.2 Calculate the total population of the EU
+sum(Eudata$Population)
+76
+77
+# 2.3 Print the population of the smallest and largest EU country by Area
+78
+79
+pop_
+smallest <- Eudata$Population[which.min(Eudata$Area)]
+80
+81
+pop_
+largest <- Eudata$Population[which.max(Eudata$Area)]
+82
+83
+84
+pop_
+smallest
+pop_
+largest
+85
+86
+87
+# 2.4 Calculate the number of countries that are members of the Eurozone
+sum(Eudata$IsEurozone == 1)
+88
+89
+90
+# 2.5 Calculate the total GDP of all Eurozone members
+sum(Eudata$GDP[Eudata$IsEurozone == 1])
+91
+92
+93
+# 2.6 Calculate the GDP per capita in euros
+# (a) of the total EU, (b) of the Eurozone (c) of the non-Eurozone
+EU …
+94# (a)
+Saved: 13.01.26, 15:34:48 Page 3/6
+Printed for: Peter Gruber
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+…
+111
+112
+113
+114
+115
+116
+117
+…
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+gdp_pc
+_
+eu <- sum(Eudata$GDP) * 1e6 / sum(Eudata$Population)
+# (b)
+gdp_pc
+_
+euro <- sum(Eudata$GDP[Eudata$IsEurozone == 1]) * 1e6 /
+sum(Eudata$Population[Eudata$IsEurozone == 1])
+# (c)
+gdp_pc
+_
+noneuro <- sum(Eudata$GDP[Eudata$IsEurozone == 0]) * 1e6 /
+sum(Eudata$Population[Eudata$IsEurozone == 0])
+gdp_pc
+gdp_pc
+gdp_pc
+eu
+_
+euro
+_
+noneuro
+_
+# 2.7 When was the EU founded?
+# Hint: this must be the earliest year in which any country became a
+member
+# 2.8 Calculate the number of EU founding members
+# 2.9 Only now you discover that the data set still contains the UK.
+# Permanently remove the UK from the dataframe "Eudata"
+# 2.10 You also discover that Bulgaria actually joined the Euro on 1st
+January 2026.
+# Permanently update the dataframe "Eudata" accordingly.
+################################################
+# 3: Simulation and probability (15 points) #
+################################################
+# 3.1 Use R to produce one roll of a dice.
+sample(1:6, 1)
+# 3.2 Create a vector called "k" that contains 1000 rolls of a dice
+k <- sample(1:6, 1000, replace = TRUE)
+# 3.3 Using "k" from (3.2), estimate the probability of obtaining
+# a "4" or "5" from a dice
+mean(k == 4 | k == 5)
+# 3.4 Create a vector called "m" that contains 1000 (different) rolls of
+a dice …
+136
+# Using "k" and "m" from (3.2) and (3.4), estimate the expected value
+137
+# and variance of the random variable z = 2k-m
+138
+m <- sample(1:6, 1000, replace = TRUE)
+139
+140
+# 3.5 Assume the yearly stock return to be normally distributed with a
+mean of 0.12 and …
+141
+# a standard deviation of 0.2. Create a variable "stock" with 100
+draws of stock returns …
+Saved: 13.01.26, 15:34:48 Page 4/6
+Printed for: Peter Gruber
+142
+stock <- rnorm(100, mean = 0.12, sd = 0.2)
+143
+144
+# 3.6 What is the probability of a negative stock return?
+145
+# Answer this question ...
+146
+# (a) by using the variable "stock" from (3.5)
+147
+# (b) by calculating the (theoretical) probability for a normal
+distribution …
+148
+mean(stock < 0)
+149
+pnorm(0, mean = 0.12, sd = 0.2)
+150
+151
+152
+153
+154
+155
+156
+157
+################################################
+# 4: Functions and Optimization (25 points)#
+################################################
+# 4.1 Create the function f(x)=x^2 in R
+f <- function(x) {
+x^2
+158
+}
+159
+160
+# 4.2 Calculate the value of f for x=1
+161
+162
+f(1)
+# [1] 1
+163
+164
+165
+# 4.3 Create a plot of the function for the interval [-2, 2]
+166
+# If in doubt, type "?plot" to get the help file for the function
+167
+x <- seq(-2, 2, length.out = 400)
+168
+plot(x, f(x), type = "l"
+, xlab = "x"
+, ylab = "f(x)"
+, main = "f(x) = x^2
+on [-2, 2]") …
+169
+170
+171
+# 4.4 Numerically, by using R, find the location of the minimum using the
+optim …
+172
+# function. Store the result of your minimization (the location of
+the minimum) …
+173
+# in a variable called xmin
+174
+xmin <- optimize(g, interval = c(-10,10))$minimum
+175
+176
+# 4.5 Now try to find the location of the minimum by implementing a grid
+search …
+177
+…
+-2 and 2.
+178
+in a …
+179
+# variable called xmin
+_grid
+180
+N <- 100
+181
+grid <- seq(-2, 2, length.out = N)
+182
+vals <- f(grid)
+# yourself. Choose N=100 grid points. Search in an interval between
+# Store the result of your minimization (the location of the minimum)
+183
+184
+185
+xmin
+_grid <- grid[which.min(vals)]
+xmin
+_grid
+186
+Saved: 13.01.26, 15:34:48 Page 5/6
+Printed for: Peter Gruber
+187
+# 4.6 Answer in a short comment (<= 2 sentences). The results from (4.4)
+and (4.5) …
+188
+# are not identical. Why?
+189
+190
+191
+192
+193
+y####################################################
+194
+# 5: Functions and algorithms (25 points) #
+195
+####################################################
+196
+# 5.1 The Luhn Algorithm is used to check whether a credit card number
+is valid. It goes …
+197
+# like this
+198
+# a) process individual digits from right to left
+199
+rev
+_
+digits <- rev(digits)
+200
+# b) leave digits number 1,3,5 etc (counted from right) unchanged
+201
+# c) multiply digits 2,3,6 etc (counted from right) by 2
+202
+# d) if a digit (after multiplying by 2) is larger than 9, subtract
+9 …
+203
+# e) calculate the sum of all (processed) digits
+204
+# IF the result can be divided by 10, the number is a valid credit
+card number …
+205
+#
+206
+# Example: 63487
+207
+# Right to left: do not change 7, multiply 8 by 2 and subtract 9, do
+not change 4, …
+208
+# multiply 3 by 2 and do not subtract anything, do
+not change 6 …
+209
+# 7 + 8*2-9 + 4 + 3*2 + 6 = 30 --> the number is
+valid …
+210
+# Hint: The operation x %% y yields the remainder of the division
+…
+x/y.
+211
+# For instance, 7 %% 4 gives 3
+212
+213
+# Write a function called checkLuhn that takes as argument a vector of
+individual digits …
+214
+# and returns TRUE if the number is a valid number and FALSE if it is not
+…
+valid.
+215
+216
+# The follwing line takes a *valid* credit card number and creates a
+…
+vector with single digits.
+217
+# You can use this to test your function
+218
+# Hint: digits contains the numbers from LEFT to RIGHT, while the Luhn
+algorithm works from …
+219
+# right to left.
+220
+digits <- as.numeric(unlist(strsplit("5019717010103742"
+,
+"")))
+221
+222
+223
+224
+checkLuhn <- function(digits) {
+digits <- as.integer(digits)
+if (any(is.na(digits)) || any(digits < 0 | digits > 9)) return(FALSE)
+225
+226
+a) process individual digits from right to left
+Saved: 13.01.26, 15:34:48 Page 6/6
+Printed for: Peter Gruber
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+rev
+_
+digits <- rev(digits)
+#leave digts number 1,3,5 ecc.. (counted from right) unchanged
+pos <- seq_
+along(rev
+_
+digits)
+# multiply digits 2,3,6 ecc.. (counted from rigt) by 2
+to
+_
+double <- (pos %% 2 == 0)
+rev
+_
+digits[to
+double] <- rev
+_
+_
+digits[to
+double] * 2
+_
+#if a digit (after multiplying by 2) is larger than 9, subtract 9
+rev
+_
+digits[rev
+_
+digits > 9] <- rev
+_
+digits[rev
+_
+digits > 9] - 9
+# calculate the sum of all (processed) digits
+sum(rev
+_
+digits) %% 10 == 0
+# Exam "Informatica 2"
+, 2025-09-04
+# Peter Gruber and Paul Schneider
+# Rules
+# - Except for theoretical questions, all questions must be answered
+using R! …
+# - The exam takes 90 minutes and has 5 questions
+# - There are a total of 100 points
+# >>>>> SUBMIT your answers on iCorsi in time IMPORTANT!!! …
+<---
+# Material that you can use
+# - the R help function
+# - any printed material (open book)
+# Notes
+# - There are several ways how this exam can be solved.
+# - What counts are ...
+# + that your program works
+# + that you follow the instructions
+# + that the program fulfills the requirements
+# - We do not expect you to provide exactly the solution presented in
+class.
+# Tip:
+# - Use R to check your solution!
+################################################
+# 0: Your name (2 points) #
+################################################
+# 0.1 Write your name below as a comment
+# <Matteo Gangi>
+# "Matteo Gangi
+################################################
+# 1: R basics (13 points) #
+################################################
+# 1.1 Create a vector v1 as defined in equation 1.1 on the Info Sheet. Do
+not use the c() command.
+v1=seq(10, 1,
+-1)
+# 1.2 Create a vector v2 as defined in equation 1.2 on the Info Sheet. Do
+not use the c() command.
+v2= seq(1, 30, 3)
+# 1.3 Create a matrix M as defined in equation 1.3 on the Info Sheet.
+M= rbind(seq(1, 291,10), seq(2, 292, 10), seq(3, 293, 10), seq(4,294,10),
+seq(10,300, 10)) …
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+…
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+…
+38
+39
+40
+…
+41
+42
+43
+44
+45
+46
+# 1.4 Print the first row of M
+47
+M[1,]
+48
+49
+# 1.5 Display the last element of v1. Tell R to "display the last element
+of x"
+, …
+50
+# regardless of the dimension of v1.
+51
+tail(v1, 1)
+52
+53
+54
+55
+56
+# 1.6 Perform the calculations in equation 1.4 on the Info Sheet.
+(12/(19-7)) ^ (1/5)
+(log10(1) + log0(2))/ ((pi+1)/(pi-1))
+log10(sin(2)/exp(2))
+57
+58
+# 1.7 Create a variable "u" with the value "ten to the power minus 5"
+59
+u= 10^(-5)
+60
+61
+62
+# 1.8 If you would now run the line
+# print(U)
+63
+64
+# you would get an error message. Which important concept of R is the
+…
+reason
+65
+# for this error? Answer in 1 sentence as a comment.
+66
+67
+# Because R is case sensitive
+68
+69
+70
+################################################
+71
+# 2: Data and Logical conditions (20 points) #
+72
+################################################
+73
+# The file "Eudata.csv" contains data about the (still 28) EU countries.
+74
+# The columns are: County Name, Code, Capital, Accession (=Year of
+membership), …
+75
+# Population, Area, GDP (in Million EUR), currency, IsEurozone (=1, if
+member) …
+76
+77
+78
+79
+# The following line loads the data into an R dataframe
+# Hunt: Use Session/Set Working Directory/To Source File Location
+Eudata <- read.table('Eudata.csv'
+, sep=";"
+,header=TRUE)
+80
+81
+82
+# 2.1 How many countries are there in the dataset?
+nrow(Eudata)
+83
+84
+85
+# 2.2 Calculate the total population of the EU
+sum(Eudata$Popolation)
+86
+87
+88
+89
+90
+# 2.3 Print the population of the smallest and largest EU country by Area
+smallest= Eudata$Population[which.min(Eudata$Area)]
+largest = Eudata$Population [which.max(Eudata$Area)]
+91
+92
+93
+# 2.4 Calculate the number of countries that are members of the Eurozone
+sum(Eudata$Eurozone== TRUE)
+94
+95
+96
+# 2.5 Calculate the total GDP of all Eurozone members
+sum(Eudata$GDP[Eudata$Eurozone== TRUE])
+97
+98
+99
+# 2.6 Calculate the GDP per capita in euros
+# (a) of the total EU, (b) of the Eurozone (c) of the non-Eurozone
+EU …
+100
+101
+sum(Eudata$GDP/Eudata$Population) #a
+102
+sum(Eudata$GDP[Eudata$Eurozone==
+TRUE]/Eudata$Population[Eudata$Eurozone== TRUE]) #b …
+103
+sum(Eudata$GDP[Eudata$Eurozone==
+FALSE]/Eudata$Population[Eudata$Eurozone== FALSE]) …
+104
+105
+# 2.7 When was the EU founded?
+106
+# Hint: this must be the earliest year in which any country became a
+member …
+107
+min(Eudata$Accession)
+108
+109
+110
+# 2.8 Calculate the number of EU founding members
+sum(Eudata$Accession == 1953)
+111
+112
+113
+114
+# 2.9 Only now you discover that the data set still contains the UK.
+# Permanently remove the UK from the dataframe "Eudata"
+Eudata= Eudata[Eudata$CountyName != "United Kingdom"]
+115
+116
+117
+# 2.10 You also discover that Bulgaria actually joined the Euro on 1st
+…
+118
+January 2026.
+# Permanently update the dataframe "Eudata" accordingly.
+119
+120
+121
+122
+123
+124
+125
+126
+################################################
+# 3: Simulation and probability (15 points) #
+################################################
+# 3.1 Use R to produce one roll of a dice.
+dice= sample(1:6, 1, TRUE)
+127
+128
+129
+130
+# 3.2 Create a vector called "k" that contains 1000 rolls of a dice
+k=sample (1:6, 1, TRUE)
+k=sample (1:6, 1, TRUE)
+131
+132
+133
+134
+# 3.3 Using "k" from (3.2), estimate the probability of obtaining
+# a "4" or "5" from a dice
+mean (k==4 | k==5)
+135
+136
+# 3.4 Create a vector called "m" that contains 1000 (different) rolls of
+a dice …
+137
+# Using "k" and "m" from (3.2) and (3.4), estimate the expected value
+138
+# and variance of the random variable z = 2k-m
+139
+140
+m= sample(1:6, 1000, TRUE)
+141
+142
+z= 2*K - m
+mean(z)
+143
+144
+# 3.5 Assume the yearly stock return to be normally distributed with a
+mean of 0.12 and …
+145
+# a standard deviation of 0.2. Create a variable "stock" with 100
+draws of stock returns …
+146
+stock = rnorm(100, 0.12, 0.2)
+147
+148
+149
+150
+151
+…
+152
+153
+# 3.6 What is the probability of a negative stock return?
+# Answer this question ...
+# (a) by using the variable "stock" from (3.5)
+# (b) by calculating the (theoretical) probability for a normal
+distribution
+mean(stock<0) #a
+pnorm(0, 0.12, 0.2) #b
+154
+155
+156
+157
+158
+159
+160
+################################################
+# 4: Functions and Optimization (25 points)#
+################################################
+# 4.1 Create the function f(x)=x^2 in R
+f = function(x){
+x^2
+161
+162
+163
+164
+165
+166
+}
+# 4.2 Calculate the value of f for x=1
+f(1)
+# 4.3 Create a plot of the function for the interval [-2, 2]
+# If in doubt, type "?plot" to get the help file for the function
+curve(f,
+-2, 2)
+167
+168
+# 4.4 Numerically, by using R, find the location of the minimum using the
+optim …
+169
+# function. Store the result of your minimization (the location of
+the minimum) …
+170
+# in a variable called xmin
+171
+neg_
+f = function (x){
+172
+-f(x)
+173
+174
+175
+176
+}
+res= optim(par=0, fn =neg_
+f, method = "Brent"
+xmin= res$par
+print(xmin)
+, lower= -2, upper=2)
+177
+178
+# 4.5 Now try to find the location of the minimum by implementing a grid
+search …
+179
+…
+-2 and 2.
+180
+in a …
+181
+# variable called xmin
+_grid
+# yourself. Choose N=100 grid points. Search in an interval between
+# Store the result of your minimization (the location of the minimum)
+182
+183
+184
+# 4.6 Answer in a short comment (<= 2 sentences). The results from (4.4)
+184…
+185
+and (4.5)
+# are not identical. Why?
+186
+187
+188
+y####################################################
+189
+# 5: Functions and algorithms (25 points) #
+190
+####################################################
+191
+# 5.1 The Luhn Algorithm is used to check whether a credit card number
+is valid. It goes …
+192
+# like this
+193
+# a) process individual digits from right to left
+194
+# b) leave digits number 1,3,5 etc (counted from right) unchanged
+195
+# c) multiply digits 2,3,6 etc (counted from right) by 2
+196
+# d) if a digit (after multiplying by 2) is larger than 9, subtract
+9 …
+197
+# e) calculate the sum of all (processed) digits
+198
+# IF the result can be divided by 10, the number is a valid credit
+card number …
+199
+#
+200
+# Example: 63487
+201
+# Right to left: do not change 7, multiply 8 by 2 and subtract 9, do
+not change 4, …
+202
+# multiply 3 by 2 and do not subtract anything, do
+not change 6 …
+203
+# 7 + 8*2-9 + 4 + 3*2 + 6 = 30 --> the number is
+valid …
+204
+# Hint: The operation x %% y yields the remainder of the division
+…
+x/y.
+205
+# For instance, 7 %% 4 gives 3
+206
+207
+# Write a function called checkLuhn that takes as argument a vector of
+individual digits …
+208
+# and returns TRUE if the number is a valid number and FALSE if it is not
+…
+valid.
+209
+210
+# The follwing line takes a *valid* credit card number and creates a
+…
+vector with single digits.
+211
+# You can use this to test your function
+212
+# Hint: digits contains the numbers from LEFT to RIGHT, while the Luhn
+algorithm works from …
+213
+# right to left.
+214
+digits <- as.numeric(unlist(strsplit("5019717010103742"
+,
+"")))
+215
+216
+217
+# Exam "Informatica 2"
+, 2025-09-04
+# Peter Gruber and Paul Schneider
+# Rules
+# - Except for theoretical questions, all questions must be answered
+using R! …
+# - The exam takes 90 minutes and has 5 questions
+# - There are a total of 100 points
+# >>>>> SUBMIT your answers on iCorsi in time IMPORTANT!!! …
+<---
+# Material that you can use
+# - the R help function
+# - any printed material (open book)
+# Notes
+# - There are several ways how this exam can be solved.
+# - What counts are ...
+# + that your program works
+# + that you follow the instructions
+# + that the program fulfills the requirements
+# - We do not expect you to provide exactly the solution presented in
+class.
+# Tip:
+# - Use R to check your solution!
+################################################
+# 0: Your name (2 points) #
+################################################
+# 0.1 Write your name below as a comment
+# <your name>
+<Matteo Zucchi>
+################################################
+# 1: R basics (13 points) #
+################################################
+# 1.1 Create a vector v1 as defined in equation 1.1 on the Info Sheet. Do
+not use the c() command.
+v1 <- 10:1
+v1
+# 1.2 Create a vector v2 as defined in equation 1.2 on the Info Sheet. Do
+not use the c() command.
+v2 <- seq(3, 30, 3)
+v2
+# 1.3 Create a matrix M as defined in equation 1.3 on the Info Sheet.
+M= rbind(seq(1, 291, 10), seq(2, 292, 10), seq(3, 293, 10), seq(4, 294,
+10), seq(10, 300, 10)) …
+# 1.4 Print the first row of M
+M[1,]
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+…
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+…
+37
+38
+39
+…
+40
+41
+42
+43
+44
+45
+46
+# 1.5 Display the last element of v1. Tell R to "display the last element
+46…
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+…
+58
+59
+of x"
+,
+# regardless of the dimension of v1.
+tail(v1,1)
+# 1.6 Perform the calculations in equation 1.4 on the Info Sheet.
+(12/(19-7))^(1/5)
+(log10(1)+log10(2))/((pi+1)/(pi-1))
+log10(sin(2)/exp(2))
+# 1.7 Create a variable "u" with the value "ten to the power minus 5"
+u= 10^(-5)
+# 1.8 If you would now run the line
+# print(U)
+# you would get an error message. Which important concept of R is the
+reason
+# for this error? Answer in 1 sentence as a comment.
+--> Because R is case sensitive
+60
+61
+################################################
+62
+# 2: Data and Logical conditions (20 points) #
+63
+################################################
+64
+# The file "Eudata.csv" contains data about the (still 28) EU countries.
+65
+# The columns are: County Name, Code, Capital, Accession (=Year of
+membership), …
+66
+# Population, Area, GDP (in Million EUR), currency, IsEurozone (=1, if
+member) …
+67
+68
+69
+70
+# The following line loads the data into an R dataframe
+# Hunt: Use Session/Set Working Directory/To Source File Location
+Eudata <- read.table('Eudata.csv'
+, sep=";"
+,header=TRUE)
+71
+72
+# 2.1 How many countries are there in the dataset?
+73
+nrow(Eudata)
+74
+# 2.2 Calculate the total population of the EU
+75
+sum=(Eudata$Population)
+76
+# 2.3 Print the population of the smallest and largest EU country by Area
+77
+smallest= Eudata$Population[which.min(Eudata$Area)]
+78
+largest= Eudata$Population[which.max(Eudata$Area)]
+79
+# 2.4 Calculate the number of countries that are members of the Eurozone
+80
+sum(Eudata$Eurozone == TRUE)
+81
+# 2.5 Calculate the total GDP of all Eurozone members
+82
+sum(Eudata$GDP[Eudata$Eurozone == TRUE])
+83
+# 2.6 Calculate the GDP per capita in euros
+84
+# (a) of the total EU, (b) of the Eurozone (c) of the non-Eurozone
+EU …
+85
+sum(Eudata$GDP/Eudata$Population) # (a)
+86
+sum(Eudata$GDP[Eudata$Eurozone == TRUE]/Eudata$Population[Eudata$Eurozone
+== TRUE]) #(b) …
+87
+sum(Eudata$GDP[Eudata$Eurozone ==
+FALSE]/Eudata$Population[Eudata$Eurozone == FALSE]) # (c) …
+88
+# 2.7 When was the EU founded?
+89
+# Hint: this must be the earliest year in which any country became a
+member …
+90min(Eudata$Accession)
+91
+92
+93
+94
+95
+96
+…
+97
+98
+# 2.8 Calculate the number of EU founding members
+sum(Eudata$Accession == 1953)
+# 2.9 Only now you discover that the data set still contains the UK.
+# Permanently remove the UK from the dataframe "Eudata"
+Eudata= Eudata[-28,]
+# 2.10 You also discover that Bulgaria actually joined the Euro on 1st
+January 2026.
+# Permanently update the dataframe "Eudata" accordingly.
+Eudata= Eudata[Eudata$CountyName ]
+99
+100
+101
+################################################
+102
+# 3: Simulation and probability (15 points) #
+103
+################################################
+104
+# 3.1 Use R to produce one roll of a dice.
+105
+dice= sample(1:6, 1, TRUE)
+106
+# 3.2 Create a vector called "k" that contains 1000 rolls of a dice
+107
+k= sample(1:6, 1000, TRUE)
+108
+# 3.3 Using "k" from (3.2), estimate the probability of obtaining
+109
+# a "4" or "5" from a dice
+110
+mean(k == 4 | k == 5)
+111
+# 3.4 Create a vector called "m" that contains 1000 (different) rolls of
+a dice …
+112
+# Using "k" and "m" from (3.2) and (3.4), estimate the expected value
+113
+# and variance of the random variable z = 2k-m
+114
+m= sample(1:6, 1000, TRUE)
+115
+z= 2*k-m
+116
+mean(z)
+117
+# 3.5 Assume the yearly stock return to be normally distributed with a
+mean of 0.12 and …
+118
+# a standard deviation of 0.2. Create a variable "stock" with 100
+draws of stock returns …
+119
+stock= rnorm(100, 0.12, 0.2)
+120
+# 3.6 What is the probability of a negative stock return?
+121
+# Answer this question ...
+122
+# (a) by using the variable "stock" from (3.5)
+123
+# (b) by calculating the (theoretical) probability for a normal
+distribution …
+124
+mean(stock<0) #(a)
+125
+pnorm(0, 0.12, 0.2) #(b)
+126
+127
+128
+129
+130
+131
+132
+################################################
+# 4: Functions and Optimization (25 points)#
+################################################
+# 4.1 Create the function f(x)=x^2 in R
+f= function(x){
+x^2
+133
+134
+# 4.2 Calculate the value of f for x=1
+135
+}
+f(1)
+136
+137
+# 4.3 Create a plot of the function for the interval [-2, 2]
+# If in doubt, type "?plot" to get the help file for the function
+138
+curve(f,
+-2, 2)
+139
+# 4.4 Numerically, by using R, find the location of the minimum using the
+optim …
+140
+# function. Store the result of your minimization (the location of
+the minimum) …
+141
+# in a variable called xmin
+142
+neg_
+f= function(x){
+143
+-f(x)
+144
+145
+146
+147
+148
+…
+149
+…
+}
+res= optim(par=0, fn = neg_
+f,method = "Brent"
+xmin= res$par
+print(xmin)
+search
+-2 and 2.
+in a …
+# variable called xmin
+_grid
+grid()
+xmin
+_grid
+and (4.5) …
+# are not identical. Why?
+, lower = -2, upper = 2)
+# 4.5 Now try to find the location of the minimum by implementing a grid
+# yourself. Choose N=100 grid points. Search in an interval between
+150
+# Store the result of your minimization (the location of the minimum)
+151
+152
+153
+154
+# 4.6 Answer in a short comment (<= 2 sentences). The results from (4.4)
+155
+156
+157
+158
+y####################################################
+159
+# 5: Functions and algorithms (25 points) #
+160
+####################################################
+161
+# 5.1 The Luhn Algorithm is used to check whether a credit card number
+is valid. It goes …
+162
+# like this
+163
+# a) process individual digits from right to left
+164
+# b) leave digits number 1,3,5 etc (counted from right) unchanged
+165
+# c) multiply digits 2,3,6 etc (counted from right) by 2
+166
+# d) if a digit (after multiplying by 2) is larger than 9, subtract
+9 …
+167
+# e) calculate the sum of all (processed) digits
+168
+# IF the result can be divided by 10, the number is a valid credit
+card number …
+169
+#
+170
+# Example: 63487
+171
+# Right to left: do not change 7, multiply 8 by 2 and subtract 9, do
+not change 4, …
+172
+# multiply 3 by 2 and do not subtract anything, do
+not change 6 …
+173
+# 7 + 8*2-9 + 4 + 3*2 + 6 = 30 --> the number is
+valid …
+174
+# Hint: The operation x %% y yields the remainder of the division
+…
+x/y.
+175
+176
+# For instance, 7 %% 4 gives 3
+177
+# Write a function called checkLuhn that takes as argument a vector of
+individual digits …
+178
+# and returns TRUE if the number is a valid number and FALSE if it is not
+…
+valid.
+179
+180
+# The follwing line takes a *valid* credit card number and creates a
+…
+vector with single digits.
+181
+# You can use this to test your function
+182
+# Hint: digits contains the numbers from LEFT to RIGHT, while the Luhn
+algorithm works from …
+183
+# right to left.
+184
+digits <- as.numeric(unlist(strsplit("5019717010103742"
+,
+"")))
+185
+186
+187
+188
+checkLuhn <- function(x){
+counter<- 0
+digits<-
+189
+}
+190
+191
+# Exam "Informatica 2"
+, 2025-09-04
+# Peter Gruber and Paul Schneider
+# Rules
+# - Except for theoretical questions, all questions must be answered
+using R! …
+# - The exam takes 90 minutes and has 5 questions
+# - There are a total of 100 points
+# >>>>> SUBMIT your answers on iCorsi in time IMPORTANT!!! …
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+…
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+…
+37
+38
+39
+…
+40
+41
+42
+43
+44
+45
+46
+47
+<---
+# Material that you can use
+# - the R help function
+# - any printed material (open book)
+# Notes
+# - There are several ways how this exam can be solved.
+# - What counts are ...
+# + that your program works
+# + that you follow the instructions
+# + that the program fulfills the requirements
+# - We do not expect you to provide exactly the solution presented in
+class.
+# Tip:
+# - Use R to check your solution!
+################################################
+# 0: Your name (2 points) #
+################################################
+# 0.1 Write your name below as a comment
+# <your name>
+#<Nicholas Serantoni>
+################################################
+# 1: R basics (13 points) #
+################################################
+# 1.1 Create a vector v1 as defined in equation 1.1 on the Info Sheet. Do
+not use the c() command.
+v1<- (10:1)
+v1
+# 1.2 Create a vector v2 as defined in equation 1.2 on the Info Sheet. Do
+not use the c() command.
+v2<-seq(3,30,by=3)
+v2
+# 1.3 Create a matrix M as defined in equation 1.3 on the Info Sheet.
+row1<- seq(1,291, by=10)
+row2<-seq(2,292,by=10)
+row3<- seq(3,293,by=10)
+row4<-seq(4,294, by=10)
+row5<- seq(10,300, by=10)
+48
+M<-rbind(row1,row2,row3,row4, row5)
+49
+M
+50
+# 1.4 Print the first row of M
+51
+M["row1"
+,]
+52
+# 1.5 Display the last element of v1. Tell R to "display the last element
+of x"
+, …
+53
+# regardless of the dimension of v1.
+54
+v1<-(10:1)
+55
+v1
+56
+tail(v1,1)
+57
+# 1.6 Perform the calculations in equation 1.4 on the Info Sheet.
+58
+(12/(19-7))^(1/5)
+59
+(log10(1)+log10(2))/((pi+1)/(pi-1))
+60
+log10(sin(2)/exp(2))
+61
+gx<- function(x){
+62
+g<-3*X^2-x/2+2
+63
+g
+64
+}
+65
+gx
+66
+# 1.7 Create a variable "u" with the value "ten to the power minus 5"
+67
+u<-10^5
+68
+# 1.8 If you would now run the line
+69
+# print(U)
+70
+# you would get an error message. Which important concept of R is the
+…
+reason
+71
+# for this error? Answer in 1 sentence as a comment.
+72
+#1.8"u"and "U" are seen as two different variables.we should use the same
+lower case name for variables …
+73
+74
+################################################
+75
+# 2: Data and Logical conditions (20 points) #
+76
+################################################
+77
+# The file "Eudata.csv" contains data about the (still 28) EU countries.
+78
+# The columns are: County Name, Code, Capital, Accession (=Year of
+membership), …
+79
+# Population, Area, GDP (in Million EUR), currency, IsEurozone (=1, if
+member) …
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+# The following line loads the data into an R dataframe
+# Hunt: Use Session/Set Working Directory/To Source File Location
+Eudata <- read.table('Eudata.csv'
+, sep=";"
+,header=TRUE)
+Eudata<- read.csv("~/Desktop/Inf2mock2024 (2)/Eudata.csv")
+# 2.1 How many countries are there in the dataset?
+nrow(Eudata)
+# 2.2 Calculate the total population of the EU
+sum(Eudata$Population)
+# 2.3 Print the population of the smallest and largest EU country by Area
+min(Eudata$Area)
+max(Eudata$Area)
+# 2.4 Calculate the number of countries that are members of the Eurozone
+sum(Eudata$Eurozone)
+# 2.5 Calculate the total GDP of all Eurozone members
+95
+sum(Eudata$GDP[myData$Eurozone])
+96
+# 2.6 Calculate the GDP per capita in euros
+97
+# (a) of the total EU, (b) of the Eurozone (c) of the non-Eurozone
+EU …
+98
+percepita<-Eudata$GDP/Eudata$Population
+99
+#a)
+100
+sum(percepita)
+101
+#b)
+102
+sum(percepita(Eudata$Eurozone))
+103
+# 2.7 When was the EU founded?
+104
+# Hint: this must be the earliest year in which any country became a
+member …
+105
+EUfoundation<-min(Eudata$Accession)
+106
+EUfoundation
+107
+# 2.8 Calculate the number of EU founding members
+108
+EUfoundation<-sum(Eudata)
+109
+# 2.9 Only now you discover that the data set still contains the UK.
+110
+# Permanently remove the UK from the dataframe "Eudata"
+111
+Eudata=Eudata[-28]
+112
+# 2.10 You also discover that Bulgaria actually joined the Euro on 1st
+…
+January 2026.
+113
+# Permanently update the dataframe "Eudata" accordingly.
+114
+115
+116
+117
+################################################
+118
+# 3: Simulation and probability (15 points) #
+119
+################################################
+120
+# 3.1 Use R to produce one roll of a dice.
+121
+sample(1:6,1, replace=T)
+122
+# 3.2 Create a vector called "k" that contains 1000 rolls of a dice
+123
+k<-sample(1:6,10000,replace =T)
+124
+k
+125
+# 3.3 Using "k" from (3.2), estimate the probability of obtaining
+126
+# a "4" or "5" from a dice
+127
+mean(k==4 | k==5)
+128
+# 3.4 Create a vector called "m" that contains 1000 (different) rolls of
+a dice …
+129
+# Using "k" and "m" from (3.2) and (3.4), estimate the expected value
+130
+# and variance of the random variable z = 2k-m
+131
+m=sample(1:6,10000,TRUE)
+132
+z=2*k-m
+133
+mean(z)
+134
+# 3.5 Assume the yearly stock return to be normally distributed with a
+mean of 0.12 and …
+135
+# a standard deviation of 0.2. Create a variable "stock" with 100
+draws of stock returns …
+136
+stock<- rnorm(100,mean=0.12,sd=0.2)
+137
+# 3.6 What is the probability of a negative stock return?
+138
+# Answer this question ...
+139
+# (a) by using the variable "stock" from (3.5)
+140empirical
+_probability<-sum(stock<0)/length(stock)
+141
+# (b) by calculating the (theoretical) probability for a normal
+…
+142
+distribution
+theoretical
+_probability<-pnorm(0,mean=0.12,sd=0.2)
+143
+144
+145
+146
+147
+148
+149
+150
+################################################
+# 4: Functions and Optimization (25 points)#
+################################################
+# 4.1 Create the function f(x)=x^2 in R
+fx<- function(x){
+fx1<- -x^2+1
+print(fx1)
+151
+}
+152
+fx
+153
+# 4.2 Calculate the value of f for x=1
+154
+fx(x=1)
+155
+# 4.3 Create a plot of the function for the interval [-2, 2]
+156
+# If in doubt, type "?plot" to get the help file for the function
+157
+plot(fx,
+-2,2)
+158
+# 4.4 Numerically, by using R, find the location of the minimum using the
+…
+optim
+159
+# function. Store the result of your minimization (the location of
+the minimum) …
+160
+# in a variable called xmin
+161
+xmin<-optimize(fx, interval=c(-2,2))$minimum
+162
+print(xmin)
+163
+# 4.5 Now try to find the location of the minimum by implementing a grid
+search …
+164
+# yourself. Choose N=100 grid points. Search in an interval between
+…
+-2 and 2.
+165
+# Store the result of your minimization (the location of the minimum)
+in a …
+166
+# variable called xmin
+_grid
+167
+168
+# 4.6 Answer in a short comment (<= 2 sentences). The results from (4.4)
+and (4.5) …
+# are not identical. Why?
+169
+170
+171
+172
+y####################################################
+173
+# 5: Functions and algorithms (25 points) #
+174
+####################################################
+175
+# 5.1 The Luhn Algorithm is used to check whether a credit card number
+is valid. It goes …
+176
+# like this
+177
+# a) process individual digits from right to left
+178
+# b) leave digits number 1,3,5 etc (counted from right) unchanged
+179
+# c) multiply digits 2,3,6 etc (counted from right) by 2
+180
+# d) if a digit (after multiplying by 2) is larger than 9, subtract
+9 …
+181
+# e) calculate the sum of all (processed) digits
+182
+# IF the result can be divided by 10, the number is a valid credit
+card number …
+183
+#
+184
+# Example: 63487
+185
+# Right to left: do not change 7, multiply 8 by 2 and subtract 9, do
+not change 4, …
+186
+# multiply 3 by 2 and do not subtract anything, do
+not change 6 …
+187
+# 7 + 8*2-9 + 4 + 3*2 + 6 = 30 --> the number is
+valid …
+188
+# Hint: The operation x %% y yields the remainder of the division
+…
+x/y.
+189
+# For instance, 7 %% 4 gives 3
+190
+191
+# Write a function called checkLuhn that takes as argument a vector of
+individual digits …
+192
+# and returns TRUE if the number is a valid number and FALSE if it is not
+…
+valid.
+193
+checkLuhn<- function
+194
+# The follwing line takes a *valid* credit card number and creates a
+…
+vector with single digits.
+195
+# You can use this to test your function
+196
+# Hint: digits contains the numbers from LEFT to RIGHT, while the Luhn
+algorithm works from …
+197
+# right to left.
+198
+digits <- as.numeric(unlist(strsplit("5019717010103742"
+,
+"")))
+199
+200
+201
+# Exam "Informatica 2"
+, 2025-09-04
+# Peter Gruber and Paul Schneider
+# Rules
+# - Except for theoretical questions, all questions must be answered
+using R! …
+# - The exam takes 90 minutes and has 5 questions
+# - There are a total of 100 points
+# >>>>> SUBMIT your answers on iCorsi in time IMPORTANT!!! …
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+…
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+…
+38
+39
+40
+…
+41
+42
+43
+44
+45
+46
+47
+<---
+# Material that you can use
+# - the R help function
+# - any printed material (open book)
+# Notes
+# - There are several ways how this exam can be solved.
+# - What counts are ...
+# + that your program works
+# + that you follow the instructions
+# + that the program fulfills the requirements
+# - We do not expect you to provide exactly the solution presented in
+class.
+# Tip:
+# - Use R to check your solution!
+################################################
+# 0: Your name (2 points) #
+################################################
+# 0.1 Write your name below as a comment
+# <your name>
+# Samuel Boccomino
+################################################
+# 1: R basics (13 points) #
+################################################
+# 1.1 Create a vector v1 as defined in equation 1.1 on the Info Sheet. Do
+not use the c() command.
+v1 <- seq(from = 10, to = 1, by = -1)
+v1
+# 1.2 Create a vector v2 as defined in equation 1.2 on the Info Sheet. Do
+not use the c() command.
+v2 <- seq(from = 3, to = 30, by = 3)
+v2
+# 1.3 Create a matrix M as defined in equation 1.3 on the Info Sheet.
+r1 <- seq(from = 1, to = 291, by = 10)
+r2 <- seq(from = 2, to = 292, by = 10)
+r3 <- seq(from = 3, to = 293, by = 10)
+r4 <- seq(from = 4, to = 294, by = 10)
+48
+49
+r5 <- seq(from = 10, to = 300, by = 10)
+M <- rbind(r1, r2, r3, r4, r5)
+50
+M
+51
+# 1.4 Print the first row of M
+52
+M[1 ,]
+53
+# 1.5 Display the last element of v1. Tell R to "display the last element
+of x"
+, …
+54
+# regardless of the dimension of v1.
+55
+tail(v1, 1)
+56
+# 1.6 Perform the calculations in equation 1.4 on the Info Sheet.
+57
+((12/(19-7)))^(1/5)
+58
+(log(1)+log(2))/((pi+1)/(pi-1))
+59
+log(sin(2)/(exp(1))^2)
+60
+# 1.7 Create a variable "u" with the value "ten to the power minus 5"
+61
+u <- 10^(-5)
+62
+63
+64
+65
+…
+u
+# 1.8 If you would now run the line
+# print(U)
+# you would get an error message. Which important concept of R is the
+reason
+66
+# for this error? Answer in 1 sentence as a comment.
+67
+68
+# It doesn't work because R is case sensitive, so U is different from u.
+69
+70
+################################################
+71
+# 2: Data and Logical conditions (20 points) #
+72
+################################################
+73
+# The file "Eudata.csv" contains data about the (still 28) EU countries.
+74
+# The columns are: County Name, Code, Capital, Accession (=Year of
+membership), …
+75
+# Population, Area, GDP (in Million EUR), currency, IsEurozone (=1, if
+member) …
+76
+77
+# The following line loads the data into an R dataframe
+78
+# Hunt: Use Session/Set Working Directory/To Source File Location
+79
+Eudata <- read.table('Eudata-2.csv'
+, sep=";"
+,header=TRUE)
+80
+# 2.1 How many countries are there in the dataset?
+81
+nrow(Eudata)
+82
+# 2.2 Calculate the total population of the EU
+83
+sum(Eudata$Population)
+84
+# 2.3 Print the population of the smallest and largest EU country by Area
+85
+Eudata$Population[which.min(Eudata$Area)]
+86
+Eudata$Population[which.max(Eudata$Area)]
+87
+# 2.4 Calculate the number of countries that are members of the Eurozone
+88
+sum(Eudata$Eurozone==TRUE)
+89
+# 2.5 Calculate the total GDP of all Eurozone members
+90
+sum(Eudata$GDP[Eudata$Eurozone==TRUE])
+91
+# 2.6 Calculate the GDP per capita in euros
+92
+# (a) of the total EU, (b) of the Eurozone (c) of the non-Eurozone
+EU …
+93
+# (a)
+94total
+GDP
+_
+_
+euros <- sum(Eudata$GDP)*10^6
+95
+total
+_population <- sum(Eudata$Population)
+96
+GDP
+_per
+_
+capita
+total <- total
+GDP
+_
+_
+_
+euros / total
+_population
+97
+GDP
+_per
+_
+capita
+total
+_
+98
+# (b)
+99
+GDP
+_
+eurozone <- sum(Eudata$GDP[Eudata$Eurozone==TRUE])*10^6
+100
+pop_
+eurozone <- sum(Eudata$Population[Eudata$Eurozone==TRUE])
+101
+GDP
+_per
+_
+capita
+eurozone <- GDP
+_
+_
+eurozone/ pop_
+eurozone
+102
+GDP
+_per
+_
+capita
+eurozone
+_
+103
+# (c)
+104
+GDP
+non
+_
+_
+euro <- sum(Eudata$GDP[Eudata$Eurozone==FALSE])*10^6
+105
+pop_
+non
+_
+euro <- sum(Eudata$Population[Eudata$Eurozone==FALSE])
+106
+GDP
+_per
+_
+capita
+non
+euro <- GDP
+non
+_
+_
+_
+_
+euro / pop_
+non
+euro
+_
+107
+GDP
+_per
+_
+capita
+non
+euro
+_
+_
+108
+# 2.7 When was the EU founded?
+109
+# Hint: this must be the earliest year in which any country became a
+member …
+110
+min(Eudata$Accession)
+111
+# 2.8 Calculate the number of EU founding members
+112
+sum(Eudata$Accession==1953)
+113
+# 2.9 Only now you discover that the data set still contains the UK.
+114
+# Permanently remove the UK from the dataframe "Eudata"
+115
+Eudata <- Eudata[Eudata$CountyName!="United Kingdom"
+, ]
+116
+# 2.10 You also discover that Bulgaria actually joined the Euro on 1st
+…
+January 2026.
+117
+# Permanently update the dataframe "Eudata" accordingly.
+118
+119
+################################################
+120
+# 3: Simulation and probability (15 points) #
+121
+################################################
+122
+# 3.1 Use R to produce one roll of a dice.
+123
+dice
+_
+roll <- sample(1:6,1)
+124
+dice
+roll
+_
+125
+# 3.2 Create a vector called "k" that contains 1000 rolls of a dice
+126
+k <- sample(1:6,1000,replace = TRUE)
+127
+k
+128
+# 3.3 Using "k" from (3.2), estimate the probability of obtaining
+129
+# a "4" or "5" from a dice
+130
+p4 <- k[k==4]
+131
+p5 <- k[k==5]
+132
+probability <- (length(p4)+length(p5))/1000
+133
+probability
+134
+percentage <- ((length(p4)+length(p5))/1000)*100
+135
+percentage
+136
+# 3.4 Create a vector called "m" that contains 1000 (different) rolls of
+a dice …
+137
+# Using "k" and "m" from (3.2) and (3.4), estimate the expected value
+138
+# and variance of the random variable z = 2k-m
+139
+m <- sample(1:6,1000,replace = TRUE)
+140
+m
+141
+z <- 2*k-m
+142
+z
+143
+mean(z)
+144
+var(z)
+145
+# 3.5 Assume the yearly stock return to be normally distributed with a
+mean of 0.12 and …
+146
+# a standard deviation of 0.2. Create a variable "stock" with 100
+draws of stock returns …
+147
+stock <- rnorm(100,mean=0.12,sd=0.2)
+148
+stock
+149
+# 3.6 What is the probability of a negative stock return?
+150
+# Answer this question ...
+151
+# (a) by using the variable "stock" from (3.5)
+152
+# (b) by calculating the (theoretical) probability for a normal
+distribution …
+153
+154
+# (a)
+155
+negative
+stock
+_
+_
+return1 <- sum(stock<0)/length(stock)
+156
+negative
+stock
+return1
+_
+_
+157
+# (b)
+158
+negative
+stock
+_
+_
+return2 <- pnorm(0,mean=0.12,sd=0.2)
+159
+negative
+stock
+return2
+_
+_
+160
+################################################
+161
+# 4: Functions and Optimization (25 points)#
+162
+################################################
+163
+# 4.1 Create the function f(x)=x^2 in R
+164
+f <- function(x){x^2}
+165
+# 4.2 Calculate the value of f for x=1
+166
+f(1)
+167
+# 4.3 Create a plot of the function for the interval [-2, 2]
+168
+# If in doubt, type "?plot" to get the help file for the function
+169
+curve(f,
+-2,2)
+170
+# 4.4 Numerically, by using R, find the location of the minimum using the
+…
+optim
+171
+# function. Store the result of your minimization (the location of
+the minimum) …
+172
+# in a variable called xmin
+173
+xmin <- optim(-2, f, method = 'L-BFGS-B'
+, lower = -2, upper = 2)
+174
+xmin
+175
+# just the par:
+176
+xmin$par
+177
+# 4.5 Now try to find the location of the minimum by implementing a grid
+search …
+178
+# yourself. Choose N=100 grid points. Search in an interval between
+…
+-2 and 2.
+179
+# Store the result of your minimization (the location of the minimum)
+in a …
+180
+# variable called xmin
+_grid
+181
+grid <- seq(from = -2, to = 2, by = 0.04)
+182
+best
+value <- Inf
+_
+183
+best
+x <- NA
+_
+184
+for(x in grid){
+185
+current
+value <- f(x)
+_
+186
+if(current
+value < best
+value){
+_
+_
+187best
+value <- current
+value
+_
+_
+188
+best
+x <- x
+_
+189
+}
+190
+}
+191
+xmin
+_grid <- print(best
+value)
+_
+192
+cat("Minimum of the function:"
+, best
+_
+value,
+"\n")
+193
+# 4.6 Answer in a short comment (<= 2 sentences). The results from (4.4)
+and (4.5) …
+194
+# are not identical. Why?
+195
+196
+# Because f(x) is a continuos function
+197
+198
+####################################################
+199
+# 5: Functions and algorithms (25 points) #
+200
+####################################################
+201
+# 5.1 The Luhn Algorithm is used to check whether a credit card number
+is valid. It goes …
+202
+# like this
+203
+# a) process individual digits from right to left
+204
+# b) leave digits number 1,3,5 etc (counted from right) unchanged
+205
+# c) multiply digits 2,3,6 etc (counted from right) by 2
+206
+# d) if a digit (after multiplying by 2) is larger than 9, subtract
+9 …
+207
+# e) calculate the sum of all (processed) digits
+208
+# IF the result can be divided by 10, the number is a valid credit
+…
+card number
+209
+#
+210
+# Example: 63487
+211
+# Right to left: do not change 7, multiply 8 by 2 and subtract 9, do
+not change 4, …
+212
+# multiply 3 by 2 and do not subtract anything, do
+not change 6 …
+213
+# 7 + 8*2-9 + 4 + 3*2 + 6 = 30 --> the number is
+valid …
+214
+# Hint: The operation x %% y yields the remainder of the division
+…
+x/y.
+215
+# For instance, 7 %% 4 gives 3
+216
+217
+# Write a function called checkLuhn that takes as argument a vector of
+individual digits …
+218
+# and returns TRUE if the number is a valid number and FALSE if it is not
+…
+valid.
+219
+220
+checkLuhn <- function(credit
+card
+number){
+_
+_
+221
+digits <-
+number)))) …
+as.numeric(unlist(strsplit(as.character(credit-card
+_
+222
+n <- lenght(digits)
+223
+for(i in seq(n, 1,
+-2)){
+224
+if(i>1){
+225
+digits[i-1] <- digits[i-1]*2
+226
+if(digits[i-1]>9)
+227
+digits[i-1] <- digits[i-1]-9
+228
+}
+229
+230
+231
+232
+…
+233
+234
+…
+235
+236
+237
+238
+239
+}
+return(sum(digits)%%10==0)
+}
+# The follwing line takes a *valid* credit card number and creates a
+vector with single digits.
+# You can use this to test your function
+# Hint: digits contains the numbers from LEFT to RIGHT, while the Luhn
+algorithm works from
+# right to left.
+digits <- as.numeric(unlist(strsplit("5019717010103742"
+,
+"")))
+digits
+Saved: 13.01.26, 15:29:50 Page 1/6
+Printed for: Peter Gruber
+# Exam "Informatica 2"
+, 2025-09-04
+# Peter Gruber and Paul Schneider
+1
+2
+3
+4
+# Rules
+5
+# - Except for theoretical questions, all questions must be answered
+using R! …
+6
+# - The exam takes 90 minutes and has 5 questions
+7
+# - There are a total of 100 points
+8
+# >>>>> SUBMIT your answers on iCorsi in time IMPORTANT!!! …
+<---
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+…
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+# Material that you can use
+# - the R help function
+# - any printed material (open book)
+# Notes
+# - There are several ways how this exam can be solved.
+# - What counts are ...
+# + that your program works
+# + that you follow the instructions
+# + that the program fulfills the requirements
+# - We do not expect you to provide exactly the solution presented in
+class.
+# Tip:
+# - Use R to check your solution!
+################################################
+# 0: Your name (2 points)
+name<-StefanoLaureti
+################################################
+# 0.1 Write your name below as a comment
+# <your name>
+# <Stefano Laureti>
+34
+################################################
+35
+# 1: R basics (13 points) #
+36
+################################################
+37
+# 1.1 Create a vector v1 as defined in equation 1.1 on the Info Sheet. Do
+…
+not use the c() command.
+38
+v1<-seq(10,1,
+-1)
+39
+# 1.2 Create a vector v2 as defined in equation 1.2 on the Info Sheet. Do
+…
+not use the c() command.
+40
+v2<-seq(3,30, 3)
+41
+# 1.3 Create a matrix M as defined in equation 1.3 on the Info Sheet.
+42
+M <- matrix(seq(1, 300, 2), nrow=5, byrow=FALSE)
+43
+# 1.4 Print the first row of M
+44
+M[1, ]
+45
+# 1.5 Display the last element of v1. Tell R to "display the last element
+of x"
+, …
+46# regardless of the dimension of v1.
+Saved: 13.01.26, 15:29:50 Page 2/6
+Printed for: Peter Gruber
+47
+tail(v1, 1)
+48
+49
+50
+51
+52
+53
+# 1.6 Perform the calculations in equation 1.4 on the Info Sheet.
+calc
+1
+7 <- c(
+_
+_
+(12/(19-7))^(1/5),
+(log10(1) + log10(2)) / ((pi + 1)/(pi - 1)),
+log10(sin(2) / exp(2))
+54
+)
+55
+calc
+1
+7
+_
+_
+56
+57
+58
+# 1.7 Create a variable "u" with the value "ten to the power minus 5"
+59
+u<-c(10^
+-5)
+60
+u
+61
+62
+63
+64
+…
+65
+66
+…
+# 1.8 If you would now run the line
+# print(U)
+# you would get an error message. Which important concept of R is the
+reason
+# for this error? Answer in 1 sentence as a comment.
+# R is case-sensitive: U and u are different objects; also Print() is not
+print().
+67
+68
+69
+################################################
+70
+# 2: Data and Logical conditions (20 points) #
+71
+################################################
+72
+# The file "Eudata.csv" contains data about the (still 28) EU countries.
+73
+# The columns are: County Name, Code, Capital, Accession (=Year of
+membership), …
+74
+# Population, Area, GDP (in Million EUR), currency, IsEurozone (=1, if
+member) …
+75
+76
+77
+78
+# The following line loads the data into an R dataframe
+# Hunt: Use Session/Set Working Directory/To Source File Location
+Eudata <- read.table('Eudata.csv'
+, sep=";"
+,header=TRUE)
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+# 2.1 How many countries are there in the dataset?
+nrow(Eudata)
+# 2.2 Calculate the total population of the EU
+sum(Eudata$Population, na.rm=TRUE)
+# 2.3 Print the population of the smallest and largest EU country by Area
+pop_
+smallest <- Eudata$Population[which.min(Eudata$Area)]
+pop_
+largest <- Eudata$Population[which.max(Eudata$Area)]
+pop_
+smallest
+pop_
+largest
+89
+90
+91
+92
+93
+94
+# 2.4 Calculate the number of countries that are members of the Eurozone
+sum(Eudata$IsEurozone == 1, na.rm = TRUE)
+# 2.5 Calculate the total GDP of all Eurozone members
+sum(Eudata$GDP[Eudata$IsEurozone == 1], na.rm = TRUE)
+# 2.6 Calculate the GDP per capita in euros
+Saved: 13.01.26, 15:29:50 Page 3/6
+Printed for: Peter Gruber
+95
+# (a) of the total EU, (b) of the Eurozone (c) of the non-Eurozone
+EU …
+96
+gdp_pc
+_
+all <- (sum(Eudata$GDP, na.rm = TRUE) * 1e6) /
+sum(Eudata$Population, na.rm = TRUE) …
+97
+98
+gdp_pc
+_
+ez <- (sum(Eudata$GDP[Eudata$IsEurozone == 1], na.rm = TRUE) *
+1e6) / …
+99
+sum(Eudata$Population[Eudata$IsEurozone == 1], na.rm = TRUE)
+100
+101
+gdp_pc
+_
+nonez <- (sum(Eudata$GDP[Eudata$IsEurozone == 0], na.rm = TRUE) *
+1e6) / …
+102
+sum(Eudata$Population[Eudata$IsEurozone == 0], na.rm = TRUE)
+103
+104
+105
+106
+107
+108
+…
+109
+110
+111
+112
+113
+114
+115
+116
+…
+117
+gdp_pc
+all
+_
+gdp_pc
+ez
+_
+gdp_pc
+nonez
+_
+# 2.7 When was the EU founded?
+# Hint: this must be the earliest year in which any country became a
+member
+min(Eudata$Accession, na.rm = TRUE)
+# 2.8 Calculate the number of EU founding members
+sum(Eudata$Accession == 1953, na.rm = TRUE)
+# 2.9 Only now you discover that the data set still contains the UK.
+# Permanently remove the UK from the dataframe "Eudata"
+Eudata <- Eudata[Eudata$`County Name
+` != "United Kingdom"
+, ]
+# (se il nome è diverso, controllo con: names(Eudata))
+# 2.10 You also discover that Bulgaria actually joined the Euro on 1st
+January 2026.
+# Permanently update the dataframe "Eudata" accordingly.
+118
+119
+120
+121
+################################################
+122
+# 3: Simulation and probability (15 points) #
+123
+################################################
+124
+# 3.1 Use R to produce one roll of a dice.
+125
+rolldice<-sample(1:6,1,replace=TRUE)
+126
+# 3.2 Create a vector called "k" that contains 1000 rolls of a dice
+127
+k<-seq(sample(1:6,5000,replace=TRUE))
+128
+# 3.3 Using "k" from (3.2), estimate the probability of obtaining
+129
+# a "4" or "5" from a dice
+130
+prob<- sum(k%%4)
+131
+prob
+_
+4<-prob/length(k)
+132
+prob2<- sum(k%%5)
+133
+prob
+_
+5<-prob2/length(k)
+134
+# 3.4 Create a vector called "m" that contains 1000 (different) rolls of
+a dice …
+135
+# Using "k" and "m" from (3.2) and (3.4), estimate the expected value
+136
+# and variance of the random variable z = 2k-m
+137
+m<-seq(sample(1:6,1000,replace=TRUE))
+138
+z<-c(2*k-m)
+139
+z
+Saved: 13.01.26, 15:29:50 Page 4/6
+Printed for: Peter Gruber
+140
+# 3.5 Assume the yearly stock return to be normally distributed with a
+mean of 0.12 and …
+141
+# a standard deviation of 0.2. Create a variable "stock" with 100
+draws of stock returns …
+142
+mu<-0.12
+143
+sdr=sqrt(0.2)
+144
+stock100<-rnorm(100, mean=mu, sd=sdr)
+145
+sum(stock100>0)
+146
+# 3.6 What is the probability of a negative stock return?
+147
+# Answer this question ...
+148
+# (a) by using the variable "stock" from (3.5)
+149
+pnorm(0, mean=mu, sd=sdr)
+150
+# (b) by calculating the (theoretical) probability for a normal
+…
+distribution
+151
+mean(pnorn(0, mean=mu, sd=sdr)<0)
+152
+153
+154
+################################################
+155
+# 4: Functions and Optimization (25 points)#
+156
+################################################
+157
+# 4.1 Create the function f(x)=x^2 in R
+158
+f<-function(x) x^2
+159
+# 4.2 Calculate the value of f for x=1
+160
+f(1)
+161
+# 4.3 Create a plot of the function for the interval [-2, 2]
+162
+# If in doubt, type "?plot" to get the help file for the function
+163
+curve(f, from = -2, to = 2)
+164
+# 4.4 Numerically, by using R, find the location of the minimum using the
+optim …
+165
+# function. Store the result of your minimization (the location of
+the minimum) …
+166
+# in a variable called xmin
+167
+xmin <- optimize(f, interval = c(-2, 2))$minimum
+168
+xmin
+169
+f(xmin)
+170
+# 4.5 Now try to find the location of the minimum by implementing a grid
+…
+search
+171
+# yourself. Choose N=100 grid points. Search in an interval between
+…
+-2 and 2.
+172
+# Store the result of your minimization (the location of the minimum)
+in a …
+173
+# variable called xmin
+_grid
+174
+xmin
+_grid <- optimize(f, interval = c(-2, 2), n=100)$minimum
+175
+xmin
+_grid
+176
+f(xmin
+_grid)
+177
+# 4.6 Answer in a short comment (<= 2 sentences). The results from (4.4)
+and (4.5) …
+178
+# are not identical. Why?
+179
+180
+181
+182
+# Because x^2 -> -Inf as |x| -> Inf, so the function is unbounded below.
+####################################################
+# 5: Functions and algorithms (25 points) #
+Saved: 13.01.26, 15:29:50 Page 5/6
+Printed for: Peter Gruber
+183
+####################################################
+184
+# 5.1 The Luhn Algorithm is used to check whether a credit card number
+is valid. It goes …
+185
+# like this
+186
+# a) process individual digits from right to left
+187
+# b) leave digits number 1,3,5 etc (counted from right) unchanged
+188
+# c) multiply digits 2,3,6 etc (counted from right) by 2
+189
+# d) if a digit (after multiplying by 2) is larger than 9, subtract
+9 …
+190
+# e) calculate the sum of all (processed) digits
+191
+# IF the result can be divided by 10, the number is a valid credit
+card number …
+192
+# if (n %% 2 > 9) { n <- n-9 }
+193
+194
+195
+Luhn<-function(n) { if (x>=0 & x<9){
+196
+197
+}
+198
+199
+}
+200
+201
+if (n %% 2 > 9) { n <- n-9
+202
+}
+203
+204
+205
+while (n != 1) {
+n <- if (n %% 2 == 0) n/2 else 3*n + 1
+out <- c(out, n)
+206
+}
+207
+#
+208
+# Example: 63487
+209
+# Right to left: do not change 7, multiply 8 by 2 and subtract 9, do
+not change 4, …
+210
+# multiply 3 by 2 and do not subtract anything, do
+not change 6 …
+211
+# 7 + 8*2-9 + 4 + 3*2 + 6 = 30 --> the number is
+valid …
+212
+# Hint: The operation x %% y yields the remainder of the division
+…
+x/y.
+213
+# For instance, 7 %% 4 gives 3
+214
+215
+# Write a function called checkLuhn that takes as argument a vector of
+individual digits …
+216
+# and returns TRUE if the number is a valid number and FALSE if it is not
+…
+valid.
+217
+218
+# The follwing line takes a *valid* credit card number and creates a
+…
+vector with single digits.
+219
+# You can use this to test your function
+220
+# Hint: digits contains the numbers from LEFT to RIGHT, while the Luhn
+algorithm works from …
+221
+# right to left.
+222
+digits <- as.numeric(unlist(strsplit("5019717010103742"
+,
+"")))
+223
+Saved: 13.01.26, 15:29:50 Page 6/6
+Printed for: Peter Gruber
+224
+225
+# Exam "Informatica 2"
+, 2025-09-04
+# Peter Gruber and Paul Schneider
+1
+2
+3
+4
+# Rules
+5
+# - Except for theoretical questions, all questions must be answered
+using R! …
+6
+# - The exam takes 90 minutes and has 5 questions
+7
+# - There are a total of 100 points
+8
+# >>>>> SUBMIT your answers on iCorsi in time IMPORTANT!!! …
+<---
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+…
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+# Material that you can use
+# - the R help function
+# - any printed material (open book)
+# Notes
+# - There are several ways how this exam can be solved.
+# - What counts are ...
+# + that your program works
+# + that you follow the instructions
+# + that the program fulfills the requirements
+# - We do not expect you to provide exactly the solution presented in
+class.
+# Tip:
+# - Use R to check your solution!
+################################################
+# 0: Your name (2 points) #
+################################################
+# 0.1 Write your name below as a comment
+# <Mokabbal Assiya>
+33
+################################################
+34
+# 1: R basics (13 points) #
+35
+################################################
+36
+# 1.1 Create a vector v1 as defined in equation 1.1 on the Info Sheet. Do
+…
+not use the c() command.
+37
+v1 = seq(10, 1,
+-1)
+38
+# 1.2 Create a vector v2 as defined in equation 1.2 on the Info Sheet. Do
+…
+not use the c() command.
+39
+v2 = seq(3, 30, 3)
+40
+# 1.3 Create a matrix M as defined in equation 1.3 on the Info Sheet.
+41
+M = rbind(seq(1, 291, 10), seq(2, 292, 10), seq(3, 292, 10), seq(4, 294,
+10), seq(10, 300, 10)) …
+42
+# 1.4 Print the first row of M
+43
+M[1,]
+44
+# 1.5 Display the last element of v1. Tell R to "display the last element
+of x"
+, …
+45# regardless of the dimension of v1.
+46
+tail(v1, 1)
+47
+# 1.6 Perform the calculations in equation 1.4 on the Info Sheet.
+48
+(12-(19-7))^1/5
+49
+log(1)+log(2)/((pi+1)/(pi-1))
+50
+log(sin(2)/exp(2))
+51
+# 1.7 Create a variable "u" with the value "ten to the power minus 5"
+52
+u = 10^(-5)
+53
+# 1.8 If you would now run the line
+54
+# print(U)
+55
+# you would get an error message. Which important concept of R is the
+reason …
+56
+# for this error? Answer in 1 sentence as a comment.
+57
+58
+"R is case sensitive"
+59
+################################################
+60
+# 2: Data and Logical conditions (20 points) #
+61
+################################################
+62
+# The file "Eudata.csv" contains data about the (still 28) EU countries.
+63
+# The columns are: County Name, Code, Capital, Accession (=Year of
+membership), …
+64
+# Population, Area, GDP (in Million EUR), currency, IsEurozone (=1, if
+member) …
+65
+66
+67
+68
+# The following line loads the data into an R dataframe
+# Hunt: Use Session/Set Working Directory/To Source File Location
+Eudata <- read.table('Eudata.csv'
+, sep=";"
+,header=TRUE)
+69
+70
+# 2.1 How many countries are there in the dataset?
+71
+nrow(Eudata)
+72
+# 2.2 Calculate the total population of the EU
+73
+sum(Eudata$Population)
+74
+# 2.3 Print the population of the smallest and largest EU country by Area
+75
+smallest= Eudata$Population[which.min(Eudata$Area)]
+76
+largest= Eudata$Population[which.max(Eudata$Area)]
+77
+# 2.4 Calculate the number of countries that are members of the Eurozone
+78
+sum(Eudata$Eurozone==TRUE)
+79
+# 2.5 Calculate the total GDP of all Eurozone members
+80
+sum(Eudata$GDP[Eudata$Eurozone == TRUE])
+81
+# 2.6 Calculate the GDP per capita in euros
+82
+# (a) of the total EU, (b) of the Eurozone (c) of the non-Eurozone
+EU …
+83
+84
+GDP
+_per
+_
+capita
+_
+EU = sum(Eudata$GDP/Eudata$Population)
+85
+GDP
+Eurozone =
+_
+sum(Eudata$GDP[Eudata$Eurozone]/Eudata$Population[Eudata$Eurozone]) …
+86
+GDP
+non
+EU =
+_
+_
+…
+sum(Eudata$GDP[Eudata$Eurozone==FALSE]/Eudata$Population[Eudata$Eurozone=
+=FALSE]) …
+87
+88
+# 2.7 When was the EU founded?
+89
+# Hint: this must be the earliest year in which any country became a
+member …
+90
+91
+92
+93
+94
+95
+96
+…
+97
+98
+min(Eudata$Accession)
+# 2.8 Calculate the number of EU founding members
+sum(Eudata$Accession == 1953)
+# 2.9 Only now you discover that the data set still contains the UK.
+# Permanently remove the UK from the dataframe "Eudata"
+Eudata = Eudata[Eudata$CountyName !="United Knigdom"
+, ]
+# 2.10 You also discover that Bulgaria actually joined the Euro on 1st
+January 2026.
+# Permanently update the dataframe "Eudata" accordingly.
+Eudata = Eudata[Eudata$Eurozone == "Bulgaria" ]
+99
+100
+101
+################################################
+102
+# 3: Simulation and probability (15 points) #
+103
+################################################
+104
+# 3.1 Use R to produce one roll of a dice.
+105
+dice = sample(1:6, 1, replace= TRUE)
+106
+# 3.2 Create a vector called "k" that contains 1000 rolls of a dice
+107
+k= sample(1:6, 1000, replace = TRUE)
+108
+# 3.3 Using "k" from (3.2), estimate the probability of obtaining
+109
+# a "4" or "5" from a dice
+110
+mean(k==4 | k==5)
+111
+# 3.4 Create a vector called "m" that contains 1000 (different) rolls of
+a dice …
+112
+# Using "k" and "m" from (3.2) and (3.4), estimate the expected value
+113
+# and variance of the random variable z = 2k-m
+114
+m = sample(1:6, 1000, replace = TRUE)
+115
+z = 2*k-m
+116
+mean(z)
+117
+# 3.5 Assume the yearly stock return to be normally distributed with a
+mean of 0.12 and …
+118
+# a standard deviation of 0.2. Create a variable "stock" with 100
+draws of stock returns …
+119
+returns
+_
+stock = rnorm(100, 0.12, 0.2)
+120
+# 3.6 What is the probability of a negative stock return?
+121
+# Answer this question ...
+122
+# (a) by using the variable "stock" from (3.5)
+123
+# (b) by calculating the (theoretical) probability for a normal
+distribution …
+124
+mean(returns
+stock > 0)
+_
+125
+pnorm(0, 0.12, 0.2)
+126
+################################################
+127
+# 4: Functions and Optimization (25 points)#
+128
+################################################
+129
+# 4.1 Create the function f(x)=x^2 in R
+130
+f = function(x){x^2}
+131
+# 4.2 Calculate the value of f for x=1
+132
+f(1)
+133
+# 4.3 Create a plot of the function for the interval [-2, 2]
+134
+# If in doubt, type "?plot" to get the help file for the function
+135
+curve(f,
+-2, 2)
+136# 4.4 Numerically, by using R, find the location of the minimum using the
+136…
+optim
+137
+# function. Store the result of your minimization (the location of
+the minimum) …
+138
+# in a variable called xmin
+139
+neg_
+f = function(x){
+140
+-f(x)
+141
+}
+142
+res <- optim(par=0, fn= neg_
+f, method = "Brent"
+, lower = -2, upper = 2)
+143
+xmin <- res$par
+144
+# 4.5 Now try to find the location of the minimum by implementing a grid
+search …
+145
+# yourself. Choose N=100 grid points. Search in an interval between
+…
+-2 and 2.
+146
+# Store the result of your minimization (the location of the minimum)
+in a …
+147
+# variable called xmin
+_grid
+148
+149
+# 4.6 Answer in a short comment (<= 2 sentences). The results from (4.4)
+and (4.5) …
+150
+# are not identical. Why?
+151
+152
+153
+y####################################################
+154
+# 5: Functions and algorithms (25 points) #
+155
+####################################################
+156
+# 5.1 The Luhn Algorithm is used to check whether a credit card number
+is valid. It goes …
+157
+# like this
+158
+# a) process individual digits from right to left
+159
+# b) leave digits number 1,3,5 etc (counted from right) unchanged
+160
+# c) multiply digits 2,3,6 etc (counted from right) by 2
+161
+# d) if a digit (after multiplying by 2) is larger than 9, subtract
+9 …
+162
+# e) calculate the sum of all (processed) digits
+163
+# IF the result can be divided by 10, the number is a valid credit
+…
+card number
+164
+#
+165
+# Example: 63487
+166
+# Right to left: do not change 7, multiply 8 by 2 and subtract 9, do
+not change 4, …
+167
+# multiply 3 by 2 and do not subtract anything, do
+not change 6 …
+168
+# 7 + 8*2-9 + 4 + 3*2 + 6 = 30 --> the number is
+valid …
+169
+# Hint: The operation x %% y yields the remainder of the division
+x/y.
+…
+170
+# For instance, 7 %% 4 gives 3
+171
+172
+# Write a function called checkLuhn that takes as argument a vector of
+individual digits …
+173
+# and returns TRUE if the number is a valid number and FALSE if it is not
+…valid.
+174
+175
+# The follwing line takes a *valid* credit card number and creates a
+…
+vector with single digits.
+176
+# You can use this to test your function
+177
+# Hint: digits contains the numbers from LEFT to RIGHT, while the Luhn
+algorithm works from …
+178
+# right to left.
+179
+digits <- as.numeric(unlist(strsplit("5019717010103742"
+,
+"")))

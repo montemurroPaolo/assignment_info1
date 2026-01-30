@@ -1,0 +1,29 @@
+﻿CountyName;Code;Capital;Accession;Population;Area;GDP;Currency;Eurozone
+Austria;AT;Vienna;1995;8792500;83855;437582;euro;1
+Belgium;BE;Brussels;1953;11365834;30528;53423;euro;1
+Bulgaria;BG;Sofia;2007;7101859;110994;55824;lev;0
+Croatia;HR;Zagreb;2013;4154213;56594;57073;euro;1
+Cyprus;CY;Nicosia;2004;854802;9251;23263;euro;1
+Czechia;CZ;Prague;2004;10467628;78866;20527;koruna;0
+Denmark;DK;Copenhagen;1973;5743947;43075;342362;krone;0
+Estonia;EE;Tallinn;2004;1315635;45227;26506;euro;1
+Finland;FI;Helsinki;1995;5577282;338424;272649;euro;1
+France;FR;Paris;1953;67024633;632833;2833687;euro;1
+Germany;DE;Berlin;1953;82437641;357386;3874437;euro;1
+Greece;GR;Athens;1981;10757293;13199;23797;euro;1
+Hungary;HU;Budapest;2004;9797561;9303;136989;forint;0
+Ireland;IE;Dublin;1973;4774833;70273;250814;euro;1
+Italy;IT;Rome;1953;61219113;301338;2147744;euro;1
+Latvia;LV;Riga;2004;1950116;64589;31972;euro;1
+Lithuania;LT;Vilnius;2004;2847904;652;48288;euro;1
+Luxembourg;LU;Luxembourg City;1953;58937;25864;65683;euro;1
+Malta;MT;Valletta;2004;440433;316;10514;euro;1
+Netherlands;NL;Amsterdam;1953;17220721;41543;880716;euro;1
+Poland;PL;Warsaw;2004;37972964;312685;547894;złoty;0
+Portugal;PT;Lisbon;1986;10291027;92212;340715;euro;1
+Romania;RO;Bucharest;2007;19638309;238391;199093;leu;0
+Slovakia;SK;Bratislava;2004;5435343;49035;99869;euro;1
+Slovenia;SI;Ljubljana;2004;2065895;20273;4957;euro;1
+Spain;ES;Madrid;1986;46528966;50403;1406538;euro;1
+Sweden;SE;Stockholm;1995;10080000;449964;570591;krona;0
+United Kingdom;UK;London;1973;65808573;24361;2950039;pound sterling;0
