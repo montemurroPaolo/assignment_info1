@@ -47,11 +47,11 @@ Name correctly provided.
 | 2.5 | Subset approach | Logic ok but wrong column name | 1/2 |
 | 2.6 | Formula errors in b) and c) | Uses total EU GDP for all parts | 1/3 |
 | 2.7 | `Eudata$Accession[which.min(...)]` | Correct | 2/2 |
-| 2.8 | `nrow(Eudata[Eudata$Accession == 1953, ])` | Wrong year (1958) | 0/2 |
+| 2.8 | `nrow(Eudata[Eudata$Accession == 1953, ])` | Correct | 2/2 |
 | 2.9 | `Eudata[-28,]` | Hardcoded row but UK removed | 2/2 |
 | 2.10 | Updates Eurozone column | Should be IsEurozone but concept correct | 1/2 |
 
-**Q2 Total: 14/20**
+**Q2 Total: 16/20**
 
 ### Errors in 2.6:
 ```r
@@ -151,8 +151,8 @@ Correct logic: reverses digits, doubles even positions, subtracts 9 if needed, c
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 10 | 13 |
-| Q2: Data/Logic | 14 | 20 |
+| Q2: Data/Logic | 16 | 20 |
 | Q3: Simulation | 12 | 15 |
 | Q4: Functions | 22 | 25 |
 | Q5: Luhn Algorithm | 25 | 25 |
-| **TOTAL** | **85** | **100** |
+| **TOTAL** | **87** | **100** |

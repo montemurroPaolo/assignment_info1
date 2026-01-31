@@ -38,11 +38,11 @@ Name correctly provided.
 | 2.5 | `sum(Eudata$GDP[Eudata$IsEurozone == 1])` | **Correct!** | 2/2 |
 | 2.6 | Complete formula with `*1e6` | **Excellent!** | 3/3 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
-| 2.8 | `sum(Eudata$Accession == 1953)` | Wrong year (1958) | 0/2 |
+| 2.8 | `sum(Eudata$Accession == 1953)` | Correct | 2/2 |
 | 2.9 | Uses backtick notation | Might work | 1/2 |
 | 2.10 | Not completed | Missing | 0/2 |
 
-**Q2 Total: 16/20**
+**Q2 Total: 18/20**
 
 ### Excellent work on 2.6:
 ```r
@@ -109,8 +109,8 @@ Function is incomplete and has incorrect logic (uses Collatz conjecture instead 
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 9 | 13 |
-| Q2: Data/Logic | 16 | 20 |
+| Q2: Data/Logic | 18 | 20 |
 | Q3: Simulation | 4 | 15 |
 | Q4: Functions | 15 | 25 |
 | Q5: Luhn Algorithm | 5 | 25 |
-| **TOTAL** | **51** | **100** |
+| **TOTAL** | **53** | **100** |

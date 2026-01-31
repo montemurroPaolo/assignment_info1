@@ -144,22 +144,22 @@ assignment_info1/
 | Metric | Value |
 |--------|-------|
 | Number of Submissions | 16 |
-| Mean Score | 59.6 / 100 |
-| Median Score | 51.25 / 100 |
-| Standard Deviation | 17.0 |
+| Mean Score | 60.9 / 100 |
+| Median Score | 53.25 / 100 |
+| Standard Deviation | 17.3 |
 | Minimum Score | 31 / 100 |
-| Maximum Score | 85 / 100 |
-| Pass Rate (>= 50) | 56% (9/16) |
+| Maximum Score | 87 / 100 |
+| Pass Rate (>= 50) | 63% (10/16) |
 
 ### Score Distribution
 
 ```
-30-39:  ██ (2 students)
+30-39:  █ (1 student)
 40-49:  ████ (4 students)
-50-59:  ███ (3 students)
+50-59:  ████ (4 students)
 60-69:  █ (1 student)
-70-79:  ████ (4 students)
-80-89:  ██ (2 students)
+70-79:  ███ (3 students)
+80-89:  ███ (3 students)
 90-100: (0 students)
 ```
 
@@ -217,10 +217,10 @@ assignment_info1/
    - Correct: `sum(GDP) / sum(Population)` (ratio of totals)
    - Partial credit (1/3) awarded for attempt with wrong formula
 
-3. **EU founding year - hardcoded value**
-   - Many students hardcoded `1953` in Q2.8 based on historical knowledge
-   - Should derive the year from the data: `min(Eudata$Accession)` returns 1958
-   - Then use that value: `sum(Eudata$Accession == min(Eudata$Accession))`
+3. **EU founding year**
+   - Q2.7 asks for `min(Eudata$Accession)` which returns **1953** from the data
+   - Q2.8: Using hardcoded `1953` is acceptable since it was derived in Q2.7
+   - Full credit for `sum(Eudata$Accession == 1953)` or dynamic `sum(Eudata$Accession == min(Eudata$Accession))`
 
 4. **CountyName column typo**
    - The CSV contains `CountyName` (typo in data)
@@ -299,21 +299,21 @@ assignment_info1/
 
 | Rank | Student | Total |
 |------|---------|-------|
-| 1 | Erica Trofimov | 85 |
-| 1 | Damiano Spiatta | 85 |
-| 3 | Lisa Dellerba | 78 |
-| 4 | Malak El Fatih | 77 |
-| 5 | Samuel Boccomino | 76 |
-| 6 | Guano Anderson | 70 |
-| 7 | Filippo Manachino | 62 |
-| 8 | Ludovico Martinelli | 51.5 |
-| 9 | Matteo Zucchi | 51 |
-| 9 | Stefano Laureti | 51 |
-| 11 | Assiya Mokabbal | 46.5 |
-| 11 | Leonardo Zanga | 46.5 |
-| 13 | Nicholas Serantoni | 42.5 |
-| 14 | Matteo Gangi | 42 |
-| 15 | Eleonora Moroni | 38 |
+| 1 | Erica Trofimov | 87 |
+| 2 | Damiano Spiatta | 85 |
+| 3 | Lisa Dellerba | 80 |
+| 4 | Samuel Boccomino | 78 |
+| 5 | Malak El Fatih | 77 |
+| 6 | Guano Anderson | 72 |
+| 7 | Filippo Manachino | 64 |
+| 8 | Ludovico Martinelli | 53.5 |
+| 9 | Matteo Zucchi | 53 |
+| 9 | Stefano Laureti | 53 |
+| 11 | Assiya Mokabbal | 48.5 |
+| 12 | Leonardo Zanga | 46.5 |
+| 13 | Matteo Gangi | 44 |
+| 14 | Nicholas Serantoni | 42.5 |
+| 15 | Eleonora Moroni | 40 |
 | 16 | Anna Bonera | 31 |
 
 ### No Submission

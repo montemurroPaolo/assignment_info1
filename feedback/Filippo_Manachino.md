@@ -51,11 +51,11 @@ log10(sin(2)/exp(2))
 | 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==1])` | Correct concept, column name variation | 1/2 |
 | 2.6 | Good structure but wrong column | Correct logic, wrong column name | 2/3 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
-| 2.8 | `sum(Eudata$Accession==1953)` | Wrong year (should be 1958) | 0/2 |
+| 2.8 | `sum(Eudata$Accession==1953)` | Correct | 2/2 |
 | 2.9 | `subset(Eudata, Code != "UK")` | Correct! | 2/2 |
 | 2.10 | Not answered | Missing | 0/2 |
 
-**Q2 Total: 14/20**
+**Q2 Total: 16/20**
 
 ---
 
@@ -139,8 +139,8 @@ The student's comments show understanding of what should happen but couldn't tra
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 9 | 13 |
-| Q2: Data/Logic | 14 | 20 |
+| Q2: Data/Logic | 16 | 20 |
 | Q3: Simulation | 15 | 15 |
 | Q4: Functions | 14 | 25 |
 | Q5: Luhn Algorithm | 8 | 25 |
-| **TOTAL** | **62** | **100** |
+| **TOTAL** | **64** | **100** |
