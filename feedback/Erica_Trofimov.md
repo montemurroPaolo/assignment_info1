@@ -45,14 +45,14 @@ log10 ( sin(2)/exp(2))
 | 2.2 | `sum(Eudata$Population)` | Correct | 2/2 |
 | 2.3 | `which.min/max(Eudata$Area)` | Correct | 2/2 |
 | 2.4 | `sum(Eudata$Eurozone)` | Correct | 2/2 |
-| 2.5 | Subset approach | Logic ok but wrong column name | 1/2 |
+| 2.5 | Subset approach | Correct | 2/2 |
 | 2.6 | Formula errors in b) and c) | Uses total EU GDP for all parts | 1/3 |
 | 2.7 | `Eudata$Accession[which.min(...)]` | Correct | 2/2 |
 | 2.8 | `nrow(Eudata[Eudata$Accession == 1953, ])` | Correct | 2/2 |
 | 2.9 | `Eudata[-28,]` | Hardcoded row but UK removed | 2/2 |
 | 2.10 | Updates Eurozone column | Correct | 2/2 |
 
-**Q2 Total: 18/20**
+**Q2 Total: 19/20**
 
 ### Errors in 2.6:
 ```r
@@ -152,8 +152,8 @@ Correct logic: reverses digits, doubles even positions, subtracts 9 if needed, c
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 12 | 13 |
-| Q2: Data/Logic | 18 | 20 |
+| Q2: Data/Logic | 19 | 20 |
 | Q3: Simulation | 12 | 15 |
 | Q4: Functions | 22 | 25 |
 | Q5: Luhn Algorithm | 25 | 25 |
-| **TOTAL** | **91** | **100** |
+| **TOTAL** | **92** | **100** |

@@ -47,13 +47,13 @@ Name correctly provided.
 | 2.3 | `which.min/max(Eudata$Area)` | Correct | 2/2 |
 | 2.4 | `sum(Eudata$Eurozone==1)` | Correct | 2/2 |
 | 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==1])` | Correct | 2/2 |
-| 2.6 | Complete with `*1e6` | Good formula but wrong column | 2/3 |
+| 2.6 | Complete with `*1e6` | Good formula | 3/3 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession==1953)` | Correct | 2/2 |
 | 2.9 | `subset(Eudata,Code != "GB")` | Used GB code but UK removed | 2/2 |
 | 2.10 | Not completed | Missing | 0/2 |
 
-**Q2 Total: 18/20**
+**Q2 Total: 19/20**
 
 ---
 
@@ -131,8 +131,8 @@ Issues:
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 10 | 13 |
-| Q2: Data/Logic | 18 | 20 |
+| Q2: Data/Logic | 19 | 20 |
 | Q3: Simulation | 13 | 15 |
 | Q4: Functions | 14 | 25 |
 | Q5: Luhn Algorithm | 18 | 25 |
-| **TOTAL** | **75** | **100** |
+| **TOTAL** | **76** | **100** |

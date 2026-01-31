@@ -46,15 +46,15 @@ v1[length(v1)]  # Gets last element of v1
 | 2.1 | `nrow(Eudata)` | Correct | 2/2 |
 | 2.2 | Filters by Eurozone | Should sum ALL EU countries | 0/2 |
 | 2.3 | `which.min/max(Eudata$Area)` | Correct | 2/2 |
-| 2.4 | `Sum(Eudata$Eurozone==TRUE)` | `Sum` doesn't exist (case!), wrong column | 0/2 |
-| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone])` | Wrong column name | 1/2 |
+| 2.4 | `Sum(Eudata$Eurozone==TRUE)` | `Sum` doesn't exist (case sensitive!) | 1/2 |
+| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone])` | Correct | 2/2 |
 | 2.6 | Sum of ratios | Wrong formula, partial credit for attempt | 1/3 |
 | 2.7 | `min(Eudata$Accesion)` | Typo "Accesion" but correct logic | 2/2 |
 | 2.8 | Uses CountyName | Should count, not sum names | 0/2 |
 | 2.9 | `Eudata[...=='UK',]` | KEEPS UK instead of removing | 0/2 |
 | 2.10 | Incomplete | Wrong approach | 0/2 |
 
-**Q2 Total: 8/20**
+**Q2 Total: 10/20**
 
 ### Critical Error in 2.9:
 ```r
@@ -120,8 +120,8 @@ Function is incomplete and has major syntax errors. The logic was not properly i
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 8 | 13 |
-| Q2: Data/Logic | 8 | 20 |
+| Q2: Data/Logic | 10 | 20 |
 | Q3: Simulation | 12.5 | 15 |
 | Q4: Functions | 13 | 25 |
 | Q5: Luhn Algorithm | 3 | 25 |
-| **TOTAL** | **46.5** | **100** |
+| **TOTAL** | **48.5** | **100** |
