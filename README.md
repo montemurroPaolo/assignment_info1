@@ -54,6 +54,36 @@ assignment_info1/
 
 ---
 
+## Grades Summary
+
+| Student | Q0 | Q1 | Q2 | Q3 | Q4 | Q5 | Total | Feedback |
+|---------|----|----|----|----|----|----|-------|----------|
+| Ambrogio Antonini | 0 | 0 | 0 | 0 | 0 | 0 | Retired | - |
+| [Anna Bonera](feedback/Anna_Bonera.md) | 2 | 8 | 11 | 4 | 5 | 0 | 30 | [View](feedback/Anna_Bonera.md) |
+| [Assiya Mokabbal](feedback/Assiya_Mokabbal.md) | 2 | 10 | 17 | 11.5 | 11 | 0 | 51.5 | [View](feedback/Assiya_Mokabbal.md) |
+| [Damiano Spiatta](feedback/Damiano_Spiatta.md) | 2 | 9 | 13 | 15 | 25 | 25 | 89 | [View](feedback/Damiano_Spiatta.md) |
+| [Eleonora Moroni](feedback/Eleonora_Moroni.md) | 2 | 10 | 13 | 10 | 7 | 0 | 42 | [View](feedback/Eleonora_Moroni.md) |
+| [Erica Trofimov](feedback/Erica_Trofimov.md) | 2 | 12 | 19 | 12 | 22 | 25 | 92 | [View](feedback/Erica_Trofimov.md) |
+| [Filippo Manachino](feedback/Filippo_Manachino.md) | 2 | 10 | 18 | 15 | 14 | 8 | 67 | [View](feedback/Filippo_Manachino.md) |
+| Gianluca Izzo | 0 | 0 | 0 | 0 | 0 | 0 | Retired | - |
+| [Guano Anderson](feedback/Guano_Anderson.md) | 2 | 10 | 18 | 13 | 14 | 18 | 75 | [View](feedback/Guano_Anderson.md) |
+| Leonardo Schenk | 0 | 0 | 0 | 0 | 0 | 0 | Retired | - |
+| [Leonardo Zanga](feedback/Leonardo_Zanga.md) | 2 | 8 | 10 | 12.5 | 13 | 3 | 48.5 | [View](feedback/Leonardo_Zanga.md) |
+| [Lisa Dellerba](feedback/Lisa_Dellerba.md) | 2 | 12 | 16 | 15 | 16 | 23 | 84 | [View](feedback/Lisa_Dellerba.md) |
+| Lorenzo Pini | 0 | 0 | 0 | 0 | 0 | 0 | 0 | - |
+| [Ludovico Martinelli](feedback/Ludovico_Martinelli.md) | 2 | 11 | 19 | 8.5 | 18 | 3 | 61.5 | [View](feedback/Ludovico_Martinelli.md) |
+| [Malak El Fatih](feedback/Malak_El_Fatih.md) | 2 | 6 | 12 | 13 | 20 | 25 | 78 | [View](feedback/Malak_El_Fatih.md) |
+| Matilde Sparviero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | - |
+| [Matteo Gangi](feedback/Matteo_Gangi.md) | 2 | 11 | 15 | 12 | 11 | 0 | 51 | [View](feedback/Matteo_Gangi.md) |
+| [Matteo Zucchi](feedback/Matteo_Zucchi.md) | 2 | 12 | 15 | 13.5 | 11.5 | 3 | 57 | [View](feedback/Matteo_Zucchi.md) |
+| [Nicholas Serantoni](feedback/Nicholas_Serantoni.md) | 2 | 11 | 10 | 12.5 | 14 | 3 | 52.5 | [View](feedback/Nicholas_Serantoni.md) |
+| [Samuel Boccomino](feedback/Samuel_Boccomino.md) | 2 | 10 | 18 | 15 | 21 | 15 | 81 | [View](feedback/Samuel_Boccomino.md) |
+| [Stefano Laureti](feedback/Stefano_Laureti.md) | 2 | 11 | 18 | 5 | 15 | 5 | 56 | [View](feedback/Stefano_Laureti.md) |
+
+**Max Points:** Q0=2, Q1=13, Q2=20, Q3=15, Q4=25, Q5=25, Total=100
+
+---
+
 ## Exam Structure
 
 | Question | Topic | Max Points |
@@ -93,7 +123,7 @@ assignment_info1/
 | 2.3 | 2 | Min/max area populations (`which.min/max`) |
 | 2.4 | 2 | Count Eurozone members |
 | 2.5 | 2 | Total Eurozone GDP |
-| 2.6 | 3 | GDP per capita (EU, Eurozone, non-Eurozone) |
+| 2.6 | 2 | GDP per capita (EU, Eurozone, non-Eurozone) |
 | 2.7 | 2 | EU founding year (`min(Accession)`) |
 | 2.8 | 2 | Count founding members |
 | 2.9 | 2 | Remove UK from dataframe |
@@ -144,23 +174,23 @@ assignment_info1/
 | Metric | Value |
 |--------|-------|
 | Number of Submissions | 16 |
-| Mean Score | 61.6 / 100 |
-| Median Score | 55.25 / 100 |
-| Standard Deviation | 17.5 |
-| Minimum Score | 31 / 100 |
-| Maximum Score | 90 / 100 |
-| Pass Rate (>= 50) | 69% (11/16) |
+| Mean Score | 63.5 / 100 |
+| Median Score | 59.25 / 100 |
+| Standard Deviation | 18.2 |
+| Minimum Score | 30 / 100 |
+| Maximum Score | 92 / 100 |
+| Pass Rate (>= 50) | 81% (13/16) |
 
 ### Score Distribution
 
 ```
 30-39:  █ (1 student)
-40-49:  ███ (3 students)
+40-49:  ██ (2 students)
 50-59:  █████ (5 students)
-60-69:  █ (1 student)
-70-79:  ███ (3 students)
+60-69:  ██ (2 students)
+70-79:  ██ (2 students)
 80-89:  ███ (3 students)
-90-100: (0 students)
+90-100: █ (1 student)
 ```
 
 ### Performance by Question
@@ -168,11 +198,11 @@ assignment_info1/
 | Question | Max | Mean | Median | % of Max |
 |----------|-----|------|--------|----------|
 | Q0: Name | 2 | 2.0 | 2 | 100% |
-| Q1: R Basics | 13 | 10.2 | 11 | 78% |
-| Q2: Data/Logic | 20 | 13.8 | 14.5 | 69% |
-| Q3: Simulation | 15 | 11.5 | 12.5 | 77% |
-| Q4: Functions | 25 | 14.2 | 14 | 57% |
-| Q5: Luhn | 25 | 9.8 | 3 | 39% |
+| Q1: R Basics | 13 | 10.1 | 10.5 | 78% |
+| Q2: Data/Logic | 20 | 15.1 | 15.5 | 76% |
+| Q3: Simulation | 15 | 11.1 | 12.5 | 74% |
+| Q4: Functions | 25 | 14.8 | 14 | 59% |
+| Q5: Luhn | 25 | 9.8 | 4 | 39% |
 
 ### Q5 Luhn Algorithm Completion
 
@@ -208,14 +238,14 @@ assignment_info1/
 
 ### Q2: Data and Logical Conditions
 
-1. **Column name variation for Eurozone**
-   - Students used `Eurozone` instead of `IsEurozone`
-   - Partial credit (1/2) awarded for correct logic with column name variation
+1. **Eurozone column name**
+   - The CSV column is named `Eurozone` (not `IsEurozone`)
+   - Students using `Eurozone` receive **full credit**
 
-2. **GDP per capita formula error**
+2. **GDP per capita formula error (Q2.6)**
    - Wrong: `sum(GDP/Population)` (sum of individual ratios)
    - Correct: `sum(GDP) / sum(Population)` (ratio of totals)
-   - Partial credit (1/3) awarded for attempt with wrong formula
+   - Partial credit (1/2) awarded for attempt with wrong formula
 
 3. **EU founding year**
    - Q2.7 asks for `min(Eudata$Accession)` which returns **1953** from the data
@@ -224,21 +254,23 @@ assignment_info1/
 
 4. **CountyName column typo**
    - The CSV contains `CountyName` (typo in data)
-   - Students using `CountryName` or `Country` were given credit
+   - Students using `CountryName` or `Country` were given full credit
 
 5. **Wrong variable, right concept (myData vs Eudata)**
-   - Students who used a different variable name (e.g., `myData`) but correct logic receive partial credit (1/2)
+   - Students who used a different variable name (e.g., `myData`) but correct logic
+   - Penalized only **once** (-1 point in first occurrence), subsequent uses with correct logic receive full credit
 
-5. **Subsetting syntax errors**
+6. **Subsetting syntax errors**
    - Missing comma: `Eudata[condition]` instead of `Eudata[condition, ]`
    - Partial credit (1/2) awarded for correct logic with minor syntax error
 
-6. **Remove UK (Q2.9) - typos and alternatives accepted**
+7. **Remove UK (Q2.9) - typos and alternatives accepted**
    - Typos in country name (e.g., "Knigdom") - full credit if UK was removed
    - Alternative codes (e.g., "GB" instead of "UK") - full credit if UK was removed
    - Hardcoded row number (e.g., `Eudata[-28,]`) - full credit if it successfully removed UK
+   - Backtick notation (e.g., `` Eudata$`United Kingdom` ``) - full credit
 
-7. **Column name typos (Q2.2, Q2.7)**
+8. **Column name typos (Q2.2, Q2.7)**
    - Typos like "Popolation" or "Accesion" - partial credit (1/2) for correct logic
 
 ### Q3: Simulation and Probability
@@ -299,20 +331,20 @@ assignment_info1/
 
 | Rank | Student | Total |
 |------|---------|-------|
-| 1 | Damiano Spiatta | 89 |
-| 2 | Erica Trofimov | 92 |
+| 1 | Erica Trofimov | 92 |
+| 2 | Damiano Spiatta | 89 |
 | 3 | Lisa Dellerba | 84 |
 | 4 | Samuel Boccomino | 81 |
 | 5 | Malak El Fatih | 78 |
 | 6 | Guano Anderson | 75 |
 | 7 | Filippo Manachino | 67 |
 | 8 | Ludovico Martinelli | 61.5 |
-| 9 | Stefano Laureti | 56 |
 | 9 | Matteo Zucchi | 57 |
-| 11 | Assiya Mokabbal | 51.5 |
-| 12 | Matteo Gangi | 51 |
-| 13 | Leonardo Zanga | 48.5 |
-| 14 | Nicholas Serantoni | 52.5 |
+| 10 | Stefano Laureti | 56 |
+| 11 | Nicholas Serantoni | 52.5 |
+| 12 | Assiya Mokabbal | 51.5 |
+| 13 | Matteo Gangi | 51 |
+| 14 | Leonardo Zanga | 48.5 |
 | 15 | Eleonora Moroni | 42 |
 | 16 | Anna Bonera | 30 |
 
