@@ -31,22 +31,22 @@ Name correctly provided.
 
 ## Question 2: Data and Logical Conditions (20 points)
 
-**CRITICAL ERROR: Uses `myData` instead of `Eudata` throughout!**
+**Note: Uses `myData` instead of `Eudata` - penalized once, not per question.**
 
 | Sub-Q | Answer | Evaluation | Points |
 |-------|--------|------------|--------|
 | 2.1 | `sum()` (empty) | Not answered | 0/2 |
-| 2.2 | `sum(myData$Population)` | Wrong var, correct concept | 1/2 |
-| 2.3 | `which.min/max` approach | Correct concept, wrong var | 1/2 |
-| 2.4 | `sum(myData$IsEurozone == 1)` | Partial: Right concept, wrong variable | 1/2 |
-| 2.5 | Similar issues | Partial: Right concept, wrong variable | 1/2 |
-| 2.6 | `sum(GDP)/sum(Population)` | Correct formula! (wrong var) | 2/3 |
+| 2.2 | `sum(myData$Population)` | Correct (myData noted once) | 2/2 |
+| 2.3 | `which.min/max` approach | Correct | 2/2 |
+| 2.4 | `sum(myData$IsEurozone == 1)` | Correct | 2/2 |
+| 2.5 | Similar approach | Correct | 2/2 |
+| 2.6 | `sum(GDP)/sum(Population)` | Correct formula | 3/3 |
 | 2.7 | Logical comparison | Returns TRUE/FALSE, not the year | 0/2 |
-| 2.8 | `sum(Accession == 1953)` | Correct concept | 1/2 |
+| 2.8 | `sum(Accession == 1953)` | Correct | 2/2 |
 | 2.9 | Missing assignment `<-` | Not permanent | 0/2 |
 | 2.10 | Update Bulgaria | Correct | 2/2 |
 
-**Q2 Total: 9/20**
+**Q2 Total: 15/20**
 
 ---
 
@@ -110,8 +110,8 @@ checkLuhn <- function(digits) {
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 9 | 13 |
-| Q2: Data/Logic | 9 | 20 |
+| Q2: Data/Logic | 15 | 20 |
 | Q3: Simulation | 15 | 15 |
 | Q4: Functions | 25 | 25 |
 | Q5: Luhn Algorithm | 25 | 25 |
-| **TOTAL** | **85** | **100** |
+| **TOTAL** | **91** | **100** |
