@@ -313,8 +313,8 @@ assignment_info1/
 | 12 | Matteo Gangi | 51 |
 | 13 | Leonardo Zanga | 46.5 |
 | 14 | Nicholas Serantoni | 45.5 |
-| 15 | Eleonora Moroni | 44 |
-| 16 | Anna Bonera | 31 |
+| 15 | Eleonora Moroni | 43 |
+| 16 | Anna Bonera | 30 |
 
 ### No Submission
 
