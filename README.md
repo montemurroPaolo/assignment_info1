@@ -56,31 +56,33 @@ assignment_info1/
 
 ## Grades Summary
 
-| Student | Q0 | Q1 | Q2 | Q3 | Q4 | Q5 | Total | Feedback |
-|---------|----|----|----|----|----|----|-------|----------|
-| Ambrogio Antonini | 0 | 0 | 0 | 0 | 0 | 0 | Retired | - |
-| [Anna Bonera](feedback/Anna_Bonera.md) | 2 | 8 | 11 | 4 | 5 | 0 | 30 | [View](feedback/Anna_Bonera.md) |
-| [Assiya Mokabbal](feedback/Assiya_Mokabbal.md) | 2 | 10 | 17 | 11.5 | 11 | 0 | 51.5 | [View](feedback/Assiya_Mokabbal.md) |
-| [Damiano Spiatta](feedback/Damiano_Spiatta.md) | 2 | 9 | 13 | 15 | 25 | 25 | 89 | [View](feedback/Damiano_Spiatta.md) |
-| [Eleonora Moroni](feedback/Eleonora_Moroni.md) | 2 | 10 | 13 | 10 | 7 | 0 | 42 | [View](feedback/Eleonora_Moroni.md) |
-| [Erica Trofimov](feedback/Erica_Trofimov.md) | 2 | 12 | 19 | 12 | 22 | 25 | 92 | [View](feedback/Erica_Trofimov.md) |
-| [Filippo Manachino](feedback/Filippo_Manachino.md) | 2 | 10 | 18 | 15 | 14 | 8 | 67 | [View](feedback/Filippo_Manachino.md) |
-| Gianluca Izzo | 0 | 0 | 0 | 0 | 0 | 0 | Retired | - |
-| [Guano Anderson](feedback/Guano_Anderson.md) | 2 | 10 | 18 | 13 | 14 | 18 | 75 | [View](feedback/Guano_Anderson.md) |
-| Leonardo Schenk | 0 | 0 | 0 | 0 | 0 | 0 | Retired | - |
-| [Leonardo Zanga](feedback/Leonardo_Zanga.md) | 2 | 8 | 10 | 12.5 | 13 | 3 | 48.5 | [View](feedback/Leonardo_Zanga.md) |
-| [Lisa Dellerba](feedback/Lisa_Dellerba.md) | 2 | 12 | 16 | 15 | 16 | 23 | 84 | [View](feedback/Lisa_Dellerba.md) |
-| Lorenzo Pini | 0 | 0 | 0 | 0 | 0 | 0 | 0 | - |
-| [Ludovico Martinelli](feedback/Ludovico_Martinelli.md) | 2 | 11 | 19 | 8.5 | 18 | 3 | 61.5 | [View](feedback/Ludovico_Martinelli.md) |
-| [Malak El Fatih](feedback/Malak_El_Fatih.md) | 2 | 6 | 12 | 13 | 20 | 25 | 78 | [View](feedback/Malak_El_Fatih.md) |
-| Matilde Sparviero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | - |
-| [Matteo Gangi](feedback/Matteo_Gangi.md) | 2 | 11 | 15 | 12 | 11 | 0 | 51 | [View](feedback/Matteo_Gangi.md) |
-| [Matteo Zucchi](feedback/Matteo_Zucchi.md) | 2 | 12 | 15 | 13.5 | 11.5 | 3 | 57 | [View](feedback/Matteo_Zucchi.md) |
-| [Nicholas Serantoni](feedback/Nicholas_Serantoni.md) | 2 | 11 | 10 | 12.5 | 14 | 3 | 52.5 | [View](feedback/Nicholas_Serantoni.md) |
-| [Samuel Boccomino](feedback/Samuel_Boccomino.md) | 2 | 10 | 18 | 15 | 21 | 15 | 81 | [View](feedback/Samuel_Boccomino.md) |
-| [Stefano Laureti](feedback/Stefano_Laureti.md) | 2 | 11 | 18 | 5 | 15 | 5 | 56 | [View](feedback/Stefano_Laureti.md) |
+| Student | Q0 | Q1 | Q2 | Q3 | Q4 | Q5 | Total | Grade | Feedback |
+|---------|----|----|----|----|----|----|-------|-------|----------|
+| Ambrogio Antonini | 0 | 0 | 0 | 0 | 0 | 0 | Retired | - | - |
+| [Anna Bonera](feedback/Anna_Bonera.md) | 2 | 8 | 11 | 4 | 5 | 0 | 30 | 3 | [View](feedback/Anna_Bonera.md) |
+| [Assiya Mokabbal](feedback/Assiya_Mokabbal.md) | 2 | 10 | 17 | 11.5 | 11 | 0 | 51.5 | 6 | [View](feedback/Assiya_Mokabbal.md) |
+| [Damiano Spiatta](feedback/Damiano_Spiatta.md) | 2 | 9 | 13 | 15 | 25 | 25 | 89 | 9 | [View](feedback/Damiano_Spiatta.md) |
+| [Eleonora Moroni](feedback/Eleonora_Moroni.md) | 2 | 10 | 13 | 10 | 7 | 0 | 42 | 4.5 | [View](feedback/Eleonora_Moroni.md) |
+| [Erica Trofimov](feedback/Erica_Trofimov.md) | 2 | 12 | 19 | 12 | 22 | 25 | 92 | 9.5 | [View](feedback/Erica_Trofimov.md) |
+| [Filippo Manachino](feedback/Filippo_Manachino.md) | 2 | 10 | 18 | 15 | 14 | 8 | 67 | 7 | [View](feedback/Filippo_Manachino.md) |
+| Gianluca Izzo | 0 | 0 | 0 | 0 | 0 | 0 | Retired | - | - |
+| [Guano Anderson](feedback/Guano_Anderson.md) | 2 | 10 | 18 | 13 | 14 | 18 | 75 | 7.5 | [View](feedback/Guano_Anderson.md) |
+| Leonardo Schenk | 0 | 0 | 0 | 0 | 0 | 0 | Retired | - | - |
+| [Leonardo Zanga](feedback/Leonardo_Zanga.md) | 2 | 8 | 10 | 12.5 | 13 | 3 | 48.5 | 5 | [View](feedback/Leonardo_Zanga.md) |
+| [Lisa Dellerba](feedback/Lisa_Dellerba.md) | 2 | 12 | 16 | 15 | 16 | 23 | 84 | 8.5 | [View](feedback/Lisa_Dellerba.md) |
+| Lorenzo Pini | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | - |
+| [Ludovico Martinelli](feedback/Ludovico_Martinelli.md) | 2 | 11 | 19 | 8.5 | 18 | 3 | 61.5 | 6.5 | [View](feedback/Ludovico_Martinelli.md) |
+| [Malak El Fatih](feedback/Malak_El_Fatih.md) | 2 | 6 | 12 | 13 | 20 | 25 | 78 | 8 | [View](feedback/Malak_El_Fatih.md) |
+| Matilde Sparviero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | - |
+| [Matteo Gangi](feedback/Matteo_Gangi.md) | 2 | 11 | 15 | 12 | 11 | 0 | 51 | 6 | [View](feedback/Matteo_Gangi.md) |
+| [Matteo Zucchi](feedback/Matteo_Zucchi.md) | 2 | 12 | 15 | 13.5 | 11.5 | 3 | 57 | 6 | [View](feedback/Matteo_Zucchi.md) |
+| [Nicholas Serantoni](feedback/Nicholas_Serantoni.md) | 2 | 11 | 10 | 12.5 | 14 | 3 | 52.5 | 6 | [View](feedback/Nicholas_Serantoni.md) |
+| [Samuel Boccomino](feedback/Samuel_Boccomino.md) | 2 | 10 | 18 | 15 | 21 | 15 | 81 | 8.5 | [View](feedback/Samuel_Boccomino.md) |
+| [Stefano Laureti](feedback/Stefano_Laureti.md) | 2 | 11 | 18 | 5 | 15 | 5 | 56 | 6 | [View](feedback/Stefano_Laureti.md) |
 
 **Max Points:** Q0=2, Q1=13, Q2=20, Q3=15, Q4=25, Q5=25, Total=100
+
+**Grade Rules:** Round up to next 0.5 out of 10. Scores >50 → 6 minimum.
 
 ---
 
