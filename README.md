@@ -238,39 +238,35 @@ assignment_info1/
 
 ### Q2: Data and Logical Conditions
 
-1. **Eurozone column name**
-   - The CSV column is named `Eurozone` (not `IsEurozone`)
-   - Students using `Eurozone` receive **full credit**
-
-2. **GDP per capita formula error (Q2.6)**
+1. **GDP per capita formula error (Q2.6)**
    - Wrong: `sum(GDP/Population)` (sum of individual ratios)
    - Correct: `sum(GDP) / sum(Population)` (ratio of totals)
    - Partial credit (1/2) awarded for attempt with wrong formula
 
-3. **EU founding year**
+2. **EU founding year**
    - Q2.7 asks for `min(Eudata$Accession)` which returns **1953** from the data
    - Q2.8: Using hardcoded `1953` is acceptable since it was derived in Q2.7
    - Full credit for `sum(Eudata$Accession == 1953)` or dynamic `sum(Eudata$Accession == min(Eudata$Accession))`
 
-4. **CountyName column typo**
+3. **CountyName column typo**
    - The CSV contains `CountyName` (typo in data)
    - Students using `CountryName` or `Country` were given full credit
 
-5. **Wrong variable, right concept (myData vs Eudata)**
+4. **Wrong variable, right concept (myData vs Eudata)**
    - Students who used a different variable name (e.g., `myData`) but correct logic
    - Penalized only **once** (-1 point in first occurrence), subsequent uses with correct logic receive full credit
 
-6. **Subsetting syntax errors**
+5. **Subsetting syntax errors**
    - Missing comma: `Eudata[condition]` instead of `Eudata[condition, ]`
    - Partial credit (1/2) awarded for correct logic with minor syntax error
 
-7. **Remove UK (Q2.9) - typos and alternatives accepted**
+6. **Remove UK (Q2.9) - typos and alternatives accepted**
    - Typos in country name (e.g., "Knigdom") - full credit if UK was removed
    - Alternative codes (e.g., "GB" instead of "UK") - full credit if UK was removed
    - Hardcoded row number (e.g., `Eudata[-28,]`) - full credit if it successfully removed UK
    - Backtick notation (e.g., `` Eudata$`United Kingdom` ``) - full credit
 
-8. **Column name typos (Q2.2, Q2.7)**
+7. **Column name typos (Q2.2, Q2.7)**
    - Typos like "Popolation" or "Accesion" - partial credit (1/2) for correct logic
 
 ### Q3: Simulation and Probability
