@@ -4,6 +4,56 @@
 
 ---
 
+## Files in This Repository
+
+```
+assignment_info1/
+├── README.md                       # This file - grading report and documentation
+├── grades_summary.csv              # All grades in CSV format (21 students)
+├── Informatica_retake_2026-01.xls  # Course enrollment roster
+├── rbakkexam2026_spring.R          # Original exam template
+├── Eudata.csv                      # Dataset used in Q2
+├── infosheet.pdf                   # Exam info sheet with equations
+├── assignment.txt                  # Raw concatenated submissions
+├── Guano_Anderson_Esame_2026.pdf   # Sample exam PDF
+├── submissions/                    # Individual student R files (16 files)
+│   ├── Anna_Bonera.R
+│   ├── Assiya_Mokabbal.R
+│   ├── Damiano_Spiatta.R
+│   ├── Eleonora_Moroni.R
+│   ├── Erica_Trofimov.R
+│   ├── Filippo_Manachino.R
+│   ├── Guano_Anderson.R
+│   ├── Leonardo_Zanga.R
+│   ├── Lisa_Dellerba.R
+│   ├── Ludovico_Martinelli.R
+│   ├── Malak_El_Fatih.R
+│   ├── Matteo_Gangi.R
+│   ├── Matteo_Zucchi.R
+│   ├── Nicholas_Serantoni.R
+│   ├── Samuel_Boccomino.R
+│   └── Stefano_Laureti.R
+└── feedback/                       # Individual feedback files (16 files)
+    ├── Anna_Bonera.md
+    ├── Assiya_Mokabbal.md
+    ├── Damiano_Spiatta.md
+    ├── Eleonora_Moroni.md
+    ├── Erica_Trofimov.md
+    ├── Filippo_Manachino.md
+    ├── Guano_Anderson.md
+    ├── Leonardo_Zanga.md
+    ├── Lisa_Dellerba.md
+    ├── Ludovico_Martinelli.md
+    ├── Malak_El_Fatih.md
+    ├── Matteo_Gangi.md
+    ├── Matteo_Zucchi.md
+    ├── Nicholas_Serantoni.md
+    ├── Samuel_Boccomino.md
+    └── Stefano_Laureti.md
+```
+
+---
+
 ## Exam Structure
 
 | Question | Topic | Max Points |
@@ -280,26 +330,6 @@
 | Ambrogio Antonini | Retired |
 | Gianluca Izzo | Retired |
 | Leonardo Schenk | Retired |
-
----
-
-## Files in This Repository
-
-```
-assignment_info1/
-├── README.md                 # This file
-├── grades_summary.csv        # All grades in CSV format
-├── rbakkexam2026_spring.R    # Original exam template
-├── Eudata.csv                # Dataset used in Q2
-├── submissions/              # Individual student R files
-│   ├── Anna_Bonera.R
-│   ├── Assiya_Mokabbal.R
-│   └── ... (16 files)
-└── feedback/                 # Individual feedback files
-    ├── Anna_Bonera.md
-    ├── Assiya_Mokabbal.md
-    └── ... (16 files)
-```
 
 ---
 
