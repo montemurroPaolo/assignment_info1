@@ -36,7 +36,7 @@ Name correctly provided.
 | 2.1 | `nrow(Eudata)` | Correct | 2/2 |
 | 2.2 | `sum(Eudata$Population)` | Correct | 2/2 |
 | 2.3 | `min/max(Eudata$Area)` | Returns area values, not population | 0/2 |
-| 2.4 | `sum(Eudata$Eurozone)` | Correct concept, column name variation | 1/2 |
+| 2.4 | `sum(Eudata$Eurozone)` | Correct | 2/2 |
 | 2.5 | Uses `myData` (undefined) | Partial: Right concept, wrong variable | 1/2 |
 | 2.6 | Sum of ratios, syntax errors | Wrong formula, partial credit for attempt | 1/3 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
@@ -44,7 +44,7 @@ Name correctly provided.
 | 2.9 | `Eudata[-28]` | Removes COLUMN 28, not row! | 0/2 |
 | 2.10 | Not answered | Missing | 0/2 |
 
-**Q2 Total: 9/20**
+**Q2 Total: 10/20**
 
 ### Error in 2.3:
 ```r
@@ -113,8 +113,8 @@ Function was started but not completed.
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 11 | 13 |
-| Q2: Data/Logic | 9 | 20 |
+| Q2: Data/Logic | 10 | 20 |
 | Q3: Simulation | 12.5 | 15 |
 | Q4: Functions | 7 | 25 |
 | Q5: Luhn Algorithm | 3 | 25 |
-| **TOTAL** | **44.5** | **100** |
+| **TOTAL** | **45.5** | **100** |

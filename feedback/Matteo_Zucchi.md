@@ -36,15 +36,15 @@ Name correctly provided.
 | 2.1 | `nrow(Eudata)` | Correct | 2/2 |
 | 2.2 | `sum=(Eudata$Population)` | Assigns to variable `sum` instead of calling function! | 0/2 |
 | 2.3 | `which.min/max(Eudata$Area)` | Correct | 2/2 |
-| 2.4 | `sum(Eudata$Eurozone == TRUE)` | Correct concept, column name variation | 1/2 |
-| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone == TRUE])` | Correct concept, column name variation | 1/2 |
+| 2.4 | `sum(Eudata$Eurozone == TRUE)` | Correct | 2/2 |
+| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone == TRUE])` | Correct | 2/2 |
 | 2.6 | Sum of ratios | Wrong formula, partial credit for attempt | 1/3 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession == 1953)` | Correct | 2/2 |
 | 2.9 | `Eudata= Eudata[-28,]` | Hardcoded row but UK removed | 2/2 |
 | 2.10 | Incomplete | Syntax error | 0/2 |
 
-**Q2 Total: 13/20**
+**Q2 Total: 15/20**
 
 ### Critical Error in 2.2:
 ```r
@@ -119,8 +119,8 @@ checkLuhn <- function(x){
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 12 | 13 |
-| Q2: Data/Logic | 13 | 20 |
+| Q2: Data/Logic | 15 | 20 |
 | Q3: Simulation | 13.5 | 15 |
 | Q4: Functions | 11.5 | 25 |
 | Q5: Luhn Algorithm | 3 | 25 |
-| **TOTAL** | **55** | **100** |
+| **TOTAL** | **57** | **100** |

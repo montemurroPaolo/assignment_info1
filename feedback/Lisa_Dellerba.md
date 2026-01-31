@@ -36,15 +36,15 @@ Name correctly provided.
 | 2.1 | `nrow(Eudata)` | Correct | 2/2 |
 | 2.2 | `sum(Eudata$Population)` | Correct | 2/2 |
 | 2.3 | `min/max(Eudata$Population)` | Returns min/max pop, not by area | 0/2 |
-| 2.4 | `sum(Eudata$Eurozone==1)` | Correct concept, column name variation | 1/2 |
-| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==1])` | Correct concept, column name variation | 1/2 |
+| 2.4 | `sum(Eudata$Eurozone==1)` | Correct | 2/2 |
+| 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==1])` | Correct | 2/2 |
 | 2.6 | Complete subsetting approach | Good structure, wrong column | 2/3 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession==1953)` | Correct | 2/2 |
 | 2.9 | `Eudata[...!="United Kingdom",]` | Correct! | 2/2 |
 | 2.10 | `Eudata[...=="Bulgaria",]` | Filters to only Bulgaria | 0/2 |
 
-**Q2 Total: 14/20**
+**Q2 Total: 16/20**
 
 ### Error in 2.3:
 ```r
@@ -129,8 +129,8 @@ Minor deduction for minor syntax issues in the printed code.
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 12 | 13 |
-| Q2: Data/Logic | 14 | 20 |
+| Q2: Data/Logic | 16 | 20 |
 | Q3: Simulation | 15 | 15 |
 | Q4: Functions | 16 | 25 |
 | Q5: Luhn Algorithm | 23 | 25 |
-| **TOTAL** | **82** | **100** |
+| **TOTAL** | **84** | **100** |
