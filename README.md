@@ -148,7 +148,7 @@ assignment_info1/
 | Median Score | 54.25 / 100 |
 | Standard Deviation | 17.3 |
 | Minimum Score | 31 / 100 |
-| Maximum Score | 91 / 100 |
+| Maximum Score | 90 / 100 |
 | Pass Rate (>= 50) | 69% (11/16) |
 
 ### Score Distribution
@@ -299,7 +299,7 @@ assignment_info1/
 
 | Rank | Student | Total |
 |------|---------|-------|
-| 1 | Damiano Spiatta | 91 |
+| 1 | Damiano Spiatta | 90 |
 | 2 | Erica Trofimov | 88 |
 | 3 | Lisa Dellerba | 81 |
 | 4 | Samuel Boccomino | 79 |

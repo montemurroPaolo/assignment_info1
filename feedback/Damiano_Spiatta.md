@@ -36,7 +36,7 @@ Name correctly provided.
 | Sub-Q | Answer | Evaluation | Points |
 |-------|--------|------------|--------|
 | 2.1 | `sum()` (empty) | Not answered | 0/2 |
-| 2.2 | `sum(myData$Population)` | Correct (myData noted once) | 2/2 |
+| 2.2 | `sum(myData$Population)` | Correct (-1 for myData, counted once) | 1/2 |
 | 2.3 | `which.min/max` approach | Correct | 2/2 |
 | 2.4 | `sum(myData$IsEurozone == 1)` | Correct | 2/2 |
 | 2.5 | Similar approach | Correct | 2/2 |
@@ -46,7 +46,7 @@ Name correctly provided.
 | 2.9 | Missing assignment `<-` | Not permanent | 0/2 |
 | 2.10 | Update Bulgaria | Correct | 2/2 |
 
-**Q2 Total: 15/20**
+**Q2 Total: 14/20**
 
 ---
 
@@ -110,8 +110,8 @@ checkLuhn <- function(digits) {
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 9 | 13 |
-| Q2: Data/Logic | 15 | 20 |
+| Q2: Data/Logic | 14 | 20 |
 | Q3: Simulation | 15 | 15 |
 | Q4: Functions | 25 | 25 |
 | Q5: Luhn Algorithm | 25 | 25 |
-| **TOTAL** | **91** | **100** |
+| **TOTAL** | **90** | **100** |
