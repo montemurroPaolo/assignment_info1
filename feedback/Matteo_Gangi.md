@@ -1,6 +1,8 @@
 # Exam Correction: Matteo Gangi
 ## Informatica 2 - Exam 2025-09-04
 
+**Submission:** https://github.com/montemurroPaolo/assignment_info1/blob/main/submissions/Matteo_Gangi.R
+
 ---
 
 ## Question 0: Name (2 points)
@@ -55,13 +57,13 @@ Name correctly provided.
 |-------|--------|------------|--------|
 | 3.1 | `sample(1:6, 1, TRUE)` | Correct | 2/2 |
 | 3.2 | `k=sample(1:6, 1, TRUE)` | size=1, should be 1000! | 0/2 |
-| 3.3 | `mean(k==4 \| k==5)` | Logic correct if k was right | 1/2 |
-| 3.4 | `z= 2*K - m` | Uses K instead of k (case!) | 1/3 |
+| 3.3 | `mean(k==4 \| k==5)` | Correct logic | 2/2 |
+| 3.4 | `z= 2*K - m` | K instead of k is a typo | 2/3 |
 | 3.5 | `rnorm(100, 0.12, 0.2)` | Correct | 2/2 |
 | 3.6a | `mean(stock<0)` | Correct | 2/2 |
 | 3.6b | `pnorm(0, 0.12, 0.2)` | Correct | 2/2 |
 
-**Q3 Total: 10/15**
+**Q3 Total: 12/15**
 
 ### Error in 3.4:
 ```r
@@ -104,7 +106,7 @@ Function not implemented.
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 11 | 13 |
 | Q2: Data/Logic | 13 | 20 |
-| Q3: Simulation | 10 | 15 |
+| Q3: Simulation | 12 | 15 |
 | Q4: Functions | 11 | 25 |
 | Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **47** | **100** |
+| **TOTAL** | **49** | **100** |

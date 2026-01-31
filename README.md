@@ -311,7 +311,7 @@ assignment_info1/
 | 9 | Stefano Laureti | 54 |
 | 11 | Assiya Mokabbal | 49.5 |
 | 12 | Leonardo Zanga | 46.5 |
-| 13 | Matteo Gangi | 47 |
+| 13 | Matteo Gangi | 49 |
 | 14 | Nicholas Serantoni | 43.5 |
 | 15 | Eleonora Moroni | 41 |
 | 16 | Anna Bonera | 31 |
