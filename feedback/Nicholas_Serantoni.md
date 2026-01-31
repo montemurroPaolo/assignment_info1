@@ -21,11 +21,11 @@ Name correctly provided.
 | 1.3 | rbind approach | row5 starts at 10 instead of 5 | 1/2 |
 | 1.4 | `M["row1",]` | Correct | 1/1 |
 | 1.5 | `tail(v1,1)` | Correct | 2/2 |
-| 1.6 | log10 correct for 2nd, 3rd | First expression wrong | 1/2 |
+| 1.6 | All expressions correct | Correct | 2/2 |
 | 1.7 | `u<-10^5` | Should be `10^(-5)` | 0/1 |
 | 1.8 | Correct explanation | Correct | 1/1 |
 
-**Q1 Total: 10/13**
+**Q1 Total: 11/13**
 
 ---
 
@@ -112,9 +112,9 @@ Function was started but not completed.
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 10 | 13 |
+| Q1: R Basics | 11 | 13 |
 | Q2: Data/Logic | 9 | 20 |
 | Q3: Simulation | 12.5 | 15 |
 | Q4: Functions | 7 | 25 |
 | Q5: Luhn Algorithm | 3 | 25 |
-| **TOTAL** | **43.5** | **100** |
+| **TOTAL** | **44.5** | **100** |

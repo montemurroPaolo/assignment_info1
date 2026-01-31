@@ -144,9 +144,9 @@ assignment_info1/
 | Metric | Value |
 |--------|-------|
 | Number of Submissions | 16 |
-| Mean Score | 61.2 / 100 |
-| Median Score | 54.25 / 100 |
-| Standard Deviation | 17.3 |
+| Mean Score | 61.6 / 100 |
+| Median Score | 55.25 / 100 |
+| Standard Deviation | 17.5 |
 | Minimum Score | 31 / 100 |
 | Maximum Score | 90 / 100 |
 | Pass Rate (>= 50) | 69% (11/16) |
@@ -168,7 +168,7 @@ assignment_info1/
 | Question | Max | Mean | Median | % of Max |
 |----------|-----|------|--------|----------|
 | Q0: Name | 2 | 2.0 | 2 | 100% |
-| Q1: R Basics | 13 | 8.8 | 9 | 68% |
+| Q1: R Basics | 13 | 10.2 | 11 | 78% |
 | Q2: Data/Logic | 20 | 13.8 | 14.5 | 69% |
 | Q3: Simulation | 15 | 11.5 | 12.5 | 77% |
 | Q4: Functions | 25 | 14.2 | 14 | 57% |
@@ -300,20 +300,20 @@ assignment_info1/
 | Rank | Student | Total |
 |------|---------|-------|
 | 1 | Damiano Spiatta | 90 |
-| 2 | Erica Trofimov | 88 |
-| 3 | Lisa Dellerba | 81 |
+| 2 | Erica Trofimov | 89 |
+| 3 | Lisa Dellerba | 82 |
 | 4 | Samuel Boccomino | 79 |
 | 5 | Malak El Fatih | 79 |
 | 6 | Guano Anderson | 73 |
 | 7 | Filippo Manachino | 65 |
-| 8 | Ludovico Martinelli | 54.5 |
-| 9 | Stefano Laureti | 54 |
-| 9 | Matteo Zucchi | 54 |
+| 8 | Ludovico Martinelli | 55.5 |
+| 9 | Stefano Laureti | 55 |
+| 9 | Matteo Zucchi | 55 |
 | 11 | Assiya Mokabbal | 49.5 |
 | 12 | Matteo Gangi | 49 |
 | 13 | Leonardo Zanga | 46.5 |
-| 14 | Nicholas Serantoni | 43.5 |
-| 15 | Eleonora Moroni | 41 |
+| 14 | Nicholas Serantoni | 44.5 |
+| 15 | Eleonora Moroni | 42 |
 | 16 | Anna Bonera | 31 |
 
 ### No Submission

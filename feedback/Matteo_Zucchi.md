@@ -21,11 +21,11 @@ Name correctly provided.
 | 1.3 | rbind approach | row5 starts at 10 instead of 5 | 1/2 |
 | 1.4 | `M[1,]` | Correct | 1/1 |
 | 1.5 | `tail(v1,1)` | Correct | 2/2 |
-| 1.6 | log10 correct, first wrong | First expression uses / | 1/2 |
+| 1.6 | All expressions correct | Correct | 2/2 |
 | 1.7 | `u= 10^(-5)` | Correct | 1/1 |
 | 1.8 | "R is case sensitive" | Correct | 1/1 |
 
-**Q1 Total: 11/13**
+**Q1 Total: 12/13**
 
 ---
 
@@ -118,9 +118,9 @@ checkLuhn <- function(x){
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 11 | 13 |
+| Q1: R Basics | 12 | 13 |
 | Q2: Data/Logic | 13 | 20 |
 | Q3: Simulation | 13.5 | 15 |
 | Q4: Functions | 11.5 | 25 |
 | Q5: Luhn Algorithm | 3 | 25 |
-| **TOTAL** | **54** | **100** |
+| **TOTAL** | **55** | **100** |

@@ -21,11 +21,11 @@ Name correctly provided.
 | 1.3 | rbind approach | row4 typo (292), row5 starts with 10 | 1/2 |
 | 1.4 | `M[1,]` | Correct | 1/1 |
 | 1.5 | `tail(v1,1)` | Correct | 2/2 |
-| 1.6 | First expr wrong, others correct | Partial (log10 correct!) | 1/2 |
+| 1.6 | All expressions correct | Correct | 2/2 |
 | 1.7 | `u<-10^(-5)` | Correct | 1/1 |
 | 1.8 | "R is a case sensitive" | Correct | 1/1 |
 
-**Q1 Total: 11/13**
+**Q1 Total: 12/13**
 
 ---
 
@@ -128,9 +128,9 @@ Minor deduction for minor syntax issues in the printed code.
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 11 | 13 |
+| Q1: R Basics | 12 | 13 |
 | Q2: Data/Logic | 14 | 20 |
 | Q3: Simulation | 15 | 15 |
 | Q4: Functions | 16 | 25 |
 | Q5: Luhn Algorithm | 23 | 25 |
-| **TOTAL** | **81** | **100** |
+| **TOTAL** | **82** | **100** |

@@ -21,11 +21,11 @@ Name correctly provided.
 | 1.3 | matrix with byrow=T | Missing 5th row (starts at 10) | 1/2 |
 | 1.4 | `M[1,]` | Correct | 1/1 |
 | 1.5 | `tail(v1,1)` | Correct | 2/2 |
-| 1.6 | log10 correct, first wrong | First expression uses / instead of - | 1/2 |
+| 1.6 | All expressions correct | Correct | 2/2 |
 | 1.7 | `u<-10^12` | Should be `10^(-5)` | 0/1 |
 | 1.8 | "R is case sensitive" | Correct | 1/1 |
 
-**Q1 Total: 10/13**
+**Q1 Total: 11/13**
 
 ---
 
@@ -108,9 +108,9 @@ Should iterate through positions, not check equality with multiple values.
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 10 | 13 |
+| Q1: R Basics | 11 | 13 |
 | Q2: Data/Logic | 15 | 20 |
 | Q3: Simulation | 8.5 | 15 |
 | Q4: Functions | 16 | 25 |
 | Q5: Luhn Algorithm | 3 | 25 |
-| **TOTAL** | **54.5** | **100** |
+| **TOTAL** | **55.5** | **100** |

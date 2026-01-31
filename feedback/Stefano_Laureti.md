@@ -21,11 +21,11 @@ Name correctly provided.
 | 1.3 | `matrix(seq(1, 300, 2), ...)` | seq by 2 gives only odd numbers | 0/2 |
 | 1.4 | `M[1, ]` | Correct | 1/1 |
 | 1.5 | `tail(v1, 1)` | Correct | 2/2 |
-| 1.6 | log10 correct, first wrong | First expression uses / | 1/2 |
+| 1.6 | All expressions correct | Correct | 2/2 |
 | 1.7 | `u<-c(10^-5)` | Correct | 1/1 |
 | 1.8 | Excellent explanation | Correct | 1/1 |
 
-**Q1 Total: 10/13**
+**Q1 Total: 11/13**
 
 ---
 
@@ -110,9 +110,9 @@ Function is incomplete and has incorrect logic (uses Collatz conjecture instead 
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 10 | 13 |
+| Q1: R Basics | 11 | 13 |
 | Q2: Data/Logic | 18 | 20 |
 | Q3: Simulation | 4 | 15 |
 | Q4: Functions | 15 | 25 |
 | Q5: Luhn Algorithm | 5 | 25 |
-| **TOTAL** | **54** | **100** |
+| **TOTAL** | **55** | **100** |

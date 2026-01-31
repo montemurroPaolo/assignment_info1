@@ -21,11 +21,11 @@ Name correctly provided.
 | 1.3 | rbind with v1-v5 | Overwrites v1,v2 and v5 starts at 10 not 5 | 1/2 |
 | 1.4 | `M[1, ]` | Correct | 1/1 |
 | 1.5 | `v1[length(v1)]` | Correct | 2/2 |
-| 1.6 | log10 correct in 2 & 3 | First calculation has wrong operator | 1/2 |
+| 1.6 | All expressions correct | Correct | 2/2 |
 | 1.7 | `u <- 10^(-5)` | Correct | 1/1 |
 | 1.8 | "R is case-sensitive" | Excellent explanation | 1/1 |
 
-**Q1 Total: 11/13**
+**Q1 Total: 12/13**
 
 ### Error in 1.6 (first expression):
 ```r
@@ -152,9 +152,9 @@ Correct logic: reverses digits, doubles even positions, subtracts 9 if needed, c
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 11 | 13 |
+| Q1: R Basics | 12 | 13 |
 | Q2: Data/Logic | 16 | 20 |
 | Q3: Simulation | 12 | 15 |
 | Q4: Functions | 22 | 25 |
 | Q5: Luhn Algorithm | 25 | 25 |
-| **TOTAL** | **88** | **100** |
+| **TOTAL** | **89** | **100** |
