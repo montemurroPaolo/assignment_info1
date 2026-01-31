@@ -109,7 +109,7 @@ xmin_grid <- x[which.min(y)]
 
 ## Question 5: Luhn Algorithm (25 points)
 
-**Score: 5/25** (partial credit for effort and understanding)
+**Score: 8/25** (partial credit for effort and understanding)
 
 The student showed understanding of the algorithm concept but the implementation has major issues:
 
@@ -142,5 +142,5 @@ The student's comments show understanding of what should happen but couldn't tra
 | Q2: Data/Logic | 14 | 20 |
 | Q3: Simulation | 15 | 15 |
 | Q4: Functions | 14 | 25 |
-| Q5: Luhn Algorithm | 5 | 25 |
-| **TOTAL** | **59** | **100** |
+| Q5: Luhn Algorithm | 8 | 25 |
+| **TOTAL** | **62** | **100** |

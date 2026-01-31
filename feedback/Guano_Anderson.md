@@ -48,10 +48,10 @@ Name correctly provided.
 | 2.6 | Complete with `*1e6` | Good formula but wrong column | 2/3 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession==1953)` | Wrong year (1958) | 0/2 |
-| 2.9 | `subset(Eudata,Code != "GB")` | Different code, might work | 1/2 |
+| 2.9 | `subset(Eudata,Code != "GB")` | Used GB code but UK removed | 2/2 |
 | 2.10 | Not completed | Missing | 0/2 |
 
-**Q2 Total: 13/20**
+**Q2 Total: 14/20**
 
 ---
 
@@ -88,7 +88,7 @@ Name correctly provided.
 
 ## Question 5: Luhn Algorithm (25 points)
 
-**Score: 15/25**
+**Score: 18/25**
 
 Good logic but hardcodes test data:
 
@@ -129,8 +129,8 @@ Issues:
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 9 | 13 |
-| Q2: Data/Logic | 13 | 20 |
+| Q2: Data/Logic | 14 | 20 |
 | Q3: Simulation | 13 | 15 |
 | Q4: Functions | 14 | 25 |
-| Q5: Luhn Algorithm | 15 | 25 |
-| **TOTAL** | **66** | **100** |
+| Q5: Luhn Algorithm | 18 | 25 |
+| **TOTAL** | **70** | **100** |

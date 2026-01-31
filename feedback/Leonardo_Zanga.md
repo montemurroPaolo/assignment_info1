@@ -47,12 +47,12 @@ v1[length(v1)]  # Gets last element of v1
 | 2.4 | `Sum(Eudata$Eurozone==TRUE)` | `Sum` doesn't exist (case!), wrong column | 0/2 |
 | 2.5 | `sum(Eudata$GDP[Eudata$Eurozone])` | Wrong column name | 1/2 |
 | 2.6 | Sum of ratios | Wrong formula, partial credit for attempt | 1/3 |
-| 2.7 | `min(Eudata$Accesion)` | Typo: "Accesion" | 1/2 |
+| 2.7 | `min(Eudata$Accesion)` | Typo "Accesion" but correct logic | 2/2 |
 | 2.8 | Uses CountyName | Should count, not sum names | 0/2 |
 | 2.9 | `Eudata[...=='UK',]` | KEEPS UK instead of removing | 0/2 |
 | 2.10 | Incomplete | Wrong approach | 0/2 |
 
-**Q2 Total: 7/20**
+**Q2 Total: 8/20**
 
 ### Critical Error in 2.9:
 ```r
@@ -72,12 +72,12 @@ Eudata <- Eudata[Eudata$CountyName != 'United Kingdom', ]
 | 3.1 | `sample(1:6,1,replace=TRUE)` | Correct | 2/2 |
 | 3.2 | `sample(1:6,100,replace=TRUE)` | 100 instead of 1000 | 1/2 |
 | 3.3 | `length(k[k>=4 & k<=5])/length(k)` | Correct logic | 2/2 |
-| 3.4 | m, z, mean but no var | Missing variance | 2/3 |
+| 3.4 | m, z, mean but no var | Missing variance | 1.5/3 |
 | 3.5 | `rnorm(100,0.12,0.2)` | Correct (var named "stocks") | 2/2 |
 | 3.6a | `mean(stocks<0)` | Correct | 2/2 |
 | 3.6b | `pnorm(0,0.12,0.2)` | Correct | 2/2 |
 
-**Q3 Total: 13/15**
+**Q3 Total: 12.5/15**
 
 ---
 
@@ -106,7 +106,7 @@ xmin_grid <- x[which.min(y)]
 
 ## Question 5: Luhn Algorithm (25 points)
 
-**Score: 0/25**
+**Score: 3/25** (partial credit for attempting)
 
 Function is incomplete and has major syntax errors. The logic was not properly implemented.
 
@@ -118,8 +118,8 @@ Function is incomplete and has major syntax errors. The logic was not properly i
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 8 | 13 |
-| Q2: Data/Logic | 7 | 20 |
-| Q3: Simulation | 13 | 15 |
+| Q2: Data/Logic | 8 | 20 |
+| Q3: Simulation | 12.5 | 15 |
 | Q4: Functions | 13 | 25 |
-| Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **43** | **100** |
+| Q5: Luhn Algorithm | 3 | 25 |
+| **TOTAL** | **46.5** | **100** |

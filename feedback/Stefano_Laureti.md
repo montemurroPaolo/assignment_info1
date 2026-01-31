@@ -97,7 +97,7 @@ k <- sample(1:6, 1000, replace=TRUE)
 
 ## Question 5: Luhn Algorithm (25 points)
 
-**Score: 0/25**
+**Score: 5/25** (partial credit for attempting)
 
 Function is incomplete and has incorrect logic (uses Collatz conjecture instead of Luhn).
 
@@ -112,5 +112,5 @@ Function is incomplete and has incorrect logic (uses Collatz conjecture instead 
 | Q2: Data/Logic | 16 | 20 |
 | Q3: Simulation | 4 | 15 |
 | Q4: Functions | 15 | 25 |
-| Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **46** | **100** |
+| Q5: Luhn Algorithm | 5 | 25 |
+| **TOTAL** | **51** | **100** |

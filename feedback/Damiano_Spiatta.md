@@ -18,12 +18,12 @@ Name correctly provided.
 | 1.2 | `v2 <- seq(3,30, by = 3)` | Correct | 2/2 |
 | 1.3 | `M <- matrix(1:300, nrow = 10, ncol = 30)` | Wrong dimensions (should be 5 rows) | 1/2 |
 | 1.4 | `print(M[1,])` | Correct | 1/1 |
-| 1.5 | `print(v2[length(v2)])` | Wrong variable (v2 instead of v1) | 0/2 |
+| 1.5 | `print(v2[length(v2)])` | Partial: Wrong variable (v2 instead of v1), right concept | 1/2 |
 | 1.6 | Missing parenthesis, wrong log | Syntax error | 0/2 |
 | 1.7 | `u <- 10^(-5)` | Correct | 1/1 |
 | 1.8 | "R is case sensitive" | Correct | 1/1 |
 
-**Q1 Total: 8/13**
+**Q1 Total: 9/13**
 
 ---
 
@@ -36,15 +36,15 @@ Name correctly provided.
 | 2.1 | `sum()` (empty) | Not answered | 0/2 |
 | 2.2 | `sum(myData$Population)` | Wrong var, correct concept | 1/2 |
 | 2.3 | `which.min/max` approach | Correct concept, wrong var | 1/2 |
-| 2.4 | `sum(myData$IsEurozone == 1)` | Wrong column & variable | 0/2 |
-| 2.5 | Similar issues | Wrong variable & column | 0/2 |
+| 2.4 | `sum(myData$IsEurozone == 1)` | Partial: Right concept, wrong variable | 1/2 |
+| 2.5 | Similar issues | Partial: Right concept, wrong variable | 1/2 |
 | 2.6 | `sum(GDP)/sum(Population)` | Correct formula! (wrong var) | 2/3 |
 | 2.7 | Logical comparison | Returns TRUE/FALSE, not the year | 0/2 |
 | 2.8 | `sum(Accession == 1953)` | Correct concept | 1/2 |
 | 2.9 | Missing assignment `<-` | Not permanent | 0/2 |
 | 2.10 | Update Bulgaria | Correct | 2/2 |
 
-**Q2 Total: 7/20**
+**Q2 Total: 9/20**
 
 ---
 
@@ -107,9 +107,9 @@ checkLuhn <- function(digits) {
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 8 | 13 |
-| Q2: Data/Logic | 7 | 20 |
+| Q1: R Basics | 9 | 13 |
+| Q2: Data/Logic | 9 | 20 |
 | Q3: Simulation | 15 | 15 |
 | Q4: Functions | 25 | 25 |
 | Q5: Luhn Algorithm | 25 | 25 |
-| **TOTAL** | **82** | **100** |
+| **TOTAL** | **85** | **100** |

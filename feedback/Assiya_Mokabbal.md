@@ -52,10 +52,10 @@ log10(sin(2)/exp(2))
 | 2.6 | `sum(Eudata$GDP/Eudata$Population)` | Wrong formula, partial credit for attempt | 1/3 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession == 1953)` | Wrong year (founding was 1958) | 0/2 |
-| 2.9 | Correct concept but typo "Knigdom" | Partial credit | 1/2 |
+| 2.9 | `Eudata[Eudata$CountyName !="United Knigdom", ]` | Typo but UK removed | 2/2 |
 | 2.10 | `Eudata[Eudata$Eurozone == "Bulgaria"]` | Wrong approach entirely | 0/2 |
 
-**Q2 Total: 12/20**
+**Q2 Total: 13/20**
 
 ### Critical Error in 2.6:
 ```r
@@ -75,12 +75,12 @@ sum(Eudata$GDP) * 1e6 / sum(Eudata$Population)  # Total GDP / Total Population
 | 3.1 | `dice = sample(1:6, 1, replace=TRUE)` | Correct | 2/2 |
 | 3.2 | `k = sample(1:6, 1000, replace=TRUE)` | Correct | 2/2 |
 | 3.3 | `mean(k==4 \| k==5)` | Correct | 2/2 |
-| 3.4 | m, z, mean(z) present | Missing `var(z)` | 2/3 |
+| 3.4 | m, z, mean(z) present | Missing `var(z)` | 1.5/3 |
 | 3.5 | `returns_stock = rnorm(100, 0.12, 0.2)` | Correct | 2/2 |
 | 3.6a | `mean(returns_stock > 0)` | Wrong: should be `< 0` for negative returns | 0/2 |
 | 3.6b | `pnorm(0, 0.12, 0.2)` | Correct | 2/2 |
 
-**Q3 Total: 12/15**
+**Q3 Total: 11.5/15**
 
 ---
 
@@ -91,11 +91,11 @@ sum(Eudata$GDP) * 1e6 / sum(Eudata$Population)  # Total GDP / Total Population
 | 4.1 | `f = function(x){x^2}` | Correct | 3/3 |
 | 4.2 | `f(1)` | Correct | 2/2 |
 | 4.3 | `curve(f, -2, 2)` | Correct | 4/4 |
-| 4.4 | Creates `neg_f` and uses optim | Wrong: Minimizing `-f(x)` finds MAXIMUM, not minimum | 0/6 |
+| 4.4 | Creates `neg_f` and uses optim | Partial: Minimizing `-f(x)` finds MAXIMUM, not minimum | 2/6 |
 | 4.5 | Not completed | Missing | 0/6 |
 | 4.6 | Not answered | Missing | 0/4 |
 
-**Q4 Total: 9/25**
+**Q4 Total: 11/25**
 
 ### Error in 4.4:
 ```r
@@ -124,8 +124,8 @@ Function not implemented. Only the test data line was present.
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 9 | 13 |
-| Q2: Data/Logic | 12 | 20 |
-| Q3: Simulation | 12 | 15 |
-| Q4: Functions | 9 | 25 |
+| Q2: Data/Logic | 13 | 20 |
+| Q3: Simulation | 11.5 | 15 |
+| Q4: Functions | 11 | 25 |
 | Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **44** | **100** |
+| **TOTAL** | **46.5** | **100** |

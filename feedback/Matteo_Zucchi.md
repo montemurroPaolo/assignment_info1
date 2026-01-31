@@ -39,10 +39,10 @@ Name correctly provided.
 | 2.6 | Sum of ratios | Wrong formula, partial credit for attempt | 1/3 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession == 1953)` | Wrong year (1958) | 0/2 |
-| 2.9 | `Eudata= Eudata[-28,]` | Works but hardcoded | 1/2 |
+| 2.9 | `Eudata= Eudata[-28,]` | Hardcoded row but UK removed | 2/2 |
 | 2.10 | Incomplete | Syntax error | 0/2 |
 
-**Q2 Total: 10/20**
+**Q2 Total: 11/20**
 
 ### Critical Error in 2.2:
 ```r
@@ -62,12 +62,12 @@ sum(Eudata$Population)   # Calls the sum() function
 | 3.1 | `sample(1:6, 1, TRUE)` | Correct | 2/2 |
 | 3.2 | `sample(1:6, 1000, TRUE)` | Correct | 2/2 |
 | 3.3 | `mean(k == 4 \| k == 5)` | Correct | 2/2 |
-| 3.4 | m, z, mean present | Missing variance | 2/3 |
+| 3.4 | m, z, mean present | Missing variance | 1.5/3 |
 | 3.5 | `rnorm(100, 0.12, 0.2)` | Correct | 2/2 |
 | 3.6a | `mean(stock<0)` | Correct | 2/2 |
 | 3.6b | `pnorm(0, 0.12, 0.2)` | Correct | 2/2 |
 
-**Q3 Total: 14/15**
+**Q3 Total: 13.5/15**
 
 ---
 
@@ -78,11 +78,11 @@ sum(Eudata$Population)   # Calls the sum() function
 | 4.1 | `f= function(x){ x^2 }` | Correct | 3/3 |
 | 4.2 | `f(1)` | Correct | 2/2 |
 | 4.3 | `curve(f, -2, 2)` | Correct | 4/4 |
-| 4.4 | Uses `neg_f` | Minimizing -f finds MAXIMUM! | 0/6 |
-| 4.5 | `grid()` | grid() is for graphics, not search | 0/6 |
+| 4.4 | Uses `neg_f` | Partial: Minimizing -f finds MAXIMUM | 2/6 |
+| 4.5 | `grid()` | Partial: grid() is for graphics, but tried | 0.5/6 |
 | 4.6 | Not answered | Missing | 0/4 |
 
-**Q4 Total: 9/25**
+**Q4 Total: 11.5/25**
 
 ### Error in 4.4:
 ```r
@@ -99,7 +99,7 @@ xmin = res$par
 
 ## Question 5: Luhn Algorithm (25 points)
 
-**Score: 0/25**
+**Score: 3/25** (partial credit for attempting)
 
 Function was started but not completed:
 ```r
@@ -117,8 +117,8 @@ checkLuhn <- function(x){
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 10 | 13 |
-| Q2: Data/Logic | 10 | 20 |
-| Q3: Simulation | 14 | 15 |
-| Q4: Functions | 9 | 25 |
-| Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **45** | **100** |
+| Q2: Data/Logic | 11 | 20 |
+| Q3: Simulation | 13.5 | 15 |
+| Q4: Functions | 11.5 | 25 |
+| Q5: Luhn Algorithm | 3 | 25 |
+| **TOTAL** | **51** | **100** |

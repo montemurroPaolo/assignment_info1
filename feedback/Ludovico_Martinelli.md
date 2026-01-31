@@ -53,12 +53,12 @@ Name correctly provided.
 | 3.1 | `sample(1:6,1)` | Correct (replace not needed for n=1) | 2/2 |
 | 3.2 | `sample(1:6,1000, replace=TRUE)` | Correct | 2/2 |
 | 3.3 | Calculates prob4 and prob5 separately | Should combine with OR | 1/2 |
-| 3.4 | m, z, mean but no var | Missing variance | 2/3 |
+| 3.4 | m, z, mean but no var | Missing variance | 1.5/3 |
 | 3.5 | `rnorm(mean=0.12,sd=0.2,100)` | Correct | 2/2 |
 | 3.6a | `mean(pnorm(stock<0))` | Wrong use of pnorm | 0/2 |
 | 3.6b | Not answered separately | Missing | 0/2 |
 
-**Q3 Total: 9/15**
+**Q3 Total: 8.5/15**
 
 ### Error in 3.6:
 ```r
@@ -89,7 +89,7 @@ mean(pnorm(stock<0))  # Applies pnorm to TRUE/FALSE values!
 
 ## Question 5: Luhn Algorithm (25 points)
 
-**Score: 0/25**
+**Score: 3/25** (partial credit for attempting)
 
 The function logic is incorrect:
 ```r
@@ -108,7 +108,7 @@ Should iterate through positions, not check equality with multiple values.
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 9 | 13 |
 | Q2: Data/Logic | 13 | 20 |
-| Q3: Simulation | 9 | 15 |
+| Q3: Simulation | 8.5 | 15 |
 | Q4: Functions | 16 | 25 |
-| Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **49** | **100** |
+| Q5: Luhn Algorithm | 3 | 25 |
+| **TOTAL** | **51.5** | **100** |

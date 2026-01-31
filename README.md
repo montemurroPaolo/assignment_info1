@@ -80,24 +80,33 @@
 
 ## Class Statistics
 
-### Overall Performance
+### Enrollment Summary
+
+| Status | Count |
+|--------|-------|
+| Total Enrolled | 21 |
+| Submitted Exam | 16 |
+| No Submission | 2 |
+| Retired | 3 |
+
+### Overall Performance (Submitted Students Only)
 
 | Metric | Value |
 |--------|-------|
-| Number of Students | 16 |
-| Mean Score | 55.9 / 100 |
-| Median Score | 47.5 / 100 |
-| Standard Deviation | 17.5 |
+| Number of Submissions | 16 |
+| Mean Score | 59.6 / 100 |
+| Median Score | 51.25 / 100 |
+| Standard Deviation | 17.0 |
 | Minimum Score | 31 / 100 |
-| Maximum Score | 83 / 100 |
+| Maximum Score | 85 / 100 |
 | Pass Rate (>= 50) | 56% (9/16) |
 
 ### Score Distribution
 
 ```
-30-39:  ███ (3 students)
-40-49:  █████ (5 students)
-50-59:  █ (1 student)
+30-39:  ██ (2 students)
+40-49:  ████ (4 students)
+50-59:  ███ (3 students)
 60-69:  █ (1 student)
 70-79:  ████ (4 students)
 80-89:  ██ (2 students)
@@ -110,18 +119,18 @@
 |----------|-----|------|--------|----------|
 | Q0: Name | 2 | 2.0 | 2 | 100% |
 | Q1: R Basics | 13 | 8.8 | 9 | 68% |
-| Q2: Data/Logic | 20 | 11.1 | 11.5 | 56% |
-| Q3: Simulation | 15 | 11.8 | 13 | 79% |
-| Q4: Functions | 25 | 14.1 | 14.5 | 56% |
-| Q5: Luhn | 25 | 8.3 | 0 | 33% |
+| Q2: Data/Logic | 20 | 11.2 | 12 | 56% |
+| Q3: Simulation | 15 | 11.5 | 12.5 | 77% |
+| Q4: Functions | 25 | 14.2 | 14 | 57% |
+| Q5: Luhn | 25 | 9.8 | 3 | 39% |
 
 ### Q5 Luhn Algorithm Completion
 
 | Status | Count | Percentage |
 |--------|-------|------------|
-| Full credit (25/25) | 4 | 25% |
-| Partial credit | 4 | 25% |
-| Not attempted | 8 | 50% |
+| Full credit (25/25) | 3 | 19% |
+| Partial credit (1-24) | 9 | 56% |
+| Zero points | 4 | 25% |
 
 ---
 
@@ -140,6 +149,12 @@
 3. **Last element access**
    - Wrong: `v1[10]` (hardcoded)
    - Correct: `tail(v1, 1)` or `v1[length(v1)]`
+
+4. **Wrong variable, right concept**
+   - Students who used the right approach but wrong variable (e.g., `v2[length(v2)]` instead of `v1[length(v1)]`) receive partial credit (1/2)
+
+5. **Matrix endpoint typos**
+   - Minor typos like `seq(3, 292, 10)` instead of `seq(3, 293, 10)` that barely affect the matrix are not additionally penalized
 
 ### Q2: Data and Logical Conditions
 
@@ -161,9 +176,20 @@
    - The CSV contains `CountyName` (typo in data)
    - Students using `CountryName` or `Country` were given credit
 
+5. **Wrong variable, right concept (myData vs Eudata)**
+   - Students who used a different variable name (e.g., `myData`) but correct logic receive partial credit (1/2)
+
 5. **Subsetting syntax errors**
    - Missing comma: `Eudata[condition]` instead of `Eudata[condition, ]`
    - Partial credit (1/2) awarded for correct logic with minor syntax error
+
+6. **Remove UK (Q2.9) - typos and alternatives accepted**
+   - Typos in country name (e.g., "Knigdom") - full credit if UK was removed
+   - Alternative codes (e.g., "GB" instead of "UK") - full credit if UK was removed
+   - Hardcoded row number (e.g., `Eudata[-28,]`) - full credit if it successfully removed UK
+
+7. **Column name typos (Q2.2, Q2.7)**
+   - Typos like "Popolation" or "Accesion" - partial credit (1/2) for correct logic
 
 ### Q3: Simulation and Probability
 
@@ -173,6 +199,7 @@
 
 2. **Variance calculation omitted**
    - Many calculated `mean(z)` but forgot `var(z)`
+   - Students with mean(z) only receive 1.5/3 (half credit for missing variance)
 
 3. **Negative returns condition reversed**
    - Wrong: `mean(stock > 0)`
@@ -182,7 +209,7 @@
 
 1. **Minimizing negative function**
    - Some students minimized `-f(x)` which finds the MAXIMUM
-   - Should minimize `f(x)` directly
+   - **Update**: Partial credit (2/6) awarded for correct use of optim with incorrect approach
 
 2. **optim result extraction**
    - Students who called `optim()` correctly but didn't extract `$par` received partial credit (5/6)
@@ -191,13 +218,20 @@
 3. **Grid search not implemented**
    - Many reused `optim()` instead of manual grid search
    - Correct approach: `x <- seq(-2, 2, length.out=100); x[which.min(f(x))]`
+   - **Update**: Students who attempted grid search (even with wrong function like `grid()`) receive 0.5/6
 
 4. **Missing explanation for Q4.6**
    - Expected: "optim uses continuous optimization; grid search evaluates discrete points"
 
+5. **Variable name typos**
+   - Typos like `ximin` instead of `xmin` receive full credit
+
 ### Q5: Luhn Algorithm
 
-1. **Not attempted by 50% of students**
+1. **Partial credit for attempts**
+   - Students who attempted but didn't complete: 3/25
+   - Students who showed more effort (wrong algorithm like Collatz): 5/25
+   - Students with hardcoded values but correct logic: up to 18/25
 
 2. **Right-to-left processing confusion**
    - Algorithm processes from RIGHT to LEFT
@@ -211,24 +245,41 @@
 
 ## Grade Summary
 
+### Submitted Exams (Ranked)
+
 | Rank | Student | Total |
 |------|---------|-------|
-| 1 | Erica Trofimov | 83 |
-| 2 | Damiano Spiatta | 82 |
+| 1 | Erica Trofimov | 85 |
+| 1 | Damiano Spiatta | 85 |
 | 3 | Lisa Dellerba | 78 |
 | 4 | Malak El Fatih | 77 |
 | 5 | Samuel Boccomino | 76 |
-| 6 | Guano Anderson | 66 |
-| 7 | Filippo Manachino | 59 |
-| 8 | Ludovico Martinelli | 49 |
-| 9 | Stefano Laureti | 46 |
-| 10 | Matteo Zucchi | 45 |
-| 11 | Assiya Mokabbal | 44 |
-| 12 | Leonardo Zanga | 43 |
-| 13 | Matteo Gangi | 39 |
-| 13 | Nicholas Serantoni | 39 |
+| 6 | Guano Anderson | 70 |
+| 7 | Filippo Manachino | 62 |
+| 8 | Ludovico Martinelli | 51.5 |
+| 9 | Matteo Zucchi | 51 |
+| 9 | Stefano Laureti | 51 |
+| 11 | Assiya Mokabbal | 46.5 |
+| 11 | Leonardo Zanga | 46.5 |
+| 13 | Nicholas Serantoni | 42.5 |
+| 14 | Matteo Gangi | 42 |
 | 15 | Eleonora Moroni | 38 |
 | 16 | Anna Bonera | 31 |
+
+### No Submission
+
+| Student | Status |
+|---------|--------|
+| Lorenzo Pini | 0 - No submission |
+| Matilde Sparviero | 0 - No submission |
+
+### Retired
+
+| Student | Status |
+|---------|--------|
+| Ambrogio Antonini | Retired |
+| Gianluca Izzo | Retired |
+| Leonardo Schenk | Retired |
 
 ---
 

@@ -41,7 +41,7 @@ Name correctly provided.
 | Sub-Q | Answer | Evaluation | Points |
 |-------|--------|------------|--------|
 | 2.1 | `nrow(Eudata)` | Correct | 2/2 |
-| 2.2 | `sum(Eudata$Popolation)` | Typo: "Popolation" | 0/2 |
+| 2.2 | `sum(Eudata$Popolation)` | Typo "Popolation" but correct logic | 1/2 |
 | 2.3 | `which.min/max(Eudata$Area)` | Correct | 2/2 |
 | 2.4 | `sum(Eudata$Eurozone== TRUE)` | Correct concept, column name variation | 1/2 |
 | 2.5 | `sum(Eudata$GDP[Eudata$Eurozone== TRUE])` | Correct concept, column name variation | 1/2 |
@@ -51,7 +51,7 @@ Name correctly provided.
 | 2.9 | Missing comma | Correct concept, minor syntax error | 1/2 |
 | 2.10 | Not answered | Missing | 0/2 |
 
-**Q2 Total: 10/20**
+**Q2 Total: 11/20**
 
 ---
 
@@ -87,11 +87,11 @@ z = 2*k - m
 | 4.1 | `f = function(x){ x^2 }` | Correct | 3/3 |
 | 4.2 | `f(1)` | Correct | 2/2 |
 | 4.3 | `curve(f, -2, 2)` | Correct | 4/4 |
-| 4.4 | Uses `neg_f` | Minimizing -f finds MAXIMUM! | 0/6 |
+| 4.4 | Uses `neg_f` | Partial: Minimizing -f finds MAXIMUM | 2/6 |
 | 4.5 | Not completed | Missing | 0/6 |
 | 4.6 | Not answered | Missing | 0/4 |
 
-**Q4 Total: 9/25**
+**Q4 Total: 11/25**
 
 ---
 
@@ -109,8 +109,8 @@ Function not implemented.
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 8 | 13 |
-| Q2: Data/Logic | 10 | 20 |
+| Q2: Data/Logic | 11 | 20 |
 | Q3: Simulation | 10 | 15 |
-| Q4: Functions | 9 | 25 |
+| Q4: Functions | 11 | 25 |
 | Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **39** | **100** |
+| **TOTAL** | **42** | **100** |
