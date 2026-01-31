@@ -303,7 +303,7 @@ assignment_info1/
 | 2 | Damiano Spiatta | 85 |
 | 3 | Lisa Dellerba | 81 |
 | 4 | Samuel Boccomino | 79 |
-| 5 | Malak El Fatih | 77 |
+| 5 | Malak El Fatih | 79 |
 | 6 | Guano Anderson | 73 |
 | 7 | Filippo Manachino | 65 |
 | 8 | Ludovico Martinelli | 54.5 |
@@ -311,7 +311,7 @@ assignment_info1/
 | 9 | Stefano Laureti | 54 |
 | 11 | Assiya Mokabbal | 49.5 |
 | 12 | Leonardo Zanga | 46.5 |
-| 13 | Matteo Gangi | 45 |
+| 13 | Matteo Gangi | 47 |
 | 14 | Nicholas Serantoni | 43.5 |
 | 15 | Eleonora Moroni | 41 |
 | 16 | Anna Bonera | 31 |

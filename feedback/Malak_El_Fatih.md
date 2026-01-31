@@ -79,11 +79,11 @@ gdp_pc_noneuro <- sum(Eudata$GDP[Eudata$IsEurozone == 0]) * 1e6 /
 | 4.1 | `f <- function(x) { x^2 }` | Correct | 3/3 |
 | 4.2 | `f(1)` | Correct | 2/2 |
 | 4.3 | plot with labels | Excellent, complete | 4/4 |
-| 4.4 | `optimize(g, ...)` | Uses undefined `g` instead of `f` | 3/6 |
+| 4.4 | `optimize(g, ...)` | Typo: `g` instead of `f`, correct otherwise | 5/6 |
 | 4.5 | Grid search with which.min | **Correct!** | 6/6 |
 | 4.6 | Not answered | Missing | 0/4 |
 
-**Q4 Total: 18/25**
+**Q4 Total: 20/25**
 
 ### Excellent grid search implementation:
 ```r
@@ -132,6 +132,6 @@ Correct algorithm with:
 | Q1: R Basics | 6 | 13 |
 | Q2: Data/Logic | 13 | 20 |
 | Q3: Simulation | 13 | 15 |
-| Q4: Functions | 18 | 25 |
+| Q4: Functions | 20 | 25 |
 | Q5: Luhn Algorithm | 25 | 25 |
-| **TOTAL** | **77** | **100** |
+| **TOTAL** | **79** | **100** |
