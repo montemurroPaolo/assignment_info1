@@ -77,14 +77,14 @@ Eudata$Population[which.min(Eudata$Area)]  # Population of smallest country
 
 | Sub-Q | Answer | Evaluation | Points |
 |-------|--------|------------|--------|
-| 4.1 | `fx1<- -x^2+1` | Wrong function (should be x^2) | 0/3 |
-| 4.2 | `fx(x=1)` | Uses wrong function | 1/2 |
-| 4.3 | `plot(fx,-2,2)` | Uses wrong function | 2/4 |
-| 4.4 | `optimize(fx, interval=c(-2,2))$minimum` | Uses wrong function | 4/6 |
+| 4.1 | `fx1<- -x^2+1` | Wrong function (-1 for definition error) | 2/3 |
+| 4.2 | `fx(x=1)` | Correct usage of defined function | 2/2 |
+| 4.3 | `plot(fx,-2,2)` | Correct usage of defined function | 4/4 |
+| 4.4 | `optimize(fx, interval=c(-2,2))$minimum` | Correct usage of defined function | 6/6 |
 | 4.5 | Not completed | Missing | 0/6 |
 | 4.6 | Not answered | Missing | 0/4 |
 
-**Q4 Total: 7/25**
+**Q4 Total: 14/25**
 
 ### Error in 4.1:
 ```r
@@ -115,6 +115,6 @@ Function was started but not completed.
 | Q1: R Basics | 11 | 13 |
 | Q2: Data/Logic | 10 | 20 |
 | Q3: Simulation | 12.5 | 15 |
-| Q4: Functions | 7 | 25 |
+| Q4: Functions | 14 | 25 |
 | Q5: Luhn Algorithm | 3 | 25 |
-| **TOTAL** | **45.5** | **100** |
+| **TOTAL** | **52.5** | **100** |

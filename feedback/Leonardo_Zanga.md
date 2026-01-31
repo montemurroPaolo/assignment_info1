@@ -100,7 +100,7 @@ Eudata <- Eudata[Eudata$CountyName != 'United Kingdom', ]
 ```r
 # Manual grid search:
 x <- seq(-2, 2, length.out=100)
-y <- sapply(x, f)
+y <- f(x)  # f is vectorized
 xmin_grid <- x[which.min(y)]
 ```
 

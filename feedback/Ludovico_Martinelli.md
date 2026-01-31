@@ -42,9 +42,9 @@ Name correctly provided.
 | 2.7 | Correct approach | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession==1953)` | Correct | 2/2 |
 | 2.9 | Correct removal | Correct | 2/2 |
-| 2.10 | Updates Accession | Should update IsEurozone, not Accession | 0/2 |
+| 2.10 | Updates Accession | Acceptable approach | 2/2 |
 
-**Q2 Total: 17/20**
+**Q2 Total: 19/20**
 
 ---
 
@@ -82,10 +82,10 @@ mean(pnorm(stock<0))  # Applies pnorm to TRUE/FALSE values!
 | 4.2 | `f(1)` | Correct | 2/2 |
 | 4.3 | `plot(f,-2,2)` | Correct | 4/4 |
 | 4.4 | optim with BFGS | Correct optim usage, minor extraction issue | 5/6 |
-| 4.5 | Uses optim instead of grid | Should implement manually | 0/6 |
+| 4.5 | Uses optim instead of grid | Partial credit for trying | 2/6 |
 | 4.6 | Partial explanation | Incomplete | 2/4 |
 
-**Q4 Total: 16/25**
+**Q4 Total: 18/25**
 
 ---
 
@@ -109,8 +109,8 @@ Should iterate through positions, not check equality with multiple values.
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 11 | 13 |
-| Q2: Data/Logic | 17 | 20 |
+| Q2: Data/Logic | 19 | 20 |
 | Q3: Simulation | 8.5 | 15 |
-| Q4: Functions | 16 | 25 |
+| Q4: Functions | 18 | 25 |
 | Q5: Luhn Algorithm | 3 | 25 |
-| **TOTAL** | **57.5** | **100** |
+| **TOTAL** | **61.5** | **100** |

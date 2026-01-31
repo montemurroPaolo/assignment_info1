@@ -103,7 +103,7 @@ xmin <- result$par
 ### What 4.5 should look like:
 ```r
 x <- seq(-2, 2, length.out=100)
-y <- sapply(x, f)
+y <- f(x)  # f is vectorized
 xmin_grid <- x[which.min(y)]
 ```
 

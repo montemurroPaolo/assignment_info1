@@ -41,10 +41,10 @@ Name correctly provided.
 | 2.6 | Complete formula with `*1e6` | **Excellent!** | 2/2 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession == 1953)` | Correct | 2/2 |
-| 2.9 | Uses backtick notation | Might work | 1/2 |
+| 2.9 | Uses backtick notation | Correct | 2/2 |
 | 2.10 | Not completed | Missing | 0/2 |
 
-**Q2 Total: 17/20**
+**Q2 Total: 18/20**
 
 ### Excellent work on 2.6:
 ```r
@@ -67,9 +67,9 @@ gdp_pc_nonez <- (sum(Eudata$GDP[Eudata$IsEurozone == 0], na.rm = TRUE) * 1e6) /
 | 3.4 | seq() wrapping | Partial | 1/3 |
 | 3.5 | `sdr=sqrt(0.2)` | sd=0.2, not sqrt(0.2) | 1/2 |
 | 3.6a | Uses pnorm | Should use empirical mean(stock<0) | 0/2 |
-| 3.6b | `pnorn` typo | Typo: pnorn → pnorm | 0/2 |
+| 3.6b | `pnorn` typo | Typo: pnorn → pnorm (partial credit) | 1/2 |
 
-**Q3 Total: 4/15**
+**Q3 Total: 5/15**
 
 ### Errors:
 ```r
@@ -111,8 +111,8 @@ Function is incomplete and has incorrect logic (uses Collatz conjecture instead 
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 11 | 13 |
-| Q2: Data/Logic | 17 | 20 |
-| Q3: Simulation | 4 | 15 |
+| Q2: Data/Logic | 18 | 20 |
+| Q3: Simulation | 5 | 15 |
 | Q4: Functions | 15 | 25 |
 | Q5: Luhn Algorithm | 5 | 25 |
-| **TOTAL** | **54** | **100** |
+| **TOTAL** | **56** | **100** |

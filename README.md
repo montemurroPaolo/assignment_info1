@@ -306,13 +306,13 @@ assignment_info1/
 | 5 | Malak El Fatih | 78 |
 | 6 | Guano Anderson | 75 |
 | 7 | Filippo Manachino | 67 |
-| 8 | Ludovico Martinelli | 57.5 |
-| 9 | Stefano Laureti | 54 |
+| 8 | Ludovico Martinelli | 61.5 |
+| 9 | Stefano Laureti | 56 |
 | 9 | Matteo Zucchi | 57 |
 | 11 | Assiya Mokabbal | 51.5 |
 | 12 | Matteo Gangi | 51 |
 | 13 | Leonardo Zanga | 48.5 |
-| 14 | Nicholas Serantoni | 45.5 |
+| 14 | Nicholas Serantoni | 52.5 |
 | 15 | Eleonora Moroni | 42 |
 | 16 | Anna Bonera | 30 |
 
