@@ -23,7 +23,7 @@ Name correctly provided.
 | 1.7 | `u= 10^(-5)` | Correct | 1/1 |
 | 1.8 | "R is case sensitive" | Correct | 1/1 |
 
-**Q1 Total: 10/13**
+**Q1 Total: 11/13**
 
 ---
 
@@ -116,9 +116,9 @@ checkLuhn <- function(x){
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 10 | 13 |
+| Q1: R Basics | 11 | 13 |
 | Q2: Data/Logic | 13 | 20 |
 | Q3: Simulation | 13.5 | 15 |
 | Q4: Functions | 11.5 | 25 |
 | Q5: Luhn Algorithm | 3 | 25 |
-| **TOTAL** | **53** | **100** |
+| **TOTAL** | **54** | **100** |

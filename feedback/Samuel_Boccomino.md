@@ -23,7 +23,7 @@ Name correctly provided.
 | 1.7 | `u <- 10^(-5)` | Correct | 1/1 |
 | 1.8 | Correct explanation | Correct | 1/1 |
 
-**Q1 Total: 9/13**
+**Q1 Total: 10/13**
 
 ---
 
@@ -131,9 +131,9 @@ Issues:
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 9 | 13 |
+| Q1: R Basics | 10 | 13 |
 | Q2: Data/Logic | 16 | 20 |
 | Q3: Simulation | 15 | 15 |
 | Q4: Functions | 21 | 25 |
 | Q5: Luhn Algorithm | 15 | 25 |
-| **TOTAL** | **78** | **100** |
+| **TOTAL** | **79** | **100** |

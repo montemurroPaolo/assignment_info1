@@ -23,7 +23,7 @@ Name correctly provided as `# <Mokabbal Assiya>`.
 | 1.7 | `u = 10^(-5)` | Correct | 1/1 |
 | 1.8 | "R is case sensitive" | Correct | 1/1 |
 
-**Q1 Total: 9/13**
+**Q1 Total: 10/13**
 
 ### Errors in 1.6:
 ```r
@@ -123,9 +123,9 @@ Function not implemented. Only the test data line was present.
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 9 | 13 |
+| Q1: R Basics | 10 | 13 |
 | Q2: Data/Logic | 15 | 20 |
 | Q3: Simulation | 11.5 | 15 |
 | Q4: Functions | 11 | 25 |
 | Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **48.5** | **100** |
+| **TOTAL** | **49.5** | **100** |

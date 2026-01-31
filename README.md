@@ -144,19 +144,19 @@ assignment_info1/
 | Metric | Value |
 |--------|-------|
 | Number of Submissions | 16 |
-| Mean Score | 60.9 / 100 |
-| Median Score | 53.25 / 100 |
-| Standard Deviation | 17.3 |
+| Mean Score | 61.7 / 100 |
+| Median Score | 54.25 / 100 |
+| Standard Deviation | 17.1 |
 | Minimum Score | 31 / 100 |
-| Maximum Score | 87 / 100 |
-| Pass Rate (>= 50) | 63% (10/16) |
+| Maximum Score | 88 / 100 |
+| Pass Rate (>= 50) | 69% (11/16) |
 
 ### Score Distribution
 
 ```
 30-39:  █ (1 student)
-40-49:  ████ (4 students)
-50-59:  ████ (4 students)
+40-49:  ███ (3 students)
+50-59:  █████ (5 students)
 60-69:  █ (1 student)
 70-79:  ███ (3 students)
 80-89:  ███ (3 students)
@@ -299,21 +299,21 @@ assignment_info1/
 
 | Rank | Student | Total |
 |------|---------|-------|
-| 1 | Erica Trofimov | 87 |
+| 1 | Erica Trofimov | 88 |
 | 2 | Damiano Spiatta | 85 |
-| 3 | Lisa Dellerba | 80 |
-| 4 | Samuel Boccomino | 78 |
+| 3 | Lisa Dellerba | 81 |
+| 4 | Samuel Boccomino | 79 |
 | 5 | Malak El Fatih | 77 |
-| 6 | Guano Anderson | 72 |
-| 7 | Filippo Manachino | 64 |
-| 8 | Ludovico Martinelli | 53.5 |
-| 9 | Matteo Zucchi | 53 |
-| 9 | Stefano Laureti | 53 |
-| 11 | Assiya Mokabbal | 48.5 |
+| 6 | Guano Anderson | 73 |
+| 7 | Filippo Manachino | 65 |
+| 8 | Ludovico Martinelli | 54.5 |
+| 9 | Matteo Zucchi | 54 |
+| 9 | Stefano Laureti | 54 |
+| 11 | Assiya Mokabbal | 49.5 |
 | 12 | Leonardo Zanga | 46.5 |
-| 13 | Matteo Gangi | 44 |
-| 14 | Nicholas Serantoni | 42.5 |
-| 15 | Eleonora Moroni | 40 |
+| 13 | Matteo Gangi | 45 |
+| 14 | Nicholas Serantoni | 43.5 |
+| 15 | Eleonora Moroni | 41 |
 | 16 | Anna Bonera | 31 |
 
 ### No Submission

@@ -23,7 +23,7 @@ Name correctly provided.
 | 1.7 | `u= 10^(-5)` | Correct | 1/1 |
 | 1.8 | "R is case sensitive" | Correct | 1/1 |
 
-**Q1 Total: 8/13**
+**Q1 Total: 9/13**
 
 ### Error in 1.6:
 ```r
@@ -108,9 +108,9 @@ Function not implemented.
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 8 | 13 |
+| Q1: R Basics | 9 | 13 |
 | Q2: Data/Logic | 13 | 20 |
 | Q3: Simulation | 10 | 15 |
 | Q4: Functions | 11 | 25 |
 | Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **44** | **100** |
+| **TOTAL** | **45** | **100** |

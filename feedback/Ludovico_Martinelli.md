@@ -23,7 +23,7 @@ Name correctly provided.
 | 1.7 | `u<-10^12` | Should be `10^(-5)` | 0/1 |
 | 1.8 | "R is case sensitive" | Correct | 1/1 |
 
-**Q1 Total: 9/13**
+**Q1 Total: 10/13**
 
 ---
 
@@ -106,9 +106,9 @@ Should iterate through positions, not check equality with multiple values.
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 9 | 13 |
+| Q1: R Basics | 10 | 13 |
 | Q2: Data/Logic | 15 | 20 |
 | Q3: Simulation | 8.5 | 15 |
 | Q4: Functions | 16 | 25 |
 | Q5: Luhn Algorithm | 3 | 25 |
-| **TOTAL** | **53.5** | **100** |
+| **TOTAL** | **54.5** | **100** |
