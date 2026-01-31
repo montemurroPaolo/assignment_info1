@@ -51,13 +51,13 @@ log10(sin(2)/exp(2))
 | 2.3 | `Eudata$Population[min(Eudata$Area)]` | Wrong: uses min() as index, not which.min() | 0/2 |
 | 2.4 | `sum(Eudata$Eurozone==1)` | Correct | 2/2 |
 | 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==1])` | Correct | 2/2 |
-| 2.6 | a) and b) present, c) missing | Formula correct but incomplete | 2/3 |
+| 2.6 | a) and b) present, c) missing | Formula correct but incomplete | 1/2 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession==1953)` | Correct | 2/2 |
 | 2.9 | `Eudata[Eudata$Country != "UK"]` | Missing comma (syntax error) | 1/2 |
 | 2.10 | Not answered | Missing | 0/2 |
 
-**Q2 Total: 14/20**
+**Q2 Total: 13/20**
 
 ### Error in 2.3:
 ```r
@@ -134,8 +134,8 @@ Function not implemented.
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 10 | 13 |
-| Q2: Data/Logic | 14 | 20 |
+| Q2: Data/Logic | 13 | 20 |
 | Q3: Simulation | 10 | 15 |
 | Q4: Functions | 7 | 25 |
 | Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **43** | **100** |
+| **TOTAL** | **42** | **100** |

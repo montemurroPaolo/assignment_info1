@@ -51,7 +51,7 @@ log10(sin(2)/exp(2))
 | 2.3 | `which.min/which.max` approach | Correct | 2/2 |
 | 2.4 | `sum(Eudata$Eurozone==TRUE)` | Correct | 2/2 |
 | 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==TRUE])` | Correct | 2/2 |
-| 2.6 | `sum(GDP/Population)` | Wrong formula, partial credit for attempt | 1/3 |
+| 2.6 | `sum(GDP/Population)` | Wrong formula, partial credit for attempt | 1/2 |
 | 2.7 | *Not answered* | Missing - Should be `min(Eudata$Accession)` | 0/2 |
 | 2.8 | `sum(Eudata$Accession==1953)` | Correct | 2/2 |
 | 2.9 | *Not answered* | Missing | 0/2 |

@@ -38,13 +38,13 @@ Name correctly provided.
 | 2.3 | `which.min/max(Eudata$Area)` | Correct | 2/2 |
 | 2.4 | `sum(Eudata$Eurozone==TRUE)` | Correct | 2/2 |
 | 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==TRUE])` | Correct | 2/2 |
-| 2.6 | Complete with `*10^6` | Excellent formula! | 3/3 |
+| 2.6 | Complete with `*10^6` | Excellent formula! | 2/2 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession==1953)` | Correct | 2/2 |
 | 2.9 | Correct removal | Correct | 2/2 |
 | 2.10 | Not completed | Missing | 0/2 |
 
-**Q2 Total: 19/20**
+**Q2 Total: 18/20**
 
 ### Excellent work on 2.6:
 ```r
@@ -134,8 +134,8 @@ Issues:
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 10 | 13 |
-| Q2: Data/Logic | 19 | 20 |
+| Q2: Data/Logic | 18 | 20 |
 | Q3: Simulation | 15 | 15 |
 | Q4: Functions | 21 | 25 |
 | Q5: Luhn Algorithm | 15 | 25 |
-| **TOTAL** | **82** | **100** |
+| **TOTAL** | **81** | **100** |

@@ -38,7 +38,7 @@ Name correctly provided.
 | 2.3 | `min/max(Eudata$Area)` | Returns area values, not population | 0/2 |
 | 2.4 | `sum(Eudata$Eurozone)` | Correct | 2/2 |
 | 2.5 | Uses `myData` (undefined) | Partial: Right concept, wrong variable | 1/2 |
-| 2.6 | Sum of ratios, syntax errors | Wrong formula, partial credit for attempt | 1/3 |
+| 2.6 | Sum of ratios, syntax errors | Wrong formula, partial credit for attempt | 1/2 |
 | 2.7 | `min(Eudata$Accession)` | Correct | 2/2 |
 | 2.8 | `sum(Eudata)` | Wrong (should filter by year) | 0/2 |
 | 2.9 | `Eudata[-28]` | Removes COLUMN 28, not row! | 0/2 |

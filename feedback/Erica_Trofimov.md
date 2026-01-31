@@ -46,7 +46,7 @@ log10 ( sin(2)/exp(2))
 | 2.3 | `which.min/max(Eudata$Area)` | Correct | 2/2 |
 | 2.4 | `sum(Eudata$Eurozone)` | Correct | 2/2 |
 | 2.5 | Subset approach | Correct | 2/2 |
-| 2.6 | Formula errors in b) and c) | Uses total EU GDP for all parts | 1/3 |
+| 2.6 | Formula errors in b) and c) | Uses total EU GDP for all parts | 1/2 |
 | 2.7 | `Eudata$Accession[which.min(...)]` | Correct | 2/2 |
 | 2.8 | `nrow(Eudata[Eudata$Accession == 1953, ])` | Correct | 2/2 |
 | 2.9 | `Eudata[-28,]` | Hardcoded row but UK removed | 2/2 |

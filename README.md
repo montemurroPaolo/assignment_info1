@@ -299,21 +299,21 @@ assignment_info1/
 
 | Rank | Student | Total |
 |------|---------|-------|
-| 1 | Damiano Spiatta | 90 |
+| 1 | Damiano Spiatta | 89 |
 | 2 | Erica Trofimov | 92 |
-| 3 | Lisa Dellerba | 85 |
-| 4 | Samuel Boccomino | 82 |
-| 5 | Malak El Fatih | 79 |
-| 6 | Guano Anderson | 76 |
-| 7 | Filippo Manachino | 68 |
+| 3 | Lisa Dellerba | 84 |
+| 4 | Samuel Boccomino | 81 |
+| 5 | Malak El Fatih | 78 |
+| 6 | Guano Anderson | 75 |
+| 7 | Filippo Manachino | 67 |
 | 8 | Ludovico Martinelli | 57.5 |
-| 9 | Stefano Laureti | 55 |
+| 9 | Stefano Laureti | 54 |
 | 9 | Matteo Zucchi | 57 |
 | 11 | Assiya Mokabbal | 51.5 |
 | 12 | Matteo Gangi | 51 |
 | 13 | Leonardo Zanga | 48.5 |
 | 14 | Nicholas Serantoni | 45.5 |
-| 15 | Eleonora Moroni | 43 |
+| 15 | Eleonora Moroni | 42 |
 | 16 | Anna Bonera | 30 |
 
 ### No Submission

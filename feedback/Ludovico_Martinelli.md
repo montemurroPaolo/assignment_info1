@@ -38,7 +38,7 @@ Name correctly provided.
 | 2.3 | `which.min/max(Eudata$Area)` | Correct | 2/2 |
 | 2.4 | `sum(Eudata$Eurozone==1)` | Correct | 2/2 |
 | 2.5 | `sum(Eudata$GDP[Eudata$Eurozone==1])` | Correct | 2/2 |
-| 2.6 | Sum of ratios | Wrong formula, partial credit for attempt | 1/3 |
+| 2.6 | Sum of ratios | Wrong formula, partial credit for attempt | 1/2 |
 | 2.7 | Correct approach | Correct | 2/2 |
 | 2.8 | `sum(Eudata$Accession==1953)` | Correct | 2/2 |
 | 2.9 | Correct removal | Correct | 2/2 |

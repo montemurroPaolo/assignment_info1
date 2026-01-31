@@ -48,7 +48,7 @@ v1[length(v1)]  # Gets last element of v1
 | 2.3 | `which.min/max(Eudata$Area)` | Correct | 2/2 |
 | 2.4 | `Sum(Eudata$Eurozone==TRUE)` | `Sum` doesn't exist (case sensitive!) | 1/2 |
 | 2.5 | `sum(Eudata$GDP[Eudata$Eurozone])` | Correct | 2/2 |
-| 2.6 | Sum of ratios | Wrong formula, partial credit for attempt | 1/3 |
+| 2.6 | Sum of ratios | Wrong formula, partial credit for attempt | 1/2 |
 | 2.7 | `min(Eudata$Accesion)` | Typo "Accesion" but correct logic | 2/2 |
 | 2.8 | Uses CountyName | Should count, not sum names | 0/2 |
 | 2.9 | `Eudata[...=='UK',]` | KEEPS UK instead of removing | 0/2 |

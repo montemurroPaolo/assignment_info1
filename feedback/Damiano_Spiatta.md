@@ -40,13 +40,13 @@ Name correctly provided.
 | 2.3 | `which.min/max` approach | Correct | 2/2 |
 | 2.4 | `sum(myData$IsEurozone == 1)` | Correct | 2/2 |
 | 2.5 | Similar approach | Correct | 2/2 |
-| 2.6 | `sum(GDP)/sum(Population)` | Correct formula | 3/3 |
+| 2.6 | `sum(GDP)/sum(Population)` | Correct formula | 2/2 |
 | 2.7 | Logical comparison | Returns TRUE/FALSE, not the year | 0/2 |
 | 2.8 | `sum(Accession == 1953)` | Correct | 2/2 |
 | 2.9 | Missing assignment `<-` | Not permanent | 0/2 |
 | 2.10 | Update Bulgaria | Correct | 2/2 |
 
-**Q2 Total: 14/20**
+**Q2 Total: 13/20**
 
 ---
 
@@ -110,8 +110,8 @@ checkLuhn <- function(digits) {
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
 | Q1: R Basics | 9 | 13 |
-| Q2: Data/Logic | 14 | 20 |
+| Q2: Data/Logic | 13 | 20 |
 | Q3: Simulation | 15 | 15 |
 | Q4: Functions | 25 | 25 |
 | Q5: Luhn Algorithm | 25 | 25 |
-| **TOTAL** | **90** | **100** |
+| **TOTAL** | **89** | **100** |
