@@ -27,13 +27,12 @@ Name correctly provided.
 
 **Q1 Total: 12/13**
 
-### Error in 1.6 (first expression):
+### Note on 1.6:
 ```r
-# Student wrote:
-((12)/(19 -7 ))^(1 / 5)  # Wrong: division instead of subtraction
-
-# Correct:
-((12-(19-7))^1)/5
+# Student wrote (ALL CORRECT):
+((12)/(19 -7 ))^(1 / 5)
+(log10(1) + log10(2))/ ((pi + 1)/ (pi - 1))
+log10 ( sin(2)/exp(2))
 ```
 
 ---

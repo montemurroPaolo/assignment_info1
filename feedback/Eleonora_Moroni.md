@@ -30,12 +30,12 @@ Name correctly provided as `#Eleonora Moroni`.
 ### Errors in 1.6:
 ```r
 # Student wrote:
-(12/(19-7))^(1/5)         # Wrong: / instead of -
+(12/(19-7))^(1/5)         # CORRECT!
 (log(1)+log(2))/((pi+1)/(pi-1))  # Wrong: log() instead of log10()
 log(sin(2)/exp(2))        # Wrong: should be log10()
 
 # Correct:
-((12-(19-7))^1)/5
+(12/(19-7))^(1/5)
 (log10(1)+log10(2))/((pi+1)/(pi-1))
 log10(sin(2)/exp(2))
 ```

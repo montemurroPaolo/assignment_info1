@@ -30,12 +30,12 @@ Name correctly provided as `# <Mokabbal Assiya>`.
 ### Errors in 1.6:
 ```r
 # Student wrote:
-(12-(19-7))^1/5           # Operator precedence issue
+(12-(19-7))^1/5           # Wrong: uses - instead of /, missing parentheses on exponent
 log(1)+log(2)/((pi+1)/(pi-1))  # Wrong: log() instead of log10(), parentheses wrong
 log(sin(2)/exp(2))        # Wrong: should be log10()
 
 # Correct:
-((12-(19-7))^1)/5
+(12/(19-7))^(1/5)
 (log10(1)+log10(2))/((pi+1)/(pi-1))
 log10(sin(2)/exp(2))
 ```

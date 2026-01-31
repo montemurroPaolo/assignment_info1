@@ -30,12 +30,12 @@ Name correctly provided.
 ### Errors in 1.6:
 ```r
 # Student wrote (WRONG):
-((sqrt^5(12/(19-17))))  # Syntax error
+((sqrt^5(12/(19-17))))  # Syntax error, 19-17 not 19-7
 (log(1)+log(2))/((pi+1)/(pi-1))  # Wrong: log() instead of log10()
 log((sin(2))/(exp(1))^2)  # Wrong: log() and exp(1)^2 instead of exp(2)
 
 # Correct:
-((12-(19-7))^1)/5
+(12/(19-7))^(1/5)
 (log10(1)+log10(2))/((pi+1)/(pi-1))
 log10(sin(2)/exp(2))
 ```
