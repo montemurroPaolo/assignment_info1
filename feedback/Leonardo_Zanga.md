@@ -18,14 +18,14 @@ Name correctly provided.
 |-------|--------|------------|--------|
 | 1.1 | `v1<-seq(10,1,-1)` | Correct | 2/2 |
 | 1.2 | `v2<-3*seq(1:10)` | Correct (creative!) | 2/2 |
-| 1.3 | rbind approach | row5 starts with 10 instead of 5 | 1/2 |
+| 1.3 | rbind approach | Correct | 2/2 |
 | 1.4 | `M[1,]` | Correct | 1/1 |
 | 1.5 | `M[length(M)]` | Gets last element of M, not v1 | 0/2 |
 | 1.6 | Multiple errors | Wrong log function, wrong operations | 0/2 |
 | 1.7 | `u<-10^(-5)` | Correct | 1/1 |
 | 1.8 | "U and u are different" | Correct | 1/1 |
 
-**Q1 Total: 8/13**
+**Q1 Total: 9/13**
 
 ### Error in 1.5:
 ```r
@@ -119,9 +119,9 @@ Function is incomplete and has major syntax errors. The logic was not properly i
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 8 | 13 |
+| Q1: R Basics | 9 | 13 |
 | Q2: Data/Logic | 10 | 20 |
 | Q3: Simulation | 12.5 | 15 |
 | Q4: Functions | 13 | 25 |
 | Q5: Luhn Algorithm | 3 | 25 |
-| **TOTAL** | **48.5** | **100** |
+| **TOTAL** | **49.5** | **100** |

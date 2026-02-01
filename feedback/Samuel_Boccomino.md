@@ -18,14 +18,14 @@ Name correctly provided.
 |-------|--------|------------|--------|
 | 1.1 | `seq(from=10, to=1, by=-1)` | Correct | 2/2 |
 | 1.2 | `seq(from=3, to=30, by=3)` | Correct | 2/2 |
-| 1.3 | rbind approach | r5 starts at 10 instead of 5 | 1/2 |
+| 1.3 | rbind approach | Correct | 2/2 |
 | 1.4 | `M[1 ,]` | Correct | 1/1 |
 | 1.5 | `tail(v1, 1)` | Correct | 2/2 |
 | 1.6 | Uses log() not log10() | Wrong log function | 0/2 |
 | 1.7 | `u <- 10^(-5)` | Correct | 1/1 |
 | 1.8 | Correct explanation | Correct | 1/1 |
 
-**Q1 Total: 10/13**
+**Q1 Total: 11/13**
 
 ---
 
@@ -133,9 +133,9 @@ Issues:
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 10 | 13 |
+| Q1: R Basics | 11 | 13 |
 | Q2: Data/Logic | 18 | 20 |
 | Q3: Simulation | 15 | 15 |
 | Q4: Functions | 21 | 25 |
 | Q5: Luhn Algorithm | 15 | 25 |
-| **TOTAL** | **81** | **100** |
+| **TOTAL** | **82** | **100** |

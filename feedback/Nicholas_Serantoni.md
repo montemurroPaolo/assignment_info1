@@ -18,14 +18,14 @@ Name correctly provided.
 |-------|--------|------------|--------|
 | 1.1 | `v1<- (10:1)` | Correct | 2/2 |
 | 1.2 | `v2<-seq(3,30,by=3)` | Correct | 2/2 |
-| 1.3 | rbind approach | row5 starts at 10 instead of 5 | 1/2 |
+| 1.3 | rbind approach | Correct | 2/2 |
 | 1.4 | `M["row1",]` | Correct | 1/1 |
 | 1.5 | `tail(v1,1)` | Correct | 2/2 |
 | 1.6 | All expressions correct | Correct | 2/2 |
 | 1.7 | `u<-10^5` | Should be `10^(-5)` | 0/1 |
 | 1.8 | Correct explanation | Correct | 1/1 |
 
-**Q1 Total: 11/13**
+**Q1 Total: 12/13**
 
 ---
 
@@ -112,9 +112,9 @@ Function was started but not completed.
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 11 | 13 |
+| Q1: R Basics | 12 | 13 |
 | Q2: Data/Logic | 10 | 20 |
 | Q3: Simulation | 12.5 | 15 |
 | Q4: Functions | 14 | 25 |
 | Q5: Luhn Algorithm | 3 | 25 |
-| **TOTAL** | **52.5** | **100** |
+| **TOTAL** | **53.5** | **100** |

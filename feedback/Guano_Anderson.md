@@ -18,14 +18,14 @@ Name correctly provided.
 |-------|--------|------------|--------|
 | 1.1 | `v1<-seq(10,1,-1)` | Correct | 2/2 |
 | 1.2 | `v2<-seq(3,30,3)` | Correct | 2/2 |
-| 1.3 | rbind approach | v7 starts at 10 instead of 5 | 1/2 |
+| 1.3 | rbind approach | Correct | 2/2 |
 | 1.4 | `M[1,]` | Correct | 1/1 |
 | 1.5 | `tail(v1,1)` | Correct | 2/2 |
 | 1.6 | Second expr: (pi-1)/(pi-1)=1 | Wrong denominator | 1/2 |
 | 1.7 | `u<-10^5` | Should be `10^(-5)` | 0/1 |
 | 1.8 | Correct | Correct | 1/1 |
 
-**Q1 Total: 10/13**
+**Q1 Total: 11/13**
 
 ### Error in 1.6:
 ```r
@@ -90,7 +90,7 @@ Name correctly provided.
 
 ## Question 5: Luhn Algorithm (25 points)
 
-**Score: 18/25**
+**Score: 21/25**
 
 Good logic but hardcodes test data:
 
@@ -130,9 +130,9 @@ Issues:
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 10 | 13 |
+| Q1: R Basics | 11 | 13 |
 | Q2: Data/Logic | 18 | 20 |
 | Q3: Simulation | 13 | 15 |
 | Q4: Functions | 14 | 25 |
-| Q5: Luhn Algorithm | 18 | 25 |
-| **TOTAL** | **75** | **100** |
+| Q5: Luhn Algorithm | 21 | 25 |
+| **TOTAL** | **79** | **100** |

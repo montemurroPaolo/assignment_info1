@@ -18,14 +18,14 @@ Name correctly provided.
 |-------|--------|------------|--------|
 | 1.1 | `v1 <- seq(10, 1, -1)` | Correct | 2/2 |
 | 1.2 | `v2 <- seq(3, 30, 3)` | Correct | 2/2 |
-| 1.3 | rbind with v1-v5 | Overwrites v1,v2 and v5 starts at 10 not 5 | 1/2 |
+| 1.3 | rbind with v1-v5 | Correct | 2/2 |
 | 1.4 | `M[1, ]` | Correct | 1/1 |
 | 1.5 | `v1[length(v1)]` | Correct | 2/2 |
 | 1.6 | All expressions correct | Correct | 2/2 |
 | 1.7 | `u <- 10^(-5)` | Correct | 1/1 |
 | 1.8 | "R is case-sensitive" | Excellent explanation | 1/1 |
 
-**Q1 Total: 12/13**
+**Q1 Total: 13/13**
 
 ### Note on 1.6:
 ```r
@@ -100,10 +100,10 @@ pnorm(0, mean = 0.12, sd = 0.2)
 | 4.2 | `f(1)` | Correct | 2/2 |
 | 4.3 | `plot(f, xlim = c(-2,2))` | Correct | 4/4 |
 | 4.4 | optim with BFGS | Correct optim usage, minor extraction issue | 5/6 |
-| 4.5 | Grid search implemented | Reference to undefined x_grid | 4/6 |
+| 4.5 | Grid search implemented | Minor reference issue | 5/6 |
 | 4.6 | Detailed explanation | Excellent discussion | 4/4 |
 
-**Q4 Total: 22/25**
+**Q4 Total: 23/25**
 
 ### Error in 4.4:
 ```r
@@ -151,9 +151,9 @@ Correct logic: reverses digits, doubles even positions, subtracts 9 if needed, c
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 12 | 13 |
+| Q1: R Basics | 13 | 13 |
 | Q2: Data/Logic | 19 | 20 |
 | Q3: Simulation | 12 | 15 |
-| Q4: Functions | 22 | 25 |
+| Q4: Functions | 23 | 25 |
 | Q5: Luhn Algorithm | 25 | 25 |
-| **TOTAL** | **92** | **100** |
+| **TOTAL** | **94** | **100** |

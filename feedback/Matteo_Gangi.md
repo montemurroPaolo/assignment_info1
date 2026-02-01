@@ -18,14 +18,14 @@ Name correctly provided.
 |-------|--------|------------|--------|
 | 1.1 | `v1=seq(10, 1, -1)` | Correct | 2/2 |
 | 1.2 | `v2= seq(1, 30, 3)` | Wrong: starts at 1, should be 3 | 1/2 |
-| 1.3 | rbind approach | row5 starts at 10 instead of 5 | 1/2 |
+| 1.3 | rbind approach | Correct | 2/2 |
 | 1.4 | `M[1,]` | Correct | 1/1 |
 | 1.5 | `tail(v1, 1)` | Correct | 2/2 |
 | 1.6 | Correct | `log0` typo (clearly meant log10) | 2/2 |
 | 1.7 | `u= 10^(-5)` | Correct | 1/1 |
 | 1.8 | "R is case sensitive" | Correct | 1/1 |
 
-**Q1 Total: 11/13**
+**Q1 Total: 12/13**
 
 ### Note on 1.6:
 `log0` is a clear typo for `log10` - full credit given.
@@ -104,9 +104,9 @@ Function not implemented.
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 11 | 13 |
+| Q1: R Basics | 12 | 13 |
 | Q2: Data/Logic | 15 | 20 |
 | Q3: Simulation | 12 | 15 |
 | Q4: Functions | 11 | 25 |
 | Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **51** | **100** |
+| **TOTAL** | **52** | **100** |

@@ -23,7 +23,7 @@ Name correctly provided as `# <Mokabbal Assiya>`.
 | 1.5 | `tail(v1, 1)` | Correct | 2/2 |
 | 1.6 | Multiple expressions | Wrong: Uses `log()` instead of `log10()`, parentheses issues | 0/2 |
 | 1.7 | `u = 10^(-5)` | Correct | 1/1 |
-| 1.8 | "R is case sensitive" | Correct | 1/1 |
+| 1.8 | `"R is case sensitive"` | Correct | 1/1 |
 
 **Q1 Total: 10/13**
 

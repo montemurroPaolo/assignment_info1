@@ -18,14 +18,14 @@ Name correctly provided as `#Eleonora Moroni`.
 |-------|--------|------------|--------|
 | 1.1 | `v1 <- seq(10,1,-1)` | Correct | 2/2 |
 | 1.2 | `v2 <- seq(3,30,3)` | Correct | 2/2 |
-| 1.3 | rbind approach with row1-row5 | row5 starts with 10, should be 5 | 1/2 |
+| 1.3 | rbind approach with row1-row5 | Correct | 2/2 |
 | 1.4 | `M["row1",]` | Correct (creative approach!) | 1/1 |
 | 1.5 | `x<-v1; tail(x,1)` | Correct | 2/2 |
 | 1.6 | Uses log() not log10() | Wrong log function | 0/2 |
 | 1.7 | `u<-(10)^(-5)` | Correct | 1/1 |
 | 1.8 | "R is very sensitive" | Correct concept (case sensitive) | 1/1 |
 
-**Q1 Total: 10/13**
+**Q1 Total: 11/13**
 
 ### Errors in 1.6:
 ```r
@@ -133,9 +133,9 @@ Function not implemented.
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 10 | 13 |
+| Q1: R Basics | 11 | 13 |
 | Q2: Data/Logic | 13 | 20 |
 | Q3: Simulation | 10 | 15 |
 | Q4: Functions | 7 | 25 |
 | Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **42** | **100** |
+| **TOTAL** | **43** | **100** |

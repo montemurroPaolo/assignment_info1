@@ -18,14 +18,14 @@ Name correctly provided.
 |-------|--------|------------|--------|
 | 1.1 | `v1<- seq(10,1,-1)` | Correct | 2/2 |
 | 1.2 | `v2<-seq(3,30,3)` | Correct | 2/2 |
-| 1.3 | matrix with byrow=T | Missing 5th row (starts at 10) | 1/2 |
+| 1.3 | matrix with byrow=T | Correct | 2/2 |
 | 1.4 | `M[1,]` | Correct | 1/1 |
 | 1.5 | `tail(v1,1)` | Correct | 2/2 |
 | 1.6 | All expressions correct | Correct | 2/2 |
 | 1.7 | `u<-10^12` | Should be `10^(-5)` | 0/1 |
 | 1.8 | "R is case sensitive" | Correct | 1/1 |
 
-**Q1 Total: 11/13**
+**Q1 Total: 12/13**
 
 ---
 
@@ -108,9 +108,9 @@ Should iterate through positions, not check equality with multiple values.
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 11 | 13 |
+| Q1: R Basics | 12 | 13 |
 | Q2: Data/Logic | 19 | 20 |
 | Q3: Simulation | 8.5 | 15 |
 | Q4: Functions | 18 | 25 |
 | Q5: Luhn Algorithm | 3 | 25 |
-| **TOTAL** | **61.5** | **100** |
+| **TOTAL** | **62.5** | **100** |

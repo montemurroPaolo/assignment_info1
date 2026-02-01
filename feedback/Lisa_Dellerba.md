@@ -18,7 +18,7 @@ Name correctly provided.
 |-------|--------|------------|--------|
 | 1.1 | `v1<-10:1` | Correct | 2/2 |
 | 1.2 | `v2<-seq(3,30,by=3)` | Correct | 2/2 |
-| 1.3 | rbind approach | row4 typo (292), row5 starts with 10 | 1/2 |
+| 1.3 | rbind approach | row4 has typo (292 instead of 294) | 1/2 |
 | 1.4 | `M[1,]` | Correct | 1/1 |
 | 1.5 | `tail(v1,1)` | Correct | 2/2 |
 | 1.6 | All expressions correct | Correct | 2/2 |

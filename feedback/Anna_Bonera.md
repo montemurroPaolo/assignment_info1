@@ -23,7 +23,7 @@ Name correctly provided as comment.
 | 1.5 | `tail(v1,1)` | Correct | 2/2 |
 | 1.6 | Uses log() not log10() | Wrong log function | 0/2 |
 | 1.7 | `u <- (10)^(-5)` | Correct | 1/1 |
-| 1.8 | "case sensitive" | Correct concept | 1/1 |
+| 1.8 | "case sensitive" | Missing `#` comment format (plain text, not R comment) | 0/1 |
 
 ### 1.6 Issue
 Used `log()` (natural log) instead of `log10()` for calculations 2 and 3.
@@ -38,7 +38,7 @@ log((sin(2))/exp(2))
 log10(sin(2)/exp(2))
 ```
 
-**Q1 Total: 8/13**
+**Q1 Total: 7/13**
 
 ---
 
@@ -113,10 +113,10 @@ sum(Eudata$GDP) * 1e6 / sum(Eudata$Population)  # Total GDP / Total Population
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 8 | 13 |
+| Q1: R Basics | 7 | 13 |
 | Q2: Data/Logic | 11 | 20 |
 | Q3: Simulation | 4 | 15 |
 | Q4: Functions | 5 | 25 |
 | Q5: Luhn Algorithm | 0 | 25 |
-| **TOTAL** | **30** | **100** |
+| **TOTAL** | **29** | **100** |
 
