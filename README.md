@@ -59,25 +59,25 @@ assignment_info1/
 | Student | Q0 | Q1 | Q2 | Q3 | Q4 | Q5 | Total | Grade | Feedback |
 |---------|----|----|----|----|----|----|-------|-------|----------|
 | Ambrogio Antonini | 0 | 0 | 0 | 0 | 0 | 0 | Retired | - | - |
-| [Anna Bonera](feedback/Anna_Bonera.md) | 2 | 8 | 11 | 4 | 5 | 0 | 30 | 3 | [View](feedback/Anna_Bonera.md) |
+| [Anna Bonera](feedback/Anna_Bonera.md) | 2 | 7 | 11 | 4 | 5 | 0 | 29 | 3 | [View](feedback/Anna_Bonera.md) |
 | [Assiya Mokabbal](feedback/Assiya_Mokabbal.md) | 2 | 10 | 17 | 11.5 | 11 | 0 | 51.5 | 6 | [View](feedback/Assiya_Mokabbal.md) |
 | [Damiano Spiatta](feedback/Damiano_Spiatta.md) | 2 | 9 | 13 | 15 | 25 | 25 | 89 | 9 | [View](feedback/Damiano_Spiatta.md) |
-| [Eleonora Moroni](feedback/Eleonora_Moroni.md) | 2 | 10 | 13 | 10 | 7 | 0 | 42 | 4.5 | [View](feedback/Eleonora_Moroni.md) |
-| [Erica Trofimov](feedback/Erica_Trofimov.md) | 2 | 12 | 19 | 12 | 22 | 25 | 92 | 9.5 | [View](feedback/Erica_Trofimov.md) |
+| [Eleonora Moroni](feedback/Eleonora_Moroni.md) | 2 | 11 | 13 | 10 | 7 | 0 | 43 | 4.5 | [View](feedback/Eleonora_Moroni.md) |
+| [Erica Trofimov](feedback/Erica_Trofimov.md) | 2 | 13 | 19 | 12 | 23 | 25 | 94 | 9.5 | [View](feedback/Erica_Trofimov.md) |
 | [Filippo Manachino](feedback/Filippo_Manachino.md) | 2 | 10 | 18 | 15 | 14 | 8 | 67 | 7 | [View](feedback/Filippo_Manachino.md) |
 | Gianluca Izzo | 0 | 0 | 0 | 0 | 0 | 0 | Retired | - | - |
-| [Guano Anderson](feedback/Guano_Anderson.md) | 2 | 10 | 18 | 13 | 14 | 18 | 75 | 7.5 | [View](feedback/Guano_Anderson.md) |
+| [Guano Anderson](feedback/Guano_Anderson.md) | 2 | 11 | 18 | 13 | 14 | 21 | 79 | 8 | [View](feedback/Guano_Anderson.md) |
 | Leonardo Schenk | 0 | 0 | 0 | 0 | 0 | 0 | Retired | - | - |
-| [Leonardo Zanga](feedback/Leonardo_Zanga.md) | 2 | 8 | 10 | 12.5 | 13 | 3 | 48.5 | 5 | [View](feedback/Leonardo_Zanga.md) |
+| [Leonardo Zanga](feedback/Leonardo_Zanga.md) | 2 | 10 | 11 | 12.5 | 13 | 3 | 51.5 | 6 | [View](feedback/Leonardo_Zanga.md) |
 | [Lisa Dellerba](feedback/Lisa_Dellerba.md) | 2 | 12 | 16 | 15 | 16 | 23 | 84 | 8.5 | [View](feedback/Lisa_Dellerba.md) |
 | Lorenzo Pini | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | - |
-| [Ludovico Martinelli](feedback/Ludovico_Martinelli.md) | 2 | 11 | 19 | 8.5 | 18 | 3 | 61.5 | 6.5 | [View](feedback/Ludovico_Martinelli.md) |
-| [Malak El Fatih](feedback/Malak_El_Fatih.md) | 2 | 6 | 12 | 13 | 20 | 25 | 78 | 8 | [View](feedback/Malak_El_Fatih.md) |
+| [Ludovico Martinelli](feedback/Ludovico_Martinelli.md) | 2 | 12 | 19 | 8.5 | 16 | 6 | 63.5 | 6.5 | [View](feedback/Ludovico_Martinelli.md) |
+| [Malak El Fatih](feedback/Malak_El_Fatih.md) ⚠️ | 2 | 6 | 12 | 13 | 20 | 25 | 78 | 8 | [View](feedback/Malak_El_Fatih.md) |
 | Matilde Sparviero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | - |
-| [Matteo Gangi](feedback/Matteo_Gangi.md) | 2 | 11 | 15 | 12 | 11 | 0 | 51 | 6 | [View](feedback/Matteo_Gangi.md) |
-| [Matteo Zucchi](feedback/Matteo_Zucchi.md) | 2 | 12 | 15 | 13.5 | 11.5 | 3 | 57 | 6 | [View](feedback/Matteo_Zucchi.md) |
-| [Nicholas Serantoni](feedback/Nicholas_Serantoni.md) | 2 | 11 | 10 | 12.5 | 14 | 3 | 52.5 | 6 | [View](feedback/Nicholas_Serantoni.md) |
-| [Samuel Boccomino](feedback/Samuel_Boccomino.md) | 2 | 10 | 18 | 15 | 21 | 15 | 81 | 8.5 | [View](feedback/Samuel_Boccomino.md) |
+| [Matteo Gangi](feedback/Matteo_Gangi.md) | 2 | 12 | 15 | 13 | 11 | 0 | 53 | 6 | [View](feedback/Matteo_Gangi.md) |
+| [Matteo Zucchi](feedback/Matteo_Zucchi.md) | 2 | 11 | 15 | 13.5 | 11.5 | 3 | 56 | 6 | [View](feedback/Matteo_Zucchi.md) |
+| [Nicholas Serantoni](feedback/Nicholas_Serantoni.md) | 2 | 12 | 10 | 12.5 | 14 | 3 | 53.5 | 6 | [View](feedback/Nicholas_Serantoni.md) |
+| [Samuel Boccomino](feedback/Samuel_Boccomino.md) | 2 | 11 | 18 | 15 | 21 | 18 | 85 | 8.5 | [View](feedback/Samuel_Boccomino.md) |
 | [Stefano Laureti](feedback/Stefano_Laureti.md) | 2 | 11 | 18 | 5 | 15 | 5 | 56 | 6 | [View](feedback/Stefano_Laureti.md) |
 
 **Max Points:** Q0=2, Q1=13, Q2=20, Q3=15, Q4=25, Q5=25, Total=100
@@ -329,22 +329,22 @@ assignment_info1/
 
 | Rank | Student | Total |
 |------|---------|-------|
-| 1 | Erica Trofimov | 92 |
+| 1 | Erica Trofimov | 94 |
 | 2 | Damiano Spiatta | 89 |
-| 3 | Lisa Dellerba | 84 |
-| 4 | Samuel Boccomino | 81 |
-| 5 | Malak El Fatih | 78 |
-| 6 | Guano Anderson | 75 |
+| 3 | Samuel Boccomino | 85 |
+| 4 | Lisa Dellerba | 84 |
+| 5 | Guano Anderson | 79 |
+| 6 | Malak El Fatih | 78 |
 | 7 | Filippo Manachino | 67 |
-| 8 | Ludovico Martinelli | 61.5 |
-| 9 | Matteo Zucchi | 57 |
+| 8 | Ludovico Martinelli | 63.5 |
+| 9 | Matteo Zucchi | 56 |
 | 10 | Stefano Laureti | 56 |
-| 11 | Nicholas Serantoni | 52.5 |
-| 12 | Assiya Mokabbal | 51.5 |
-| 13 | Matteo Gangi | 51 |
-| 14 | Leonardo Zanga | 48.5 |
-| 15 | Eleonora Moroni | 42 |
-| 16 | Anna Bonera | 30 |
+| 11 | Nicholas Serantoni | 53.5 |
+| 12 | Matteo Gangi | 53 |
+| 13 | Assiya Mokabbal | 51.5 |
+| 14 | Leonardo Zanga | 51.5 |
+| 15 | Eleonora Moroni | 43 |
+| 16 | Anna Bonera | 29 |
 
 ### No Submission
 
@@ -368,3 +368,9 @@ assignment_info1/
 - Partial credit was awarded for correct concepts with minor syntax errors
 - The `CountyName` column typo in Eudata.csv was acknowledged; students using `CountryName` or `Country` received credit
 - Case sensitivity errors in R (e.g., `Sum` vs `sum`) resulted in point deductions as this is a fundamental R concept tested in Q1.8
+
+### ⚠️ Under Investigation
+
+| Student | Reason |
+|---------|--------|
+| Malak El Fatih | Q5 sophistication inconsistent with Q1-Q2 performance. Student left basic questions unanswered but submitted professional-grade vectorized code with input validation. |

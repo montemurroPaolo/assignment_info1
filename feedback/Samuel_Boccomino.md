@@ -103,7 +103,7 @@ for(x in grid){
 
 ## Question 5: Luhn Algorithm (25 points)
 
-**Score: 15/25**
+**Score: 18/25**
 
 Good attempt with mostly correct logic:
 
@@ -137,5 +137,5 @@ Issues:
 | Q2: Data/Logic | 18 | 20 |
 | Q3: Simulation | 15 | 15 |
 | Q4: Functions | 21 | 25 |
-| Q5: Luhn Algorithm | 15 | 25 |
-| **TOTAL** | **82** | **100** |
+| Q5: Luhn Algorithm | 18 | 25 |
+| **TOTAL** | **85** | **100** |
