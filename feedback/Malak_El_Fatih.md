@@ -101,6 +101,12 @@ xmin_grid <- grid[which.min(vals)]
 
 **Score: 25/25**
 
+⚠️ **UNDER INVESTIGATION** - The sophistication of this answer contrasts sharply with earlier performance:
+- Student left basic questions unanswered (Q1.5, Q1.7, Q1.8, Q2.7-2.10)
+- Couldn't write `10^(-5)` or explain case sensitivity
+- But submitted professional-grade vectorized code with input validation
+- Code style and techniques (seq_along, vectorized boolean indexing, defensive programming) are inconsistent with rest of exam
+
 Excellent implementation using vectorized R operations:
 
 ```r

@@ -20,12 +20,12 @@ Name correctly provided.
 | 1.2 | `v2<-3*seq(1:10)` | Correct (creative!) | 2/2 |
 | 1.3 | rbind approach | Correct | 2/2 |
 | 1.4 | `M[1,]` | Correct | 1/1 |
-| 1.5 | `M[length(M)]` | Gets last element of M, not v1 | 0/2 |
+| 1.5 | `M[length(M)]` | Likely typo (M instead of v1), correct concept | 1/2 |
 | 1.6 | Multiple errors | Wrong log function, wrong operations | 0/2 |
 | 1.7 | `u<-10^(-5)` | Correct | 1/1 |
 | 1.8 | "U and u are different" | Correct | 1/1 |
 
-**Q1 Total: 9/13**
+**Q1 Total: 10/13**
 
 ### Error in 1.5:
 ```r
@@ -51,10 +51,10 @@ v1[length(v1)]  # Gets last element of v1
 | 2.6 | Sum of ratios | Wrong formula, partial credit for attempt | 1/2 |
 | 2.7 | `min(Eudata$Accesion)` | Typo "Accesion" but correct logic | 2/2 |
 | 2.8 | Uses CountyName | Should count, not sum names | 0/2 |
-| 2.9 | `Eudata[...=='UK',]` | KEEPS UK instead of removing | 0/2 |
+| 2.9 | `Eudata[...=='UK',]` | Correct subsetting, wrong operator (== instead of !=) | 1/2 |
 | 2.10 | Incomplete | Wrong approach | 0/2 |
 
-**Q2 Total: 10/20**
+**Q2 Total: 11/20**
 
 ### Critical Error in 2.9:
 ```r
@@ -119,9 +119,9 @@ Function is incomplete and has major syntax errors. The logic was not properly i
 | Question | Points Earned | Max Points |
 |----------|---------------|------------|
 | Q0: Name | 2 | 2 |
-| Q1: R Basics | 9 | 13 |
-| Q2: Data/Logic | 10 | 20 |
+| Q1: R Basics | 10 | 13 |
+| Q2: Data/Logic | 11 | 20 |
 | Q3: Simulation | 12.5 | 15 |
 | Q4: Functions | 13 | 25 |
 | Q5: Luhn Algorithm | 3 | 25 |
-| **TOTAL** | **49.5** | **100** |
+| **TOTAL** | **51.5** | **100** |

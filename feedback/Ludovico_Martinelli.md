@@ -82,24 +82,25 @@ mean(pnorm(stock<0))  # Applies pnorm to TRUE/FALSE values!
 | 4.2 | `f(1)` | Correct | 2/2 |
 | 4.3 | `plot(f,-2,2)` | Correct | 4/4 |
 | 4.4 | optim with BFGS | Correct optim usage, minor extraction issue | 5/6 |
-| 4.5 | Uses optim instead of grid | Partial credit for trying | 2/6 |
+| 4.5 | Uses optim instead of grid | Should implement manual grid search | 0/6 |
 | 4.6 | Partial explanation | Incomplete | 2/4 |
 
-**Q4 Total: 18/25**
+**Q4 Total: 16/25**
 
 ---
 
 ## Question 5: Luhn Algorithm (25 points)
 
-**Score: 3/25** (partial credit for attempting)
+**Score: 6/25** (partial credit)
 
-The function logic is incorrect:
+The function structure is correct (function definition, if-else statements, return), but the logic is wrong:
 ```r
 # Student's condition doesn't make sense:
 if(x==1 && 3 && 5)  # This compares x to 1, then evaluates 3 and 5 as booleans!
 ```
 
-Should iterate through positions, not check equality with multiple values.
+Credit for: function syntax, if-else control flow, attempt at algorithm.
+Missing: proper iteration through positions, correct condition logic.
 
 ---
 
@@ -111,6 +112,6 @@ Should iterate through positions, not check equality with multiple values.
 | Q1: R Basics | 12 | 13 |
 | Q2: Data/Logic | 19 | 20 |
 | Q3: Simulation | 8.5 | 15 |
-| Q4: Functions | 18 | 25 |
-| Q5: Luhn Algorithm | 3 | 25 |
-| **TOTAL** | **62.5** | **100** |
+| Q4: Functions | 16 | 25 |
+| Q5: Luhn Algorithm | 6 | 25 |
+| **TOTAL** | **63.5** | **100** |
